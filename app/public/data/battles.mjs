@@ -1,0 +1,25594 @@
+// Factual battle records from version-matched community workbooks. See docs/build/battle-sources.md.
+export const BATTLES = [
+  {
+    "id": "gym-mirskle",
+    "name": "Mirskle",
+    "kind": "gym",
+    "order": 1,
+    "location": "Dresco Town",
+    "focus": [
+      "grass"
+    ],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Floette",
+            "dexId": 670,
+            "types": [
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Fairy Wind",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Razor Leaf",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Grass Knot",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Echoed Voice",
+                "type": "normal",
+                "category": "special"
+              }
+            ],
+            "ability": "Flower Veil",
+            "item": "Grass Gem",
+            "level": 21,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Floette [1st lead]"
+            ]
+          },
+          {
+            "name": "Gloom",
+            "dexId": 44,
+            "types": [
+              "grass",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Acid",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Mega Drain",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Sweet Scent",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Sleep Powder",
+                "type": "grass",
+                "category": "status"
+              }
+            ],
+            "ability": "Chlorophyll",
+            "item": null,
+            "level": 20,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Gloom [2nd lead]"
+            ]
+          },
+          {
+            "name": "Weedle",
+            "dexId": 13,
+            "types": [
+              "bug",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Bug Bite",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Electroweb",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Poison Sting",
+                "type": "poison",
+                "category": "physical"
+              },
+              {
+                "name": "String Shot",
+                "type": "bug",
+                "category": "status"
+              }
+            ],
+            "ability": "Shield Dust",
+            "item": null,
+            "level": 18,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A1:G20",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "double",
+          "notes": [
+            "Double Battle, Fog"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 1,
+        "trainerItems": "Super Potion x1",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Floette",
+            "dexId": 670,
+            "types": [
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Fairy Wind",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Grass Knot",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Wish",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Grassy Terrain",
+                "type": "grass",
+                "category": "status"
+              }
+            ],
+            "ability": "Flower Veil / Aroma Veil",
+            "item": "Grass Gem",
+            "level": 19,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Floette [1st lead]"
+            ]
+          },
+          {
+            "name": "Gloom",
+            "dexId": 44,
+            "types": [
+              "grass",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Acid",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Mega Drain",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Ingrain",
+                "type": "grass",
+                "category": "status"
+              },
+              {
+                "name": "Sleep Powder",
+                "type": "grass",
+                "category": "status"
+              }
+            ],
+            "ability": "Chlorophyll",
+            "item": null,
+            "level": 21,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Gloom [2nd lead]"
+            ]
+          },
+          {
+            "name": "Weedle",
+            "dexId": 13,
+            "types": [
+              "bug",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Bug Bite",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Electroweb",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Poison Sting",
+                "type": "poison",
+                "category": "physical"
+              },
+              {
+                "name": "String Shot",
+                "type": "bug",
+                "category": "status"
+              }
+            ],
+            "ability": "Technician",
+            "item": "Silver Powder",
+            "level": 17,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Comfey",
+            "dexId": 764,
+            "types": [
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Magical Leaf",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Helping Hand",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Flower Shield",
+                "type": "fairy",
+                "category": "status"
+              },
+              {
+                "name": "Floral Healing",
+                "type": "fairy",
+                "category": "status"
+              }
+            ],
+            "ability": "Flower Veil / Triage",
+            "item": null,
+            "level": 18,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A1:G20",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "double",
+          "notes": [
+            "Double Battle, Fog"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 1,
+        "trainerItems": "Super Potion x1",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Floette",
+            "dexId": 670,
+            "types": [
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Petal Blizzard",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Wish",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Grassy Terrain",
+                "type": "grass",
+                "category": "status"
+              }
+            ],
+            "ability": "Flower Veil / Aroma Veil",
+            "item": "Grassy Seed",
+            "level": 19,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Floette [1st lead]"
+            ]
+          },
+          {
+            "name": "Gloom",
+            "dexId": 44,
+            "types": [
+              "grass",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Apple Acid",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Ingrain",
+                "type": "grass",
+                "category": "status"
+              },
+              {
+                "name": "Sleep Powder",
+                "type": "grass",
+                "category": "status"
+              }
+            ],
+            "ability": "Chlorophyll",
+            "item": "Leftovers",
+            "level": 21,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Gloom [2nd lead]"
+            ]
+          },
+          {
+            "name": "Weedle",
+            "dexId": 13,
+            "types": [
+              "bug",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Bug Bite",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Electroweb",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Poison Sting",
+                "type": "poison",
+                "category": "physical"
+              },
+              {
+                "name": "String Shot",
+                "type": "bug",
+                "category": "status"
+              }
+            ],
+            "ability": "Technician",
+            "item": "Silver Powder",
+            "level": 17,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Comfey",
+            "dexId": 764,
+            "types": [
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Draining Kiss",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Helping Hand",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Flower Shield",
+                "type": "fairy",
+                "category": "status"
+              },
+              {
+                "name": "Floral Healing",
+                "type": "fairy",
+                "category": "status"
+              }
+            ],
+            "ability": "Triage",
+            "item": "Leftovers",
+            "level": 18,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A1:G20",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "double",
+          "notes": [
+            "Double Battle, Fog"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 1,
+        "trainerItems": "none",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A1:G20"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A1:G20"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A1:G20"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": 1,
+    "chapter": "Gym Leaders"
+  },
+  {
+    "id": "gym-vega",
+    "name": "Vega",
+    "kind": "gym",
+    "order": 2,
+    "location": "Crater Town",
+    "focus": [
+      "dark"
+    ],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Liepard",
+            "dexId": 510,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Thief",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Fury Swipes",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Pursuit",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Limber",
+            "item": null,
+            "level": 26,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Absol",
+            "dexId": 359,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Thief",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Slash",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Feint",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Pursuit",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Pressure",
+            "item": null,
+            "level": 27,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Sneasel",
+            "dexId": 215,
+            "types": [
+              "dark",
+              "ice"
+            ],
+            "moves": [
+              {
+                "name": "Thief",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Icy Wind",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Keen Eye",
+            "item": "Dark Gem",
+            "level": 25,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A21:G40",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Negative Energy"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 21,
+        "trainerItems": "Super Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Liepard",
+            "dexId": 510,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Thief",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Pursuit",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Unburden",
+            "item": "Lum Berry",
+            "level": 26,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Absol",
+            "dexId": 359,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Knock Off",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Psycho Cut",
+                "type": "psychic",
+                "category": "physical"
+              },
+              {
+                "name": "Feint",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Pursuit",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Pressure",
+            "item": null,
+            "level": 27,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Weavile",
+            "dexId": 461,
+            "types": [
+              "dark",
+              "ice"
+            ],
+            "moves": [
+              {
+                "name": "Punishment",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Swagger",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Pressure",
+            "item": "Dark Gem",
+            "level": 27,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Honchkrow",
+            "dexId": 430,
+            "types": [
+              "dark",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Punishment",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Air Cutter",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Night Shade",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Swagger",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Super Luck",
+            "item": null,
+            "level": 26,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A21:G40",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Negative Energy"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 21,
+        "trainerItems": "Moomoo Milk x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Liepard",
+            "dexId": 510,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Night Daze",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Burning Jealousy",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Thunder Wave",
+                "type": "electric",
+                "category": "status"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Unburden",
+            "item": "Focus Sash",
+            "level": 26,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Absol",
+            "dexId": 359,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Knock Off",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Close Combat",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Pressure → Magic Bounce",
+            "item": "Absolite",
+            "level": 27,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Spiritomb",
+            "dexId": 442,
+            "types": [
+              "ghost",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Hex",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              },
+              {
+                "name": "Calm Mind",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Pressure",
+            "item": "Leftovers",
+            "level": 27,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Honchkrow",
+            "dexId": 430,
+            "types": [
+              "dark",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Oblivion Wing",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Super Luck",
+            "item": "Big Root",
+            "level": 26,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Pawniard",
+            "dexId": 624,
+            "types": [
+              "dark",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Night Slash",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Defiant",
+            "item": "Eviolite",
+            "level": 26,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A21:G40",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Negative Energy"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 21,
+        "trainerItems": "none",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A21:G40"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A21:G40"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A21:G40"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": 2,
+    "chapter": "Gym Leaders"
+  },
+  {
+    "id": "gym-alice",
+    "name": "Alice",
+    "kind": "gym",
+    "order": 3,
+    "location": "Blizzard City",
+    "focus": [
+      "flying"
+    ],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Dodrio",
+            "dexId": 85,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Aerial Ace",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Double Hit",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Steel Wing",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Quick Attack",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Early Bird",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gliscor",
+            "dexId": 472,
+            "types": [
+              "ground",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Aerial Ace",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Knock Off",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Fang",
+                "type": "fire",
+                "category": "physical"
+              }
+            ],
+            "ability": "Hyper Cutter",
+            "item": "Flying Gem",
+            "level": 31,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Crobat",
+            "dexId": 169,
+            "types": [
+              "poison",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Venoshock",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Aerial Ace",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Bite",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              }
+            ],
+            "ability": "Inner Focus",
+            "item": null,
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Pinsir",
+            "dexId": 127,
+            "types": [
+              "bug"
+            ],
+            "moves": [
+              {
+                "name": "Bug Bite",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Brick Break",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Double Hit",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Tomb",
+                "type": "rock",
+                "category": "physical"
+              }
+            ],
+            "ability": "Mold Breaker",
+            "item": null,
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A41:G60",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Permanent Tailwind for Flying-types on the field                                        "
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 41,
+        "trainerItems": "Hyper Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Minior",
+            "dexId": 774,
+            "types": [
+              "rock",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Ancient Power",
+                "type": "rock",
+                "category": "special"
+              },
+              {
+                "name": "Acrobatics",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              },
+              {
+                "name": "Confuse Ray",
+                "type": "ghost",
+                "category": "status"
+              }
+            ],
+            "ability": "Shields Down",
+            "item": "Snowball",
+            "level": 31,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gliscor",
+            "dexId": 472,
+            "types": [
+              "ground",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Acrobatics",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Knock Off",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Fang",
+                "type": "fire",
+                "category": "physical"
+              }
+            ],
+            "ability": "Hyper Cutter",
+            "item": "Flying Gem",
+            "level": 31,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Dodrio",
+            "dexId": 85,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Aerial Ace",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Quick Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Steel Wing",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Knock Off",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Early Bird",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Pinsir",
+            "dexId": 127,
+            "types": [
+              "bug",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "X-Scissor",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Double Hit",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Brick Break",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Tomb",
+                "type": "rock",
+                "category": "physical"
+              }
+            ],
+            "ability": "Hyper Cutter → Aerilate",
+            "item": "Pinsirite",
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Crobat",
+            "dexId": 169,
+            "types": [
+              "poison",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Venoshock",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Air Cutter",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Acrobatics",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Bite",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Infiltrator",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A41:G60",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Permanent Tailwind for Flying-types on the field"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 41,
+        "trainerItems": "Hyper Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Skarmory",
+            "dexId": 227,
+            "types": [
+              "steel",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Body Press",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              },
+              {
+                "name": "Whirlwind",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": "Rocky Helmet",
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gliscor",
+            "dexId": 472,
+            "types": [
+              "ground",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Tomb",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Poison Heal",
+            "item": "Toxic Orb",
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Dodrio",
+            "dexId": 85,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Brave Bird",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Jump Kick",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Stomping Tantrum",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Knock Off",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Reckless",
+            "item": "Choice Band",
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Pinsir",
+            "dexId": 127,
+            "types": [
+              "bug",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Facade",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Storm Throw",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Feint",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Hyper Cutter → Aerilate",
+            "item": "Pinsirite",
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Crobat",
+            "dexId": 169,
+            "types": [
+              "poison",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Sludge Bomb",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Nasty Plot",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Infiltrator",
+            "item": "Focus Sash",
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A41:G60",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Permanent Strong Winds, Permanent Tailwind for Flying-types on the field"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 41,
+        "trainerItems": "none",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A41:G60"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A41:G60"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A41:G60"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": 3,
+    "chapter": "Gym Leaders"
+  },
+  {
+    "id": "gym-mel",
+    "name": "Mel",
+    "kind": "gym",
+    "order": 4,
+    "location": "Fallshore City",
+    "focus": [
+      "normal"
+    ],
+    "rules": {
+      "inverse": true,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Bewear",
+            "dexId": 760,
+            "types": [
+              "normal",
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Facade",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Low Sweep",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Brutal Swing",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Payback",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Fluffy",
+            "item": null,
+            "level": 36,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Heliolisk",
+            "dexId": 695,
+            "types": [
+              "electric",
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "Swift",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Parabolic Charge",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Wave",
+                "type": "electric",
+                "category": "status"
+              }
+            ],
+            "ability": "Dry Skin",
+            "item": null,
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Miltank",
+            "dexId": 241,
+            "types": [
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "Facade",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Punch",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Zen Headbutt",
+                "type": "psychic",
+                "category": "physical"
+              },
+              {
+                "name": "Milk Drink",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Scrappy",
+            "item": "Normal Gem",
+            "level": 36,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Lopunny",
+            "dexId": 428,
+            "types": [
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "Facade",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Double Kick",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Low Kick",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Cute Charm",
+            "item": null,
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A61:G80",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": true,
+          "format": "single",
+          "notes": [
+            "Inverse Battle"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 61,
+        "trainerItems": "Hyper Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Bewear",
+            "dexId": 760,
+            "types": [
+              "normal",
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Facade",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Hammer Arm",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Payback",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              }
+            ],
+            "ability": "Fluffy",
+            "item": "Normal Gem",
+            "level": 36,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Porygon-Z",
+            "dexId": 474,
+            "types": [
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "Round",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Signal Beam",
+                "type": "bug",
+                "category": "special"
+              },
+              {
+                "name": "Psybeam",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Recover",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Adaptability",
+            "item": null,
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Miltank",
+            "dexId": 241,
+            "types": [
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "Body Slam",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Power-Up Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Milk Drink",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Scrappy",
+            "item": "Sitrus Berry",
+            "level": 36,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Lopunny",
+            "dexId": 428,
+            "types": [
+              "normal",
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Facade",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Brick Break",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Power-Up Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Limber → Scrappy",
+            "item": "Lopunnite",
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Heliolisk",
+            "dexId": 695,
+            "types": [
+              "electric",
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "Swift",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Parabolic Charge",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Grass Knot",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Thunder Wave",
+                "type": "electric",
+                "category": "status"
+              }
+            ],
+            "ability": "Sand Veil",
+            "item": null,
+            "level": 35,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A61:G80",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": true,
+          "format": "single",
+          "notes": [
+            "Inverse Battle"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 61,
+        "trainerItems": "Hyper Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Porygon-Z",
+            "dexId": 474,
+            "types": [
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "Uproar",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Uproar",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Tri Attack",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Tri Attack",
+                "type": "normal",
+                "category": "special"
+              }
+            ],
+            "ability": "Adaptability",
+            "item": "Choice Specs",
+            "level": 36,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Snorlax",
+            "dexId": 143,
+            "types": [
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "Body Slam",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Power-Up Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Seed Bomb",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Whirlwind",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Leftovers",
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Swellow",
+            "dexId": 277,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Facade",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Boomburst",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Quick Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "U-turn",
+                "type": "bug",
+                "category": "physical"
+              }
+            ],
+            "ability": "Guts",
+            "item": "Silk Scarf",
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Swellow (pre-burned)"
+            ]
+          },
+          {
+            "name": "Mega Kangaskhan",
+            "dexId": 115,
+            "types": [
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "Facade",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Power-Up Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Inner Focus → Parental Bond",
+            "item": "Kangaskhite",
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Type: Null",
+            "dexId": 772,
+            "types": [
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "Return",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Sleep Talk",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Rest",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Battle Armor",
+            "item": "Eviolite",
+            "level": 36,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A61:G80",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": true,
+          "format": "single",
+          "notes": [
+            "Inverse Battle"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 61,
+        "trainerItems": "none",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A61:G80"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A61:G80"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A61:G80"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": 4,
+    "chapter": "Gym Leaders"
+  },
+  {
+    "id": "boss-maxima",
+    "name": "Successor Maxima",
+    "kind": "boss",
+    "order": 5,
+    "location": "Tarmigan Town",
+    "focus": [
+      "fairy"
+    ],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Wigglytuff",
+            "dexId": 40,
+            "types": [
+              "normal",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Fire Punch",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Wake-Up Slap",
+                "type": "fighting",
+                "category": "physical"
+              }
+            ],
+            "ability": "Huge Power",
+            "item": null,
+            "level": 39,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Delphox",
+            "dexId": 655,
+            "types": [
+              "fire",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Psyshock",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              }
+            ],
+            "ability": "Blaze",
+            "item": null,
+            "level": 39,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Empoleon",
+            "dexId": 395,
+            "types": [
+              "water",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Aqua Jet",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Aerial Ace",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Defiant",
+            "item": null,
+            "level": 40,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Alolan Ninetales",
+            "dexId": 38,
+            "types": [
+              "ice",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Nasty Plot",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Snow Cloak",
+            "item": null,
+            "level": 40,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Altaria",
+            "dexId": 334,
+            "types": [
+              "dragon",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Body Slam",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Natural Cure → Pixilate",
+            "item": "Altarianite",
+            "level": 41,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A81:G100",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 81,
+        "trainerItems": "Hyper Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Wigglytuff",
+            "dexId": 40,
+            "types": [
+              "normal",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Punch",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              }
+            ],
+            "ability": "Huge Power",
+            "item": "Assault Vest",
+            "level": 39,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Serperior",
+            "dexId": 497,
+            "types": [
+              "grass"
+            ],
+            "moves": [
+              {
+                "name": "Leaf Blade",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Aqua Tail",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Leech Seed",
+                "type": "grass",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Overgrow",
+            "item": "Big Root",
+            "level": 40,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Empoleon",
+            "dexId": 395,
+            "types": [
+              "water",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Wave Crash",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Aerial Ace",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Defiant",
+            "item": null,
+            "level": 40,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Alolan Ninetales",
+            "dexId": 38,
+            "types": [
+              "ice",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Psyshock",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Nasty Plot",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Snow Cloak",
+            "item": null,
+            "level": 40,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Altaria",
+            "dexId": 334,
+            "types": [
+              "dragon",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Pulse",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Cotton Cloud → Pixilate",
+            "item": "Altarianite",
+            "level": 41,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A81:G100",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 81,
+        "trainerItems": "Hyper Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Wigglytuff",
+            "dexId": 40,
+            "types": [
+              "normal",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Punch",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              }
+            ],
+            "ability": "Huge Power",
+            "item": "Assault Vest",
+            "level": 39,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Serperior",
+            "dexId": 497,
+            "types": [
+              "grass"
+            ],
+            "moves": [
+              {
+                "name": "Leaf Storm",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Leech Seed",
+                "type": "grass",
+                "category": "status"
+              },
+              {
+                "name": "Glare",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Substitute",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Contrary",
+            "item": "Leftovers",
+            "level": 40,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Empoleon",
+            "dexId": 395,
+            "types": [
+              "water",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Wave Crash",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Drill Peck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Defiant",
+            "item": "Life Orb",
+            "level": 40,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Alolan Ninetales",
+            "dexId": 38,
+            "types": [
+              "ice",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Blizzard",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Aurora Veil",
+                "type": "ice",
+                "category": "status"
+              },
+              {
+                "name": "Nasty Plot",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Snow Warning",
+            "item": "Focus Sash",
+            "level": 40,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Altaria",
+            "dexId": 334,
+            "types": [
+              "dragon",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Return",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Cotton Cloud → Pixilate",
+            "item": "Altarianite",
+            "level": 41,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Victini",
+            "dexId": 494,
+            "types": [
+              "psychic",
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Blue Flare",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Psyshock",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Glaciate",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              }
+            ],
+            "ability": "Victory Star",
+            "item": "Expert Belt",
+            "level": 40,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A81:G100",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 81,
+        "trainerItems": "none",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A81:G100"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A81:G100"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A81:G100"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Gym Leaders"
+  },
+  {
+    "id": "gym-galavan",
+    "name": "Galavan",
+    "kind": "gym",
+    "order": 6,
+    "location": "Dehara City",
+    "focus": [
+      "electric"
+    ],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Alolan Golem",
+            "dexId": 76,
+            "types": [
+              "rock",
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Steamroller",
+                "type": "bug",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Alolan Golem [1st lead]"
+            ]
+          },
+          {
+            "name": "Magneton",
+            "dexId": 82,
+            "types": [
+              "electric",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Discharge",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Flash Cannon",
+                "type": "steel",
+                "category": "special"
+              },
+              {
+                "name": "Tri Attack",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Volt Switch",
+                "type": "electric",
+                "category": "special"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": "Eviolite",
+            "level": 44,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Magneton [2nd lead]"
+            ]
+          },
+          {
+            "name": "Eelektross",
+            "dexId": 604,
+            "types": [
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Discharge",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Giga Drain",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              }
+            ],
+            "ability": "Levitate",
+            "item": "Electric Gem",
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Manectric",
+            "dexId": 310,
+            "types": [
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Discharge",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Volt Switch",
+                "type": "electric",
+                "category": "special"
+              }
+            ],
+            "ability": "Lightning Rod → Intimidate",
+            "item": "Manectite",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Lanturn",
+            "dexId": 171,
+            "types": [
+              "water",
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Discharge",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Signal Beam",
+                "type": "bug",
+                "category": "special"
+              },
+              {
+                "name": "Thunder Wave",
+                "type": "electric",
+                "category": "status"
+              }
+            ],
+            "ability": "Volt Absorb",
+            "item": null,
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A101:G120",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "double",
+          "notes": [
+            "Permanent Magnet Rise for Electric- and Steel-types on the field, Double Battle                                        "
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 101,
+        "trainerItems": "Hyper Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Bronzong",
+            "dexId": 437,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Heavy Slam",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Body Press",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Trick Room",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Heatproof",
+            "item": "Mental Herb",
+            "level": 44,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Bronzong [1st lead]"
+            ]
+          },
+          {
+            "name": "Alolan Golem",
+            "dexId": 76,
+            "types": [
+              "rock",
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Return",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Punch",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Galvanize",
+            "item": null,
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Alolan Golem [2nd lead]"
+            ]
+          },
+          {
+            "name": "Lanturn",
+            "dexId": 171,
+            "types": [
+              "water",
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Thunder Wave",
+                "type": "electric",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Sitrus Berry",
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Ampharos",
+            "dexId": 181,
+            "types": [
+              "electric",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Dragon Pulse",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power Grass",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Volt Switch",
+                "type": "electric",
+                "category": "special"
+              }
+            ],
+            "ability": "Static → Mold Breaker",
+            "item": "Ampharosite",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Escavalier",
+            "dexId": 589,
+            "types": [
+              "bug",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "X-Scissor",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Drill Run",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Night Slash",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Overcoat",
+            "item": "Assault Vest",
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A101:G120",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "double",
+          "notes": [
+            "Permanent Magnet Rise for Electric- and Steel-types on the field, Double Battle"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 101,
+        "trainerItems": "Max Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Klinklang",
+            "dexId": 601,
+            "types": [
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Gear Grind",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Wild Charge",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Shift Gear",
+                "type": "steel",
+                "category": "status"
+              }
+            ],
+            "ability": "Motor Drive",
+            "item": "Steel Gem",
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Klinklang [1st lead]"
+            ]
+          },
+          {
+            "name": "Alolan Raichu",
+            "dexId": 26,
+            "types": [
+              "electric",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Rising Voltage",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Psyshock",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Grass Knot",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power Fire",
+                "type": "fire",
+                "category": "special"
+              }
+            ],
+            "ability": "Surge Surfer",
+            "item": "Focus Sash",
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Alolan Raichu [2nd lead]"
+            ]
+          },
+          {
+            "name": "Mega Ampharos",
+            "dexId": 181,
+            "types": [
+              "electric",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Rising Voltage",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Dragon Pulse",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power Grass",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Tangling Wool → Mold Breaker",
+            "item": "Ampharosite",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Metagross",
+            "dexId": 376,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Steel Roller",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Brick Break",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Grass Knot",
+                "type": "grass",
+                "category": "special"
+              }
+            ],
+            "ability": "Clear Body",
+            "item": "Lum Berry",
+            "level": 44,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Metagross (0 speed IVs)"
+            ]
+          },
+          {
+            "name": "Manectric",
+            "dexId": 310,
+            "types": [
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Rising Voltage",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power Grass",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Snarl",
+                "type": "dark",
+                "category": "special"
+              }
+            ],
+            "ability": "Flare Boost",
+            "item": "Life Orb",
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Manectric (pre-burned)"
+            ]
+          },
+          {
+            "name": "Heatran",
+            "dexId": 485,
+            "types": [
+              "fire",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Nature Power",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Hidden Power Grass",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Flash Fire",
+            "item": "Aguav Berry",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A101:G120",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "double",
+          "notes": [
+            "Permanent Magnet Rise for Electric- and Steel-types on the field, Permanent Electric Terrain, Double Battle"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 101,
+        "trainerItems": "none",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A101:G120"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A101:G120"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A101:G120"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": 5,
+    "chapter": "Gym Leaders"
+  },
+  {
+    "id": "gym-big-mo",
+    "name": "Big Mo",
+    "kind": "gym",
+    "order": 7,
+    "location": "Antisis City",
+    "focus": [
+      "fighting"
+    ],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Conkeldurr",
+            "dexId": 534,
+            "types": [
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Stone Edge",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Chip Away",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Bulk Up",
+                "type": "fighting",
+                "category": "status"
+              }
+            ],
+            "ability": "Guts",
+            "item": "Protective Pads",
+            "level": 52,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Pangoro",
+            "dexId": 675,
+            "types": [
+              "fighting",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Bullet Punch",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Iron Fist",
+            "item": "Fighting Gem",
+            "level": 52,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mienshao",
+            "dexId": 620,
+            "types": [
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Aura Sphere",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Knock Off",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Acrobatics",
+                "type": "flying",
+                "category": "physical"
+              }
+            ],
+            "ability": "Regenerator",
+            "item": null,
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Hariyama",
+            "dexId": 297,
+            "types": [
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Revenge",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Heavy Slam",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Knock Off",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Guts",
+            "item": null,
+            "level": 52,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Lucario",
+            "dexId": 448,
+            "types": [
+              "fighting",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Aura Sphere",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Pulse",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Blaze Kick",
+                "type": "fire",
+                "category": "physical"
+              }
+            ],
+            "ability": "Steadfast → Adaptability",
+            "item": "Lucarionite",
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A121:G140",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Trick Room for Weight"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 121,
+        "trainerItems": "Max Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Mudsdale",
+            "dexId": 750,
+            "types": [
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Smack Down",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Heavy Slam",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Stamina",
+            "item": "Heavy-Duty Boots",
+            "level": 52,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Pangoro",
+            "dexId": 675,
+            "types": [
+              "fighting",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Wicked Blow",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Bullet Punch",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Iron Fist",
+            "item": "Fighting Gem",
+            "level": 52,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Snorlax",
+            "dexId": 143,
+            "types": [
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "Body Slam",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "High Horsepower",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Heavy Slam",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Rawst Berry",
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Hariyama",
+            "dexId": 297,
+            "types": [
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Storm Throw",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Knock Off",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Heavy Slam",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Guts",
+            "item": "Flame Orb",
+            "level": 52,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Wailord",
+            "dexId": 321,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Water Spout",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Surf",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Clear Smog",
+                "type": "poison",
+                "category": "special"
+              }
+            ],
+            "ability": "Regenerator",
+            "item": "Heavy-Duty Boots",
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A121:G140",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Trick Room for Weight"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 121,
+        "trainerItems": "Max Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Mudsdale",
+            "dexId": 750,
+            "types": [
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Body Press",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Smack Down",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Roar",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Stamina",
+            "item": "Rocky Helmet",
+            "level": 52,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Celesteela",
+            "dexId": 797,
+            "types": [
+              "steel",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Leech Seed",
+                "type": "grass",
+                "category": "status"
+              },
+              {
+                "name": "Substitute",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Beast Boost",
+            "item": "Leftovers",
+            "level": 52,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Guzzlord",
+            "dexId": 799,
+            "types": [
+              "dark",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Core Enforcer",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Sludge Wave",
+                "type": "poison",
+                "category": "special"
+              }
+            ],
+            "ability": "Beast Boost",
+            "item": "Assault Vest",
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Buzzwole",
+            "dexId": 794,
+            "types": [
+              "bug",
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Leech Fang",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Darkest Lariat",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              }
+            ],
+            "ability": "Beast Boost",
+            "item": "Assault Vest",
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Wailord",
+            "dexId": 321,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Water Spout",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Surf",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Clear Smog",
+                "type": "poison",
+                "category": "special"
+              }
+            ],
+            "ability": "Regenerator",
+            "item": "Heavy-Duty Boots",
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Terrakion",
+            "dexId": 639,
+            "types": [
+              "rock",
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Close Combat",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Sacred Sword",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Justified",
+            "item": "Heavy-Duty Boots",
+            "level": 52,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A121:G140",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Fairy-type moves ban, Trick Room for Weight"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 121,
+        "trainerItems": "none",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A121:G140"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A121:G140"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A121:G140"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": 6,
+    "chapter": "Gym Leaders"
+  },
+  {
+    "id": "gym-tessy",
+    "name": "Tessy",
+    "kind": "gym",
+    "order": 8,
+    "location": "Polder Town",
+    "focus": [
+      "water"
+    ],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Toxapex",
+            "dexId": 748,
+            "types": [
+              "poison",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Venoshock",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Knock Off",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Haze",
+                "type": "ice",
+                "category": "status"
+              },
+              {
+                "name": "Toxic Spikes",
+                "type": "poison",
+                "category": "status"
+              }
+            ],
+            "ability": "Merciless",
+            "item": null,
+            "level": 56,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "poison",
+              "water"
+            ]
+          },
+          {
+            "name": "Armaldo",
+            "dexId": 348,
+            "types": [
+              "water",
+              "bug"
+            ],
+            "moves": [
+              {
+                "name": "Aqua Tail",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "X-Scissor",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Accelerock",
+                "type": "rock",
+                "category": "physical"
+              }
+            ],
+            "ability": "Swift Swim",
+            "item": null,
+            "level": 57,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "rock",
+              "bug"
+            ]
+          },
+          {
+            "name": "Kingdra",
+            "dexId": 230,
+            "types": [
+              "water",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Snipe Shot",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Dragon Pulse",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Focus Energy",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Agility",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Swift Swim",
+            "item": "Scope Lens",
+            "level": 58,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "water",
+              "dragon"
+            ]
+          },
+          {
+            "name": "Seismitoad",
+            "dexId": 537,
+            "types": [
+              "water",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Muddy Water",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Swift Swim",
+            "item": "Water Gem",
+            "level": 57,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "water",
+              "ground"
+            ]
+          },
+          {
+            "name": "Mega Gyarados",
+            "dexId": 130,
+            "types": [
+              "water",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Waterfall",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              }
+            ],
+            "ability": "Intimidate → Mold Breaker",
+            "item": "Gyaradosite",
+            "level": 58,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "water",
+              "dark"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A141:G160",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Camomons Battle, Rain"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 141,
+        "trainerItems": "Max Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Toxapex",
+            "dexId": 748,
+            "types": [
+              "poison",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Toxic Spikes",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Knock Off",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Haze",
+                "type": "ice",
+                "category": "status"
+              },
+              {
+                "name": "Recover",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Regenerator",
+            "item": "Leftovers",
+            "level": 56,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "poison",
+              "water"
+            ]
+          },
+          {
+            "name": "Armaldo",
+            "dexId": 348,
+            "types": [
+              "water",
+              "bug"
+            ],
+            "moves": [
+              {
+                "name": "Aqua Tail",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "X-Scissor",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Stomping Tantrum",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Accelerock",
+                "type": "rock",
+                "category": "physical"
+              }
+            ],
+            "ability": "Swift Swim",
+            "item": null,
+            "level": 57,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "rock",
+              "bug"
+            ]
+          },
+          {
+            "name": "Kingdra",
+            "dexId": 230,
+            "types": [
+              "water",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Snipe Shot",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Dragon Pulse",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Flash Cannon",
+                "type": "steel",
+                "category": "special"
+              }
+            ],
+            "ability": "Swift Swim",
+            "item": "Scope Lens",
+            "level": 58,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "water",
+              "dragon"
+            ]
+          },
+          {
+            "name": "Seismitoad",
+            "dexId": 537,
+            "types": [
+              "water",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Liquidation",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              }
+            ],
+            "ability": "Swift Swim",
+            "item": "Life Orb",
+            "level": 57,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "water",
+              "ground"
+            ]
+          },
+          {
+            "name": "Mega Gyarados",
+            "dexId": 130,
+            "types": [
+              "water",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Waterfall",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              }
+            ],
+            "ability": "Intimidate → Mold Breaker",
+            "item": "Gyaradosite",
+            "level": 58,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "water",
+              "dark"
+            ]
+          },
+          {
+            "name": "Seaking",
+            "dexId": 119,
+            "types": [
+              "water",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Waterfall",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Smart Strike",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Poison Jab",
+                "type": "poison",
+                "category": "physical"
+              },
+              {
+                "name": "Drill Run",
+                "type": "ground",
+                "category": "physical"
+              }
+            ],
+            "ability": "Swift Swim",
+            "item": "Expert Belt",
+            "level": 57,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "water"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A141:G160",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Camomons Battle, Permanent Heavy Rain"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 141,
+        "trainerItems": "Max Potion x3",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Masquerain",
+            "dexId": 284,
+            "types": [
+              "water",
+              "grass"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Haze",
+                "type": "ice",
+                "category": "status"
+              },
+              {
+                "name": "Sticky Web",
+                "type": "bug",
+                "category": "status"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": "Focus Sash",
+            "level": 57,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "bug",
+              "flying"
+            ]
+          },
+          {
+            "name": "Hydreigon",
+            "dexId": 635,
+            "types": [
+              "dark",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Flash Cannon",
+                "type": "steel",
+                "category": "special"
+              },
+              {
+                "name": "Surf",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Earth Power",
+                "type": "ground",
+                "category": "special"
+              }
+            ],
+            "ability": "Levitate",
+            "item": "Life Orb",
+            "level": 58,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "dark",
+              "dragon"
+            ]
+          },
+          {
+            "name": "Zeraora",
+            "dexId": 807,
+            "types": [
+              "electric",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Plasma Fists",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Acrobatics",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Close Combat",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Roar",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Volt Absorb",
+            "item": "Flying Gem",
+            "level": 58,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "electric"
+            ]
+          },
+          {
+            "name": "Tornadus Therian",
+            "dexId": 641,
+            "types": [
+              "flying",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Hurricane",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Weather Ball",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Nasty Plot",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Regenerator",
+            "item": "Rocky Helmet",
+            "level": 58,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "flying"
+            ]
+          },
+          {
+            "name": "Mega Latias",
+            "dexId": 380,
+            "types": [
+              "water",
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Surf",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Thunder",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Calm Mind",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate",
+            "item": "Latiasite",
+            "level": 58,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "dragon",
+              "psychic"
+            ]
+          },
+          {
+            "name": "Seaking",
+            "dexId": 119,
+            "types": [
+              "water",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Fishious Rend",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Smart Strike",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Drill Run",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Aqua Jet",
+                "type": "water",
+                "category": "physical"
+              }
+            ],
+            "ability": "Swift Swim",
+            "item": "Mystic Water",
+            "level": 57,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Camomons: battle typing comes from the first two listed moves."
+            ],
+            "baseTypes": [
+              "water"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A141:G160",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Camomons Battle, Permanent Heavy Rain"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 141,
+        "trainerItems": "none",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A141:G160"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A141:G160"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A141:G160"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": 7,
+    "chapter": "Gym Leaders"
+  },
+  {
+    "id": "gym-benjamin",
+    "name": "Benjamin",
+    "kind": "gym",
+    "order": 9,
+    "location": "Redwood Village",
+    "focus": [
+      "bug"
+    ],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Araquanid",
+            "dexId": 752,
+            "types": [
+              "water",
+              "bug"
+            ],
+            "moves": [
+              {
+                "name": "Liquidation",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Leech Fang",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Mirror Coat",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Sticky Web",
+                "type": "bug",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Bubble",
+            "item": null,
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Forretress",
+            "dexId": 205,
+            "types": [
+              "bug",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Pin Missile",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Counter",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Toxic Spikes",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": "Eviolite",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Drapion",
+            "dexId": 452,
+            "types": [
+              "poison",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Cross Poison",
+                "type": "poison",
+                "category": "physical"
+              },
+              {
+                "name": "Night Slash",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Pin Missile",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Agility",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Sniper",
+            "item": "Bug Gem",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Butterfree",
+            "dexId": 12,
+            "types": [
+              "bug",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Bug Buzz",
+                "type": "bug",
+                "category": "special"
+              },
+              {
+                "name": "Hurricane",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Sleep Powder",
+                "type": "grass",
+                "category": "status"
+              },
+              {
+                "name": "Quiver Dance",
+                "type": "bug",
+                "category": "status"
+              }
+            ],
+            "ability": "Compound Eyes",
+            "item": null,
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Scizor",
+            "dexId": 212,
+            "types": [
+              "bug",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "X-Scissor",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Bullet Punch",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Wing Attack",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Agility",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Technician",
+            "item": "Scizorite",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A161:G180",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Benjamin Butterfree metagame"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 161,
+        "trainerItems": "Max Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Araquanid",
+            "dexId": 752,
+            "types": [
+              "water",
+              "bug"
+            ],
+            "moves": [
+              {
+                "name": "Liquidation",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Leech Fang",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Mirror Coat",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Sticky Web",
+                "type": "bug",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Bubble",
+            "item": "Focus Sash",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Forretress",
+            "dexId": 205,
+            "types": [
+              "bug",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Gyro Ball",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Counter",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Reflect",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Light Screen",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": "Light Clay",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Drapion",
+            "dexId": 452,
+            "types": [
+              "poison",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Cross Poison",
+                "type": "poison",
+                "category": "physical"
+              },
+              {
+                "name": "Night Slash",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Pin Missile",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              }
+            ],
+            "ability": "Super Luck",
+            "item": "Eviolite",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Volcarona",
+            "dexId": 637,
+            "types": [
+              "bug",
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Bug Buzz",
+                "type": "bug",
+                "category": "special"
+              },
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Wild Charge",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Quiver Dance",
+                "type": "bug",
+                "category": "status"
+              }
+            ],
+            "ability": "Flame Body",
+            "item": "Bug Gem",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Scizor",
+            "dexId": 212,
+            "types": [
+              "bug",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Bug Bite",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Bullet Punch",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Dual Wingbeat",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Technician",
+            "item": "Scizorite",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Flygon",
+            "dexId": 330,
+            "types": [
+              "ground",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Levitate",
+            "item": "Eviolite",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A161:G180",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Benjamin Butterfree metagame"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 161,
+        "trainerItems": "Full Restore x3",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Araquanid",
+            "dexId": 752,
+            "types": [
+              "water",
+              "bug"
+            ],
+            "moves": [
+              {
+                "name": "Liquidation",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Leech Fang",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Mirror Coat",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Sticky Web",
+                "type": "bug",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Bubble",
+            "item": "Sitrus Berry",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Magnezone",
+            "dexId": 462,
+            "types": [
+              "electric",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Flash Cannon",
+                "type": "steel",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power Ice",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Mirror Coat",
+                "type": "psychic",
+                "category": "special"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": "Eviolite",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Rhyperior",
+            "dexId": 464,
+            "types": [
+              "ground",
+              "rock"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Fang",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Counter",
+                "type": "fighting",
+                "category": "physical"
+              }
+            ],
+            "ability": "Solid Rock",
+            "item": "Eviolite",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Volcarona",
+            "dexId": 637,
+            "types": [
+              "bug",
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Bug Buzz",
+                "type": "bug",
+                "category": "special"
+              },
+              {
+                "name": "Overheat",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Wild Charge",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Flare Blitz",
+                "type": "fire",
+                "category": "physical"
+              }
+            ],
+            "ability": "Swarm",
+            "item": "Eviolite",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Scizor",
+            "dexId": 212,
+            "types": [
+              "bug",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Bug Bite",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Bullet Punch",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Dual Wingbeat",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Technician",
+            "item": "Scizorite",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Flygon",
+            "dexId": 330,
+            "types": [
+              "ground",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Clanging Scales",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sound Waves",
+            "item": "Life Orb",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A161:G180",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Benjamin Butterfree metagame"
+          ]
+        },
+        "sourceSheet": "Gym Leaders",
+        "sourceRow": 161,
+        "trainerItems": "none",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Gym%20Leaders!A161:G180"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Gym%20Leaders!A161:G180"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Gym%20Leaders!A161:G180"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": 8,
+    "chapter": "Gym Leaders"
+  },
+  {
+    "id": "league-1",
+    "name": "Elite Four Moleman",
+    "kind": "boss",
+    "order": 10,
+    "location": "Pokémon League",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Excadrill",
+            "dexId": 530,
+            "types": [
+              "ground",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Sand Rush",
+            "item": null,
+            "level": 74,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Flygon",
+            "dexId": 330,
+            "types": [
+              "ground",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Pulse",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Earth Power",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Boomburst",
+                "type": "normal",
+                "category": "special"
+              }
+            ],
+            "ability": "Levitate",
+            "item": "Ground Gem",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Sandslash",
+            "dexId": 28,
+            "types": [
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Leech Fang",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Sand Rush",
+            "item": null,
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Quagsire",
+            "dexId": 195,
+            "types": [
+              "water",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Muddy Water",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Recover",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Yawn",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Sitrus Berry",
+            "level": 74,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gliscor",
+            "dexId": 472,
+            "types": [
+              "ground",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Acrobatics",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Sand Veil",
+            "item": null,
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Pokemon%20League!A1:G20",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "double",
+          "notes": [
+            "Vicious Sandstorm, Double Battle"
+          ]
+        },
+        "sourceSheet": "Pokemon League",
+        "sourceRow": 1,
+        "trainerItems": "Full Restore x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Excadrill",
+            "dexId": 530,
+            "types": [
+              "ground",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Sand Rush",
+            "item": "Focus Sash",
+            "level": 74,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Excadrill [1st lead]"
+            ]
+          },
+          {
+            "name": "Flygon",
+            "dexId": 330,
+            "types": [
+              "ground",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Clanging Scales",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Earth Power",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Boomburst",
+                "type": "normal",
+                "category": "special"
+              }
+            ],
+            "ability": "Levitate",
+            "item": "Throat Spray",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Flygon [2nd lead]"
+            ]
+          },
+          {
+            "name": "Sandslash",
+            "dexId": 28,
+            "types": [
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Leech Fang",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Sand Rush",
+            "item": "Ground Gem",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Quagsire",
+            "dexId": 195,
+            "types": [
+              "water",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Muddy Water",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Recover",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Yawn",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Sitrus Berry",
+            "level": 74,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gliscor",
+            "dexId": 472,
+            "types": [
+              "ground",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Acrobatics",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Sand Veil",
+            "item": null,
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Landorus Therian",
+            "dexId": 645,
+            "types": [
+              "ground",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "U-turn",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": null,
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Pokemon%20League!A1:G20",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "double",
+          "notes": [
+            "Vicious Sandstorm, Double Battle                                        "
+          ]
+        },
+        "sourceSheet": "Pokemon League",
+        "sourceRow": 1,
+        "trainerItems": "Full Restore x3",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Excadrill",
+            "dexId": 530,
+            "types": [
+              "ground",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "High Horsepower",
+                "type": "ground",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sand Rush",
+            "item": "Focus Sash",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Excadrill [1st lead]"
+            ]
+          },
+          {
+            "name": "Mega Aerodactyl",
+            "dexId": 142,
+            "types": [
+              "rock",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Dual Wingbeat",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Wide Guard",
+                "type": "rock",
+                "category": "status"
+              },
+              {
+                "name": "Taunt",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Rock Head / Pressure → Tough Claws",
+            "item": "Aerodactite",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Mega Aerodactyl [2nd lead]"
+            ]
+          },
+          {
+            "name": "Groudon",
+            "dexId": 383,
+            "types": [
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Precipice Blades",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Heat Crash",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Heavy Slam",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Heatproof",
+            "item": "Choice Band",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gastrodon",
+            "dexId": 423,
+            "types": [
+              "water",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Earth Power",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Yawn",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Storm Drain",
+            "item": "Sitrus Berry",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gliscor",
+            "dexId": 472,
+            "types": [
+              "ground",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Dual Wingbeat",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Tailwind",
+                "type": "flying",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Sand Veil",
+            "item": "Bright Powder",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Landorus",
+            "dexId": 645,
+            "types": [
+              "ground",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Earth Power",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Sand Force",
+            "item": "Focus Sash",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Pokemon%20League!A1:G20",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "double",
+          "notes": [
+            "Vicious Sandstorm, Double Battle                                        "
+          ]
+        },
+        "sourceSheet": "Pokemon League",
+        "sourceRow": 1,
+        "trainerItems": "none",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Pokemon%20League!A1:G20"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Pokemon%20League!A1:G20"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Pokemon%20League!A1:G20"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Pokemon League"
+  },
+  {
+    "id": "league-2",
+    "name": "Elite Four Elias",
+    "kind": "boss",
+    "order": 11,
+    "location": "Pokémon League",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Mimikyu",
+            "dexId": 778,
+            "types": [
+              "ghost",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Shadow Claw",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Shadow Sneak",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Disguise",
+            "item": null,
+            "level": 74,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Aegislash",
+            "dexId": 681,
+            "types": [
+              "steel",
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Shadow Claw",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Sacred Sword",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "King's Shield",
+                "type": "steel",
+                "category": "status"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Stance Change",
+            "item": null,
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Trevenant",
+            "dexId": 709,
+            "types": [
+              "ghost",
+              "grass"
+            ],
+            "moves": [
+              {
+                "name": "Poltergeist",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Horn Leech",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Leech Seed",
+                "type": "grass",
+                "category": "status"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              }
+            ],
+            "ability": "Harvest",
+            "item": "Sitrus Berry",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Chandelure",
+            "dexId": 609,
+            "types": [
+              "ghost",
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Calm Mind",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Flash Fire",
+            "item": null,
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Banette",
+            "dexId": 354,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Poltergeist",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              },
+              {
+                "name": "Skitter Smack",
+                "type": "bug",
+                "category": "physical"
+              }
+            ],
+            "ability": "Insomnia / Frisk → Prankster",
+            "item": "Banettite",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Pokemon%20League!A21:G40",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Shadowy Veil"
+          ]
+        },
+        "sourceSheet": "Pokemon League",
+        "sourceRow": 21,
+        "trainerItems": "Full Restore x1",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Mimikyu",
+            "dexId": 778,
+            "types": [
+              "ghost",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Shadow Claw",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Shadow Sneak",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Disguise",
+            "item": null,
+            "level": 74,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Aegislash",
+            "dexId": 681,
+            "types": [
+              "steel",
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Substitute",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "King's Shield",
+                "type": "steel",
+                "category": "status"
+              }
+            ],
+            "ability": "Stance Change",
+            "item": "Leftovers",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Trevenant",
+            "dexId": 709,
+            "types": [
+              "ghost",
+              "grass"
+            ],
+            "moves": [
+              {
+                "name": "Poltergeist",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Horn Leech",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Leech Seed",
+                "type": "grass",
+                "category": "status"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              }
+            ],
+            "ability": "Harvest",
+            "item": "Sitrus Berry",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Cofagrigus",
+            "dexId": 563,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Night Shade",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Body Press",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Defense",
+                "type": "steel",
+                "category": "status"
+              },
+              {
+                "name": "Rest",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Mummy",
+            "item": "Colbur Berry",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Banette",
+            "dexId": 354,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Poltergeist",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              },
+              {
+                "name": "Destiny Bond",
+                "type": "ghost",
+                "category": "status"
+              }
+            ],
+            "ability": "Frisk → Prankster",
+            "item": "Banettite",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Blacephalon",
+            "dexId": 806,
+            "types": [
+              "fire",
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Psyshock",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Calm Mind",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Beast Boost",
+            "item": null,
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Pokemon%20League!A21:G40",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Shadowy Veil"
+          ]
+        },
+        "sourceSheet": "Pokemon League",
+        "sourceRow": 21,
+        "trainerItems": "Full Restore x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Marshadow",
+            "dexId": 802,
+            "types": [
+              "fighting",
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Spectral Thief",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Close Combat",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Shadow Sneak",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              }
+            ],
+            "ability": "Long Reach",
+            "item": "Marshadium Z",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Jellicent",
+            "dexId": 593,
+            "types": [
+              "water",
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Night Shade",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Taunt",
+                "type": "dark",
+                "category": "status"
+              },
+              {
+                "name": "Recover",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Leftovers",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Giratina",
+            "dexId": 487,
+            "types": [
+              "ghost",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Hex",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              },
+              {
+                "name": "Roar",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Rest",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Pressure",
+            "item": "Leftovers",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Cofagrigus",
+            "dexId": 563,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Night Shade",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Body Press",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Defense",
+                "type": "steel",
+                "category": "status"
+              },
+              {
+                "name": "Haze",
+                "type": "ice",
+                "category": "status"
+              }
+            ],
+            "ability": "Mummy",
+            "item": "Colbur Berry",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Gengar",
+            "dexId": 94,
+            "types": [
+              "ghost",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Sludge Wave",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Giga Drain",
+                "type": "grass",
+                "category": "special"
+              }
+            ],
+            "ability": "Levitate → Shadow Tag",
+            "item": "Gengarite",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Blacephalon",
+            "dexId": 806,
+            "types": [
+              "fire",
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power Fighting",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Calm Mind",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Beast Boost",
+            "item": "Weakness Policy",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Pokemon%20League!A21:G40",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Shadowy Veil"
+          ]
+        },
+        "sourceSheet": "Pokemon League",
+        "sourceRow": 21,
+        "trainerItems": "none",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Pokemon%20League!A21:G40"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Pokemon%20League!A21:G40"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Pokemon%20League!A21:G40"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Pokemon League"
+  },
+  {
+    "id": "league-3",
+    "name": "Elite Four Arabella",
+    "kind": "boss",
+    "order": 12,
+    "location": "Pokémon League",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Ribombee",
+            "dexId": 743,
+            "types": [
+              "bug",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Reflect",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Light Screen",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Sticky Web",
+                "type": "bug",
+                "category": "status"
+              }
+            ],
+            "ability": "Shield Dust",
+            "item": "Focus Sash",
+            "level": 74,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Sylveon",
+            "dexId": 700,
+            "types": [
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Psyshock",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Calm Mind",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Cute Charm",
+            "item": null,
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Togekiss",
+            "dexId": 468,
+            "types": [
+              "fairy",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Aura Sphere",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Wish",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Serene Grace",
+            "item": null,
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Azumarill",
+            "dexId": 184,
+            "types": [
+              "water",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Aqua Tail",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Superpower",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Aqua Jet",
+                "type": "water",
+                "category": "physical"
+              }
+            ],
+            "ability": "Huge Power",
+            "item": null,
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Mawile",
+            "dexId": 303,
+            "types": [
+              "steel",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Intimidate → Huge Power",
+            "item": "Mawilite",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Pokemon%20League!A41:G60",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Permanent Misty Terrain, Pixies"
+          ]
+        },
+        "sourceSheet": "Pokemon League",
+        "sourceRow": 41,
+        "trainerItems": "Full Restore x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Ribombee",
+            "dexId": 743,
+            "types": [
+              "bug",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Reflect",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Light Screen",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Sticky Web",
+                "type": "bug",
+                "category": "status"
+              }
+            ],
+            "ability": "Shield Dust",
+            "item": "Focus Sash",
+            "level": 74,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Sylveon",
+            "dexId": 700,
+            "types": [
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Wish",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Psyshock",
+                "type": "psychic",
+                "category": "special"
+              }
+            ],
+            "ability": "Pixilate",
+            "item": "Fairy Gem",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Togekiss",
+            "dexId": 468,
+            "types": [
+              "fairy",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Wish",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Serene Grace",
+            "item": null,
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Azumarill",
+            "dexId": 184,
+            "types": [
+              "water",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Aqua Tail",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Superpower",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Aqua Jet",
+                "type": "water",
+                "category": "physical"
+              }
+            ],
+            "ability": "Huge Power",
+            "item": null,
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Mawile",
+            "dexId": 303,
+            "types": [
+              "steel",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Intimidate → Huge Power",
+            "item": "Mawilite",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Tapu Fini",
+            "dexId": 788,
+            "types": [
+              "water",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Surf",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Nature's Madness",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Taunt",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Misty Surge",
+            "item": "Sitrus Berry",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Pokemon%20League!A41:G60",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Permanent Misty Terrain, Pixies"
+          ]
+        },
+        "sourceSheet": "Pokemon League",
+        "sourceRow": 41,
+        "trainerItems": "Full Restore x3",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Magearna",
+            "dexId": 801,
+            "types": [
+              "steel",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Fleur Cannon",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Reflect",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Heart Swap",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Analytic",
+            "item": "Light Clay",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Clefable",
+            "dexId": 36,
+            "types": [
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Counter",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Soft-Boiled",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Unaware",
+            "item": "Leftovers",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Togekiss",
+            "dexId": 468,
+            "types": [
+              "fairy",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Aura Sphere",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              }
+            ],
+            "ability": "Serene Grace",
+            "item": "Choice Scarf",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Azumarill",
+            "dexId": 184,
+            "types": [
+              "water",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Aqua Tail",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Aqua Jet",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Belly Drum",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Huge Power",
+            "item": "Normalium Z",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Mawile",
+            "dexId": 303,
+            "types": [
+              "steel",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Intimidate → Huge Power",
+            "item": "Mawilite",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Xerneas",
+            "dexId": 716,
+            "types": [
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Terrain Pulse",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Geomancy",
+                "type": "fairy",
+                "category": "status"
+              }
+            ],
+            "ability": "Fairy Aura",
+            "item": "Power Herb",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Pokemon%20League!A41:G60",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Permanent Misty Terrain, Pixies"
+          ]
+        },
+        "sourceSheet": "Pokemon League",
+        "sourceRow": 41,
+        "trainerItems": "none",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Pokemon%20League!A41:G60"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Pokemon%20League!A41:G60"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Pokemon%20League!A41:G60"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Pokemon League"
+  },
+  {
+    "id": "league-4",
+    "name": "Elite Four Penny",
+    "kind": "boss",
+    "order": 13,
+    "location": "Pokémon League",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Goodra",
+            "dexId": 706,
+            "types": [
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Breath",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Muddy Water",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Sludge Bomb",
+                "type": "poison",
+                "category": "special"
+              }
+            ],
+            "ability": "Sap Sipper",
+            "item": null,
+            "level": 74,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Goodra [1st lead]"
+            ]
+          },
+          {
+            "name": "Tyrantrum",
+            "dexId": 697,
+            "types": [
+              "rock",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Head Smash",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Fang",
+                "type": "fire",
+                "category": "physical"
+              }
+            ],
+            "ability": "Rock Head",
+            "item": null,
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Tyrantrum [2nd lead]"
+            ]
+          },
+          {
+            "name": "Kommo-o",
+            "dexId": 784,
+            "types": [
+              "dragon",
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Clanging Scales",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Aura Sphere",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Bulletproof",
+            "item": null,
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Hydreigon",
+            "dexId": 635,
+            "types": [
+              "dark",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Breath",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Charge Beam",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Tailwind",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate",
+            "item": "Roseli Berry",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Sceptile",
+            "dexId": 254,
+            "types": [
+              "grass",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Pulse",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Giga Drain",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Overgrow → Technician",
+            "item": "Sceptilite",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Pokemon%20League!A61:G80",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "double",
+          "notes": [
+            "Rainbow Battle, Double Battle"
+          ]
+        },
+        "sourceSheet": "Pokemon League",
+        "sourceRow": 61,
+        "trainerItems": "Full Restore x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Goodra",
+            "dexId": 706,
+            "types": [
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Muddy Water",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Sludge Bomb",
+                "type": "poison",
+                "category": "special"
+              }
+            ],
+            "ability": "Gooey",
+            "item": "Wide Lens",
+            "level": 74,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Goodra [1st lead]"
+            ]
+          },
+          {
+            "name": "Tyrantrum",
+            "dexId": 697,
+            "types": [
+              "rock",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Head Smash",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "High Horsepower",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Rock Head",
+            "item": "Lum Berry",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Tyrantrum [2nd lead]"
+            ]
+          },
+          {
+            "name": "Kommo-o",
+            "dexId": 784,
+            "types": [
+              "dragon",
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Clanging Scales",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Aura Sphere",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Flash Cannon",
+                "type": "steel",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Overcoat",
+            "item": "Dragon Gem",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Hydreigon",
+            "dexId": 635,
+            "types": [
+              "dark",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Breath",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Charge Beam",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Tailwind",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate",
+            "item": null,
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Sceptile",
+            "dexId": 254,
+            "types": [
+              "grass",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Pulse",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Giga Drain",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Overgrow → Technician",
+            "item": "Sceptilite",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Latias",
+            "dexId": 380,
+            "types": [
+              "dragon",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Breath",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Mist Ball",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate",
+            "item": null,
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Pokemon%20League!A61:G80",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "double",
+          "notes": [
+            "Rainbow Battle, Double Battle                                        "
+          ]
+        },
+        "sourceSheet": "Pokemon League",
+        "sourceRow": 61,
+        "trainerItems": "Full Restore x3",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Dialga",
+            "dexId": 483,
+            "types": [
+              "steel",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Breath",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Flash Cannon",
+                "type": "steel",
+                "category": "special"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Secret Power",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Pressure",
+            "item": "Assault Vest",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Dialga [1st lead]"
+            ]
+          },
+          {
+            "name": "Tyrantrum",
+            "dexId": 697,
+            "types": [
+              "rock",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Head Smash",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "High Horsepower",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              }
+            ],
+            "ability": "Rock Head",
+            "item": "Choice Scarf",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Tyrantrum [2nd lead]"
+            ]
+          },
+          {
+            "name": "Kommo-o",
+            "dexId": 784,
+            "types": [
+              "dragon",
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Clanging Scales",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Aura Sphere",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Flash Cannon",
+                "type": "steel",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Soundproof",
+            "item": "Kommonium Z",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Kyurem Black",
+            "dexId": 646,
+            "types": [
+              "dragon",
+              "ice"
+            ],
+            "moves": [
+              {
+                "name": "Icicle Spear",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Fusion Bolt",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Secret Power",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Teravolt",
+            "item": "Sitrus Berry",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Dragonite",
+            "dexId": 149,
+            "types": [
+              "dragon",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Punch",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Dual Wingbeat",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Tailwind",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Multiscale",
+            "item": "Wide Lens",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Salamence",
+            "dexId": 373,
+            "types": [
+              "dragon",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Secret Power",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              }
+            ],
+            "ability": "Intimidate → Aerilate",
+            "item": "Salamencite",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Pokemon%20League!A61:G80",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "double",
+          "notes": [
+            "Rainbow Battle, Double Battle "
+          ]
+        },
+        "sourceSheet": "Pokemon League",
+        "sourceRow": 61,
+        "trainerItems": "none",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Pokemon%20League!A61:G80"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Pokemon%20League!A61:G80"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Pokemon%20League!A61:G80"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Pokemon League"
+  },
+  {
+    "id": "league-5",
+    "name": "Pokemon Trainer Jax",
+    "kind": "boss",
+    "order": 14,
+    "location": "Pokémon League",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Mega Salamence",
+            "dexId": 373,
+            "types": [
+              "dragon",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Steel Wing",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Intimidate → Aerilate",
+            "item": "Salamencite",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Mega Salamence [1st lead]"
+            ]
+          },
+          {
+            "name": "Hitmontop",
+            "dexId": 237,
+            "types": [
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Close Combat",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Helping Hand",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Wide Guard",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": "Sitrus Berry",
+            "level": 74,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Hitmontop [2nd lead]"
+            ]
+          },
+          {
+            "name": "Magnezone",
+            "dexId": 462,
+            "types": [
+              "electric",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Flash Cannon",
+                "type": "steel",
+                "category": "special"
+              },
+              {
+                "name": "Volt Switch",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": "Air Balloon",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gastrodon",
+            "dexId": 423,
+            "types": [
+              "water",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Muddy Water",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Earth Power",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Icy Wind",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Storm Drain",
+            "item": "Rindo Berry",
+            "level": 74,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Pyroar",
+            "dexId": 668,
+            "types": [
+              "fire",
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Scorching Sands",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Unnerve",
+            "item": "Fire Gem",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Staraptor",
+            "dexId": 398,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Brave Bird",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Close Combat",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "U-turn",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": "Eject Pack",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Pokemon%20League!A81:G100",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "double",
+          "notes": [
+            "Double Battle"
+          ]
+        },
+        "sourceSheet": "Pokemon League",
+        "sourceRow": 81,
+        "trainerItems": "Full Restore x3",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Mega Salamence",
+            "dexId": 373,
+            "types": [
+              "dragon",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Double-Edge",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              }
+            ],
+            "ability": "Intimidate → Aerilate",
+            "item": "Salamencite",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Mega Salamence [1st lead]"
+            ]
+          },
+          {
+            "name": "Hitmontop",
+            "dexId": 237,
+            "types": [
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Close Combat",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Helping Hand",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Wide Guard",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": "Sitrus Berry",
+            "level": 74,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Hitmontop [2nd lead]"
+            ]
+          },
+          {
+            "name": "Magnezone",
+            "dexId": 462,
+            "types": [
+              "electric",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Flash Cannon",
+                "type": "steel",
+                "category": "special"
+              },
+              {
+                "name": "Body Press",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": "Air Balloon",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gastrodon",
+            "dexId": 423,
+            "types": [
+              "water",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Muddy Water",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Earth Power",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Icy Wind",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Storm Drain",
+            "item": "Rindo Berry",
+            "level": 74,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Naganadel",
+            "dexId": 804,
+            "types": [
+              "poison",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Sludge Bomb",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Dragon Pulse",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Beast Boost",
+            "item": "Yache Berry",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Pyroar",
+            "dexId": 668,
+            "types": [
+              "fire",
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Scorching Sands",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Royal Roar",
+            "item": "Fire Gem",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Pokemon%20League!A81:G100",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "double",
+          "notes": [
+            "Double Battle"
+          ]
+        },
+        "sourceSheet": "Pokemon League",
+        "sourceRow": 81,
+        "trainerItems": "Full Restore x3",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Mega Rayquaza",
+            "dexId": 384,
+            "types": [
+              "dragon",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Draco Meteor",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Dragon Ascent",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "V-create",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Air Lock → Delta Stream",
+            "item": "Lum Berry",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Mega Rayquaza [1st lead]"
+            ]
+          },
+          {
+            "name": "Suicune",
+            "dexId": 245,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Icy Wind",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power Electric",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Calm Mind",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Inner Focus",
+            "item": "Sitrus Berry",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Suicune [2nd lead]"
+            ]
+          },
+          {
+            "name": "Magnezone",
+            "dexId": 462,
+            "types": [
+              "electric",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Flash Cannon",
+                "type": "steel",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power (Water?)",
+                "type": null,
+                "category": null
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": "Air Balloon",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Zygarde",
+            "dexId": 718,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Thousand Arrows",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Power Construct",
+            "item": "Leftovers",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Kartana",
+            "dexId": 798,
+            "types": [
+              "grass",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Leaf Blade",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Smart Strike",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Sacred Sword",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Knock Off",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Beast Boost",
+            "item": "Assault Vest",
+            "level": 76,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Arcanine",
+            "dexId": 59,
+            "types": [
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Close Combat",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": "Assault Vest",
+            "level": 75,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Pokemon%20League!A81:G100",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "double",
+          "notes": [
+            "Double Battle"
+          ]
+        },
+        "sourceSheet": "Pokemon League",
+        "sourceRow": 81,
+        "trainerItems": "none",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Pokemon%20League!A81:G100"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Pokemon%20League!A81:G100"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Pokemon%20League!A81:G100"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Pokemon League"
+  },
+  {
+    "id": "shadow-1",
+    "name": "Team Shadow Admin Marlon & Team Shadow Grunt",
+    "kind": "boss",
+    "order": 15,
+    "location": "Cinder Volcano 1F, climbing down the ladder to the right of Chansey",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Duskull",
+            "dexId": 355,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Shadow Sneak",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Payback",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Night Shade",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Destiny Bond",
+                "type": "ghost",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate",
+            "item": null,
+            "level": 26,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Duskull [Marlon's lead]"
+            ]
+          },
+          {
+            "name": "Cacnea",
+            "dexId": 331,
+            "types": [
+              "grass"
+            ],
+            "moves": [
+              {
+                "name": "Needle Arm",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Feint Attack",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Cut",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sand Veil",
+            "item": null,
+            "level": 27,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Swoobat",
+            "dexId": 528,
+            "types": [
+              "psychic",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Heart Stamp",
+                "type": "psychic",
+                "category": "physical"
+              },
+              {
+                "name": "Air Cutter",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Assurance",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Unaware",
+            "item": null,
+            "level": 28,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Sableye",
+            "dexId": 302,
+            "types": [
+              "dark",
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Feint Attack",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Disable",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Leer",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Prankster",
+            "item": null,
+            "level": 26,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Sableye [Grunt's lead]"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Shadow%20Bosses!A2:G21",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Jax"
+          ]
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 2,
+        "trainerItems": "Super Potion x1",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Duskull",
+            "dexId": 355,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Shadow Sneak",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Night Shade",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Payback",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Destiny Bond",
+                "type": "ghost",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate",
+            "item": "Eviolite",
+            "level": 26,
+            "levelBasis": "Minimum Level",
+            "notes": [
+              "Duskull [Marlon's lead]"
+            ]
+          },
+          {
+            "name": "Cacnea",
+            "dexId": 331,
+            "types": [
+              "grass"
+            ],
+            "moves": [
+              {
+                "name": "Needle Arm",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Feint Attack",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Fell Stinger",
+                "type": "bug",
+                "category": "physical"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": null,
+            "level": 27,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Swoobat",
+            "dexId": 528,
+            "types": [
+              "psychic",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Confusion",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Air Cutter",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Charge Beam",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Unaware",
+            "item": null,
+            "level": 28,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Sableye",
+            "dexId": 302,
+            "types": [
+              "dark",
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Night Shade",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              },
+              {
+                "name": "Torment",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Prankster",
+            "item": null,
+            "level": 25,
+            "levelBasis": "Minimum Level",
+            "notes": [
+              "Sableye [Grunt's lead]"
+            ]
+          },
+          {
+            "name": "Shiftry",
+            "dexId": 275,
+            "types": [
+              "grass",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Leaf Tornado",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Extrasensory",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Pickpocket",
+            "item": null,
+            "level": 27,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Shadow%20Bosses!A2:G21",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Jax"
+          ]
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 2,
+        "trainerItems": "Lemonade x1",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Krokorok",
+            "dexId": 552,
+            "types": [
+              "ground",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Stomping Tantrum",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Fang",
+                "type": "electric",
+                "category": "physical"
+              }
+            ],
+            "ability": "Moxie",
+            "item": "Soft Sand",
+            "level": 27,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Krokorok [Marlon's lead]"
+            ]
+          },
+          {
+            "name": "Cacnea",
+            "dexId": 331,
+            "types": [
+              "grass"
+            ],
+            "moves": [
+              {
+                "name": "Seed Bomb",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Quick Claw",
+            "level": 26,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Swoobat",
+            "dexId": 528,
+            "types": [
+              "psychic",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Stored Power",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Calm Mind",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Simple",
+            "item": "Lum Berry",
+            "level": 28,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Sableye",
+            "dexId": 302,
+            "types": [
+              "dark",
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Foul Play",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              },
+              {
+                "name": "Torment",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Prankster",
+            "item": "Wide Lens",
+            "level": 26,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Sableye [Grunt's lead]"
+            ]
+          },
+          {
+            "name": "Hitmonchan",
+            "dexId": 107,
+            "types": [
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Mach Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Inner Focus",
+            "item": "Muscle Band",
+            "level": 27,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Shiftry",
+            "dexId": 275,
+            "types": [
+              "grass",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Giga Drain",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Pickpocket",
+            "item": "Fire Gem",
+            "level": 28,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Shadow%20Bosses!A2:G21",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Jax"
+          ]
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 2,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Shadow%20Bosses!A2:G21"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Shadow%20Bosses!A2:G21"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Shadow%20Bosses!A2:G21"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Team Shadow Bosses"
+  },
+  {
+    "id": "shadow-2",
+    "name": "Team Shadow Admin Ivory",
+    "kind": "boss",
+    "order": 16,
+    "location": "Post-Crater Gym Kidnapping",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Misdreavus",
+            "dexId": 200,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Hex",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              },
+              {
+                "name": "Mean Look",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Confuse Ray",
+                "type": "ghost",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate",
+            "item": null,
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Kadabra",
+            "dexId": 64,
+            "types": [
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Psybeam",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Night Shade",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Miracle Eye",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Synchronize",
+            "item": null,
+            "level": 34,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vullaby",
+            "dexId": 629,
+            "types": [
+              "dark",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Punishment",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Pluck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Incinerate",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Flatter",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Overcoat",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Shadow%20Bosses!A22:G41",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 22,
+        "trainerItems": "Super Potion x1",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Misdreavus",
+            "dexId": 200,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Hex",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              },
+              {
+                "name": "Mean Look",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Confuse Ray",
+                "type": "ghost",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate",
+            "item": null,
+            "level": 33,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Kadabra",
+            "dexId": 64,
+            "types": [
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Psybeam",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Charge Beam",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Tri Attack",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Night Shade",
+                "type": "ghost",
+                "category": "special"
+              }
+            ],
+            "ability": "Synchronize / Inner Focus",
+            "item": null,
+            "level": 34,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Vullaby",
+            "dexId": 629,
+            "types": [
+              "dark",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Punishment",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Pluck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Tomb",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Flatter",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Overcoat",
+            "item": "Eviolite",
+            "level": 32,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Shadow%20Bosses!A22:G41",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 22,
+        "trainerItems": "Super Potion x1",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Misdreavus",
+            "dexId": 200,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Hex",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              },
+              {
+                "name": "Mean Look",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Confuse Ray",
+                "type": "ghost",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate",
+            "item": "Eviolite",
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Alakazam",
+            "dexId": 65,
+            "types": [
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Expanding Force",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Psychic Terrain",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Magic Guard",
+            "item": "Focus Sash",
+            "level": 34,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vullaby",
+            "dexId": 629,
+            "types": [
+              "dark",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Foul Play",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Swagger",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Overcoat",
+            "item": "Eviolite",
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Shadow%20Bosses!A22:G41",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 22,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Shadow%20Bosses!A22:G41"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Shadow%20Bosses!A22:G41"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Shadow%20Bosses!A22:G41"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Team Shadow Bosses"
+  },
+  {
+    "id": "shadow-3",
+    "name": "Team Shadow Boss Zeph",
+    "kind": "boss",
+    "order": 17,
+    "location": "Battle immidiately after Ivory fight",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Mega Houndoom",
+            "dexId": 229,
+            "types": [
+              "dark",
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Incinerate",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Thunder Fang",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Howl",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Flash Fire → Solar Power",
+            "item": "Houndoomite",
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Shadow%20Bosses!A42:G61",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 42,
+        "trainerItems": "Hyper Potion x1",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Mega Houndoom",
+            "dexId": 229,
+            "types": [
+              "dark",
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Fire Fang",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Fang",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Howl",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Flash Fire → Solar Power",
+            "item": "Houndoomite",
+            "level": 33,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Shadow%20Bosses!A42:G61",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 42,
+        "trainerItems": "Hyper Potion x1",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Mega Houndoom",
+            "dexId": 229,
+            "types": [
+              "dark",
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Sludge Bomb",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Flash Fire → Solar Power",
+            "item": "Houndoomite",
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Shadow%20Bosses!A42:G61",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 42,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Shadow%20Bosses!A42:G61"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Shadow%20Bosses!A42:G61"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Shadow%20Bosses!A42:G61"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Team Shadow Bosses"
+  },
+  {
+    "id": "shadow-4",
+    "name": "Team Shadow Admin Ivory & Team Shadow Grunt",
+    "kind": "boss",
+    "order": 18,
+    "location": "Route 9 Barrier Quest Finale",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Incineroar",
+            "dexId": 727,
+            "types": [
+              "fire",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Fire Fang",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Darkest Lariat",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Double Kick",
+                "type": "fighting",
+                "category": "physical"
+              }
+            ],
+            "ability": "Blaze",
+            "item": null,
+            "level": 38,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Incineroar [Ivory's lead]"
+            ]
+          },
+          {
+            "name": "Mismagius",
+            "dexId": 429,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Ominous Wind",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Power Gem",
+                "type": "rock",
+                "category": "special"
+              },
+              {
+                "name": "Magical Leaf",
+                "type": "grass",
+                "category": "special"
+              }
+            ],
+            "ability": "Levitate",
+            "item": null,
+            "level": 36,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Alakazam",
+            "dexId": 65,
+            "types": [
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Psyshock",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Charge Beam",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Night Shade",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Recover",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Synchronize",
+            "item": null,
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gourgeist",
+            "dexId": 711,
+            "types": [
+              "ghost",
+              "grass"
+            ],
+            "moves": [
+              {
+                "name": "default moveset",
+                "type": null,
+                "category": null
+              }
+            ],
+            "ability": "Pickup",
+            "item": null,
+            "level": 35,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Gourgeist [Grunt's lead]"
+            ]
+          },
+          {
+            "name": "Alolan Raticate",
+            "dexId": 20,
+            "types": [
+              "dark",
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "default moveset",
+                "type": null,
+                "category": null
+              }
+            ],
+            "ability": "Gluttony",
+            "item": null,
+            "level": 36,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Shadow%20Bosses!A62:G81",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Jax"
+          ]
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 62,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Incineroar",
+            "dexId": 727,
+            "types": [
+              "fire",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Fire Punch",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Darkest Lariat",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              }
+            ],
+            "ability": "Blaze",
+            "item": null,
+            "level": 38,
+            "levelBasis": "Minimum Level",
+            "notes": [
+              "Incineroar [Ivory's lead]"
+            ]
+          },
+          {
+            "name": "Mismagius",
+            "dexId": 429,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Ominous Wind",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Power Gem",
+                "type": "rock",
+                "category": "special"
+              },
+              {
+                "name": "Destiny Bond",
+                "type": "ghost",
+                "category": "status"
+              }
+            ],
+            "ability": "Magic Bounce",
+            "item": null,
+            "level": 36,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Alakazam",
+            "dexId": 65,
+            "types": [
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Psyshock",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Charge Beam",
+                "type": "electric",
+                "category": "special"
+              }
+            ],
+            "ability": "Synchronize / Inner Focus",
+            "item": null,
+            "level": 37,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Meowstic M",
+            "dexId": 678,
+            "types": [
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Psyshock",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Helping Hand",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Reflect",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Psychic Terrain",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Prankster",
+            "item": "Terrain Extender",
+            "level": 37,
+            "levelBasis": "Minimum Level",
+            "notes": [
+              "Meowstic M [Grunt's lead]"
+            ]
+          },
+          {
+            "name": "Oranguru",
+            "dexId": 765,
+            "types": [
+              "normal",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Zen Headbutt",
+                "type": "psychic",
+                "category": "physical"
+              },
+              {
+                "name": "Instruct",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Light Screen",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Psychic Terrain",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Inner Focus",
+            "item": null,
+            "level": 38,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Shadow%20Bosses!A62:G81",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Jax"
+          ]
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 62,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Incineroar",
+            "dexId": 727,
+            "types": [
+              "fire",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Flare Blitz",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Knock Off",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Parting Shot",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": "Sitrus Berry",
+            "level": 38,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Incineroar [Ivory's lead]"
+            ]
+          },
+          {
+            "name": "Mismagius",
+            "dexId": 429,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Moongeist Beam",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Power Gem",
+                "type": "rock",
+                "category": "special"
+              },
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Destiny Bond",
+                "type": "ghost",
+                "category": "status"
+              }
+            ],
+            "ability": "Magic Bounce",
+            "item": "Focus Sash",
+            "level": 36,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Alakazam",
+            "dexId": 65,
+            "types": [
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Expanding Force",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              }
+            ],
+            "ability": "Magic Guard",
+            "item": "Fairy Gem",
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Meowstic F",
+            "dexId": 678,
+            "types": [
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Expanding Force",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Psychic Terrain",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Competitive",
+            "item": "Kasib Berry",
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Meowstic F [Grunt's lead]"
+            ]
+          },
+          {
+            "name": "Meowstic M",
+            "dexId": 678,
+            "types": [
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Expanding Force",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Helping Hand",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Charm",
+                "type": "fairy",
+                "category": "status"
+              },
+              {
+                "name": "Psychic Terrain",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Prankster",
+            "item": "Terrain Extender",
+            "level": 36,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Oranguru",
+            "dexId": 765,
+            "types": [
+              "normal",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Expanding Force",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Instruct",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Light Screen",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Psychic Terrain",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Symbiosis",
+            "item": "Mago Berry",
+            "level": 36,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Shadow%20Bosses!A62:G81",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Jax"
+          ]
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 62,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Shadow%20Bosses!A62:G81"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Shadow%20Bosses!A62:G81"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Shadow%20Bosses!A62:G81"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Team Shadow Bosses"
+  },
+  {
+    "id": "shadow-5",
+    "name": "Team Shadow Admin Marlon",
+    "kind": "boss",
+    "order": 19,
+    "location": "Zapdos Capture in Thundercap Mt.",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Zapdos",
+            "dexId": 145,
+            "types": [
+              "electric",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Discharge",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Drill Peck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Ancient Power",
+                "type": "rock",
+                "category": "special"
+              },
+              {
+                "name": "Light Screen",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Pressure",
+            "item": null,
+            "level": 39,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Dusclops",
+            "dexId": 356,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Night Shade",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Confuse Ray",
+                "type": "ghost",
+                "category": "status"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              }
+            ],
+            "ability": "Pressure",
+            "item": "Eviolite",
+            "level": 41,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Cacturne",
+            "dexId": 332,
+            "types": [
+              "grass",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Needle Arm",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Poison Jab",
+                "type": "poison",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": null,
+            "level": 40,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Swoobat",
+            "dexId": 528,
+            "types": [
+              "psychic",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Esper Wing",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Stored Power",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Calm Mind",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Unaware",
+            "item": null,
+            "level": 39,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Krookodile",
+            "dexId": 553,
+            "types": [
+              "ground",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Stomping Tantrum",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Stone Edge",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Power-Up Punch",
+                "type": "fighting",
+                "category": "physical"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": "Black Glasses",
+            "level": 41,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Shadow%20Bosses!A82:G101",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Rain"
+          ]
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 82,
+        "trainerItems": "Hyper Potion x1",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Zapdos",
+            "dexId": 145,
+            "types": [
+              "electric",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Discharge",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Hurricane",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Ancient Power",
+                "type": "rock",
+                "category": "special"
+              },
+              {
+                "name": "Light Screen",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Pressure",
+            "item": null,
+            "level": 41,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Dusclops",
+            "dexId": 356,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Night Shade",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Confuse Ray",
+                "type": "ghost",
+                "category": "status"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              }
+            ],
+            "ability": "Pressure",
+            "item": "Eviolite",
+            "level": 40,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Mega Sharpedo",
+            "dexId": 319,
+            "types": [
+              "water",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Aqua Jet",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Poison Fang",
+                "type": "poison",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              }
+            ],
+            "ability": "Speed Boost → Strong Jaw",
+            "item": "Sharpedonite",
+            "level": 41,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Swoobat",
+            "dexId": 528,
+            "types": [
+              "psychic",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Esper Wing",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Calm Mind",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Simple",
+            "item": "Scope Lens",
+            "level": 40,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Krookodile",
+            "dexId": 553,
+            "types": [
+              "ground",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Stomping Tantrum",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Stone Edge",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Power-Up Punch",
+                "type": "fighting",
+                "category": "physical"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": null,
+            "level": 42,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Shadow%20Bosses!A82:G101",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Rain"
+          ]
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 82,
+        "trainerItems": "Hyper Potion x1",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Zapdos",
+            "dexId": 145,
+            "types": [
+              "electric",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Bolt Beak",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Hurricane",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Weather Ball",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "U-turn",
+                "type": "bug",
+                "category": "physical"
+              }
+            ],
+            "ability": "Defiant",
+            "item": "Quick Claw",
+            "level": 40,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Dusclops",
+            "dexId": 356,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Night Shade",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              },
+              {
+                "name": "Confuse Ray",
+                "type": "ghost",
+                "category": "status"
+              },
+              {
+                "name": "Pain Split",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Pressure",
+            "item": "Eviolite",
+            "level": 40,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Sharpedo",
+            "dexId": 319,
+            "types": [
+              "water",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Liquidation",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Jaw Lock",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Poison Jab",
+                "type": "poison",
+                "category": "physical"
+              },
+              {
+                "name": "Aqua Jet",
+                "type": "water",
+                "category": "physical"
+              }
+            ],
+            "ability": "Speed Boost → Strong Jaw",
+            "item": "Sharpedonite",
+            "level": 41,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Aegislash",
+            "dexId": 681,
+            "types": [
+              "steel",
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Sacred Sword",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "King's Shield",
+                "type": "steel",
+                "category": "status"
+              }
+            ],
+            "ability": "Stance Change",
+            "item": "Weakness Policy",
+            "level": 41,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Krookodile",
+            "dexId": 553,
+            "types": [
+              "ground",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Stone Edge",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": "Choice Band",
+            "level": 41,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Tentacruel",
+            "dexId": 73,
+            "types": [
+              "water",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Acid Spray",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Rain Dish",
+            "item": "Black Sludge",
+            "level": 40,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Shadow%20Bosses!A82:G101",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": [
+            "Rain"
+          ]
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 82,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Shadow%20Bosses!A82:G101"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Shadow%20Bosses!A82:G101"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Shadow%20Bosses!A82:G101"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Team Shadow Bosses"
+  },
+  {
+    "id": "shadow-6",
+    "name": "Team Shadow Boss Zeph",
+    "kind": "boss",
+    "order": 20,
+    "location": "Shadow Base infiltration",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Mightyena",
+            "dexId": 262,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Take Down",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Fang",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Swagger",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": null,
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Gengar",
+            "dexId": 94,
+            "types": [
+              "ghost",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Hex",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Venoshock",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Mean Look",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Hypnosis",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate → Shadow Tag",
+            "item": "Gengarite",
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Umbreon",
+            "dexId": 197,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Confuse Ray",
+                "type": "ghost",
+                "category": "status"
+              },
+              {
+                "name": "Charm",
+                "type": "fairy",
+                "category": "status"
+              },
+              {
+                "name": "Moonlight",
+                "type": "fairy",
+                "category": "status"
+              }
+            ],
+            "ability": "Synchronize",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Exploud",
+            "dexId": 295,
+            "types": [
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "Strength",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Roar",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Soundproof",
+            "item": null,
+            "level": 44,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Decidueye",
+            "dexId": 724,
+            "types": [
+              "grass",
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Leaf Blade",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Spirit Shackle",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Low Sweep",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "U-turn",
+                "type": "bug",
+                "category": "physical"
+              }
+            ],
+            "ability": "Overgrow",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Shadow%20Bosses!A102:G121",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 102,
+        "trainerItems": "Hyper Potion x2, Full Heal x1",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Mightyena",
+            "dexId": 262,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Psychic Fangs",
+                "type": "psychic",
+                "category": "physical"
+              },
+              {
+                "name": "Swagger",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Strong Jaw",
+            "item": null,
+            "level": 45,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Mega Gengar",
+            "dexId": 94,
+            "types": [
+              "ghost",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Venoshock",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate → Shadow Tag",
+            "item": "Gengarite",
+            "level": 45,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Umbreon",
+            "dexId": 197,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Foul Play",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Confuse Ray",
+                "type": "ghost",
+                "category": "status"
+              },
+              {
+                "name": "Moonlight",
+                "type": "fairy",
+                "category": "status"
+              }
+            ],
+            "ability": "Synchronize",
+            "item": "Leftovers",
+            "level": 46,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Exploud",
+            "dexId": 295,
+            "types": [
+              "normal"
+            ],
+            "moves": [
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Surf",
+                "type": "water",
+                "category": "special"
+              }
+            ],
+            "ability": "Bellow",
+            "item": "Throat Spray",
+            "level": 44,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Decidueye",
+            "dexId": 724,
+            "types": [
+              "grass",
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Leaf Blade",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Spirit Shackle",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Low Sweep",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Acrobatics",
+                "type": "flying",
+                "category": "physical"
+              }
+            ],
+            "ability": "Long Reach",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Shadow%20Bosses!A102:G121",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 102,
+        "trainerItems": "Hyper Potion x2, Full Heal x1",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Mega Gyarados",
+            "dexId": 130,
+            "types": [
+              "water",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Waterfall",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Intimidate → Mold Breaker",
+            "item": "Gyaradosite",
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Thundurus Therian",
+            "dexId": 642,
+            "types": [
+              "electric",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Psychic",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Sludge Wave",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power Ground",
+                "type": "ground",
+                "category": "special"
+              }
+            ],
+            "ability": "Volt Absorb",
+            "item": "Life Orb",
+            "level": 44,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Umbreon",
+            "dexId": 197,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Foul Play",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Wish",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Synchronize",
+            "item": "Leftovers",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Talonflame",
+            "dexId": 663,
+            "types": [
+              "fire",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Flare Blitz",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Brave Bird",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Overheat",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "U-turn",
+                "type": "bug",
+                "category": "physical"
+              }
+            ],
+            "ability": "Gale Wings",
+            "item": "Heavy-Duty Boots",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gengar",
+            "dexId": 94,
+            "types": [
+              "ghost",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Sludge Wave",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              }
+            ],
+            "ability": "Levitate",
+            "item": "Focus Sash",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Zebstrika",
+            "dexId": 523,
+            "types": [
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Volt Tackle",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Flare Blitz",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Thunderous Kick",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Overheat",
+                "type": "fire",
+                "category": "special"
+              }
+            ],
+            "ability": "Shocking Neigh",
+            "item": "Expert Belt",
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Shadow%20Bosses!A102:G121",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 102,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Shadow%20Bosses!A102:G121"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Shadow%20Bosses!A102:G121"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Shadow%20Bosses!A102:G121"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Team Shadow Bosses"
+  },
+  {
+    "id": "shadow-7",
+    "name": "Ex Shadow Admin Marlon 3",
+    "kind": "boss",
+    "order": 21,
+    "location": "Crystal Peak, after Aklove's defeat",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Krookodile",
+            "dexId": 553,
+            "types": [
+              "ground",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": "Passho Berry",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Krookodile [1st lead]"
+            ]
+          },
+          {
+            "name": "Swoobat",
+            "dexId": 528,
+            "types": [
+              "psychic",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Psychic",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Thunder Wave",
+                "type": "electric",
+                "category": "status"
+              },
+              {
+                "name": "Helping Hand",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Unaware",
+            "item": "Focus Sash",
+            "level": 60,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Swoobat [2nd lead]"
+            ]
+          },
+          {
+            "name": "Machamp",
+            "dexId": 68,
+            "types": [
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Cross Chop",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Stone Edge",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Dual Chop",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "No Guard",
+            "item": null,
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Dusknoir",
+            "dexId": 477,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Shadow Punch",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Brick Break",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              }
+            ],
+            "ability": "Iron Fist",
+            "item": null,
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Sharpedo",
+            "dexId": 319,
+            "types": [
+              "water",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Liquidation",
+                "type": "water",
+                "category": "physical"
+              },
+              {
+                "name": "Jaw Lock",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Poison Fang",
+                "type": "poison",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Speed Boost → Strong Jaw",
+            "item": "Sharpedonite",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Shadow%20Bosses!A122:G141",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Rival"
+          ]
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 122,
+        "trainerItems": "Max Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Sableye",
+            "dexId": 302,
+            "types": [
+              "dark",
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Night Shade",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              },
+              {
+                "name": "Quash",
+                "type": "dark",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Prankster",
+            "item": null,
+            "level": 61,
+            "levelBasis": "Minimum Level",
+            "notes": [
+              "Sableye [1st lead]"
+            ]
+          },
+          {
+            "name": "Tentacruel",
+            "dexId": 73,
+            "types": [
+              "water",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Giga Drain",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Haze",
+                "type": "ice",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Clear Body",
+            "item": "Black Sludge",
+            "level": 61,
+            "levelBasis": "Minimum Level",
+            "notes": [
+              "Tentacruel [2nd lead]"
+            ]
+          },
+          {
+            "name": "Krookodile",
+            "dexId": 553,
+            "types": [
+              "ground",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "High Horsepower",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": "Passho Berry",
+            "level": 62,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Mega Beedrill",
+            "dexId": 15,
+            "types": [
+              "bug",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "X-Scissor",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Poison Jab",
+                "type": "poison",
+                "category": "physical"
+              },
+              {
+                "name": "Brick Break",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Swarm / Sniper → Adaptability",
+            "item": "Beedrillite",
+            "level": 61,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Dusknoir",
+            "dexId": 477,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Poltergeist",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Power-Up Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              }
+            ],
+            "ability": "Iron Fist",
+            "item": null,
+            "level": 62,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Swoobat",
+            "dexId": 528,
+            "types": [
+              "psychic",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Thunder Wave",
+                "type": "electric",
+                "category": "status"
+              },
+              {
+                "name": "Helping Hand",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Unaware",
+            "item": "Focus Sash",
+            "level": 61,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Shadow%20Bosses!A122:G141",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Rival"
+          ]
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 122,
+        "trainerItems": "Max Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Sableye",
+            "dexId": 302,
+            "types": [
+              "dark",
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Night Shade",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              },
+              {
+                "name": "Quash",
+                "type": "dark",
+                "category": "status"
+              },
+              {
+                "name": "Recover",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Prankster",
+            "item": "Rocky Helmet",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Sableye [1st lead]"
+            ]
+          },
+          {
+            "name": "Nihilego",
+            "dexId": 793,
+            "types": [
+              "rock",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Power Gem",
+                "type": "rock",
+                "category": "special"
+              },
+              {
+                "name": "Sludge Bomb",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Clear Smog",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Beast Boost",
+            "item": "Focus Sash",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Nihilego [2nd lead]"
+            ]
+          },
+          {
+            "name": "Krookodile",
+            "dexId": 553,
+            "types": [
+              "ground",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Darkest Lariat",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "High Horsepower",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": "Passho Berry",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Beedrill",
+            "dexId": 15,
+            "types": [
+              "bug",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "U-turn",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Poison Jab",
+                "type": "poison",
+                "category": "physical"
+              },
+              {
+                "name": "Brick Break",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Swarm / Sniper → Adaptability",
+            "item": "Beedrillite",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Rotom Wash",
+            "dexId": 479,
+            "types": [
+              "electric",
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Hydro Pump",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Electroweb",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate",
+            "item": "Aguav Berry",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Yveltal",
+            "dexId": 717,
+            "types": [
+              "dark",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Oblivion Wing",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power Fighting",
+                "type": "fighting",
+                "category": "special"
+              }
+            ],
+            "ability": "Dark Aura",
+            "item": "Assault Vest",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Shadow%20Bosses!A122:G141",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Rival"
+          ]
+        },
+        "sourceSheet": "Team Shadow Bosses",
+        "sourceRow": 122,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Shadow%20Bosses!A122:G141"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Shadow%20Bosses!A122:G141"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Shadow%20Bosses!A122:G141"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Team Shadow Bosses"
+  },
+  {
+    "id": "light-1",
+    "name": "Team Light of Ruin Agent Vega & Grunt",
+    "kind": "boss",
+    "order": 22,
+    "location": "Cinder Volcano after Cube Space",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Liepard",
+            "dexId": 510,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Foul Play",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Grass Knot",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "U-turn",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Limber",
+            "item": null,
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Liepard [Vega's lead]"
+            ]
+          },
+          {
+            "name": "Honchkrow",
+            "dexId": 430,
+            "types": [
+              "dark",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Punishment",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Drill Peck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Swagger",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Tailwind",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Super Luck",
+            "item": "Dark Gem",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Absol",
+            "dexId": 359,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Night Slash",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Psycho Cut",
+                "type": "psychic",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Pressure → Magic Bounce",
+            "item": "Absolite",
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Floette",
+            "dexId": 670,
+            "types": [
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "default moveset",
+                "type": null,
+                "category": null
+              }
+            ],
+            "ability": "Flower Veil",
+            "item": null,
+            "level": 38,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Floette [Grunt's lead]"
+            ]
+          },
+          {
+            "name": "Ribombee",
+            "dexId": 743,
+            "types": [
+              "bug",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "default moveset",
+                "type": null,
+                "category": null
+              }
+            ],
+            "ability": "Honey Gather",
+            "item": null,
+            "level": 38,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Sylveon",
+            "dexId": 700,
+            "types": [
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "default moveset",
+                "type": null,
+                "category": null
+              }
+            ],
+            "ability": "Cute Charm",
+            "item": null,
+            "level": 39,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A2:G21",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Marlon, Negative energy"
+          ]
+        },
+        "sourceSheet": "Team Light Of Ruin Bosses",
+        "sourceRow": 2,
+        "trainerItems": "Hyper Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Liepard",
+            "dexId": 510,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Grass Knot",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Burning Jealousy",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Unburden",
+            "item": "Sitrus Berry",
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Liepard [1st lead]"
+            ]
+          },
+          {
+            "name": "Honchkrow",
+            "dexId": 430,
+            "types": [
+              "dark",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Air Cutter",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Super Luck",
+            "item": "Scope Lens",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Honchkrow [2nd lead]"
+            ]
+          },
+          {
+            "name": "Mega Absol",
+            "dexId": 359,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Night Slash",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Psycho Cut",
+                "type": "psychic",
+                "category": "physical"
+              },
+              {
+                "name": "X-Scissor",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Tail",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Pressure → Magic Bounce",
+            "item": "Absolite",
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Weavile",
+            "dexId": 461,
+            "types": [
+              "dark",
+              "ice"
+            ],
+            "moves": [
+              {
+                "name": "Knock Off",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Brick Break",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Pressure",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Spiritomb",
+            "dexId": 442,
+            "types": [
+              "ghost",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Hex",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Pain Split",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Pressure / Infiltrator",
+            "item": "Leftovers",
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Bisharp",
+            "dexId": 625,
+            "types": [
+              "dark",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Low Sweep",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Defiant",
+            "item": null,
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A2:G21",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Marlon, Negative energy"
+          ]
+        },
+        "sourceSheet": "Team Light Of Ruin Bosses",
+        "sourceRow": 2,
+        "trainerItems": "Hyper Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Liepard",
+            "dexId": 510,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Night Daze",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Grass Knot",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Nasty Plot",
+                "type": "dark",
+                "category": "status"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Unburden",
+            "item": "Sitrus Berry",
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Liepard [1st lead]"
+            ]
+          },
+          {
+            "name": "Bisharp",
+            "dexId": 625,
+            "types": [
+              "dark",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Low Kick",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Defiant",
+            "item": "Adrenaline Orb",
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Bisharp [2nd lead]"
+            ]
+          },
+          {
+            "name": "Mega Absol",
+            "dexId": 359,
+            "types": [
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Close Combat",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Pressure → Magic Bounce",
+            "item": "Absolite",
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Drapion",
+            "dexId": 452,
+            "types": [
+              "poison",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Cross Poison",
+                "type": "poison",
+                "category": "physical"
+              },
+              {
+                "name": "Night Slash",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Brick Break",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Super Luck",
+            "item": "Scope Lens",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Spiritomb",
+            "dexId": 442,
+            "types": [
+              "ghost",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Foul Play",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Pain Split",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Pressure / Infiltrator",
+            "item": "Leftovers",
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Honchkrow",
+            "dexId": 430,
+            "types": [
+              "dark",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Oblivion Wing",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Heat Wave",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Super Luck",
+            "item": "Wide Lens",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A2:G21",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Marlon, Negative energy"
+          ]
+        },
+        "sourceSheet": "Team Light Of Ruin Bosses",
+        "sourceRow": 2,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A2:G21"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A2:G21"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A2:G21"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Team Light Of Ruin Bosses"
+  },
+  {
+    "id": "light-2",
+    "name": "Team Light of Ruin Leader Aklove",
+    "kind": "boss",
+    "order": 23,
+    "location": "Vivill Hideout infiltration",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Klefki",
+            "dexId": 707,
+            "types": [
+              "steel",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Reflect",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Light Screen",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Thunder Wave",
+                "type": "electric",
+                "category": "status"
+              }
+            ],
+            "ability": "Prankster",
+            "item": "Light Clay",
+            "level": 51,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Roserade",
+            "dexId": 407,
+            "types": [
+              "grass",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Giga Drain",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Leech Seed",
+                "type": "grass",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Natural Cure",
+            "item": "Big Root",
+            "level": 51,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Primarina",
+            "dexId": 730,
+            "types": [
+              "water",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Sparkling Aria",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Aqua Jet",
+                "type": "water",
+                "category": "physical"
+              }
+            ],
+            "ability": "Torrent",
+            "item": "Rindo Berry",
+            "level": 52,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Togekiss",
+            "dexId": 468,
+            "types": [
+              "fairy",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Aura Sphere",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              }
+            ],
+            "ability": "Serene Grace",
+            "item": null,
+            "level": 52,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Hoopa Unbound",
+            "dexId": 720,
+            "types": [
+              "psychic",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Zen Headbutt",
+                "type": "psychic",
+                "category": "physical"
+              },
+              {
+                "name": "Knock Off",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Dual Chop",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              }
+            ],
+            "ability": "Magician",
+            "item": null,
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A22:G41",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Team Light Of Ruin Bosses",
+        "sourceRow": 22,
+        "trainerItems": "Hyper Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Klefki",
+            "dexId": 707,
+            "types": [
+              "steel",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Reflect",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Light Screen",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Thunder Wave",
+                "type": "electric",
+                "category": "status"
+              }
+            ],
+            "ability": "Prankster",
+            "item": "Light Clay",
+            "level": 51,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Roserade",
+            "dexId": 407,
+            "types": [
+              "grass",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Giga Drain",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Leech Seed",
+                "type": "grass",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Technician",
+            "item": "Big Root",
+            "level": 51,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Primarina",
+            "dexId": 730,
+            "types": [
+              "water",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Surf",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Aqua Jet",
+                "type": "water",
+                "category": "physical"
+              }
+            ],
+            "ability": "Torrent",
+            "item": "Kebia Berry",
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Togekiss",
+            "dexId": 468,
+            "types": [
+              "fairy",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Aura Sphere",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              }
+            ],
+            "ability": "Serene Grace",
+            "item": "Babiri Berry",
+            "level": 52,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Hoopa Unbound",
+            "dexId": 720,
+            "types": [
+              "psychic",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Zen Headbutt",
+                "type": "psychic",
+                "category": "physical"
+              },
+              {
+                "name": "Hyperspace Fury",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Dual Chop",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              }
+            ],
+            "ability": "Portal Power",
+            "item": null,
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Gardevoir",
+            "dexId": 282,
+            "types": [
+              "psychic",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Psyshock",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Sneak",
+                "type": "ghost",
+                "category": "physical"
+              }
+            ],
+            "ability": "Trace → Pixilate",
+            "item": "Gardevoirite",
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A22:G41",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Team Light Of Ruin Bosses",
+        "sourceRow": 22,
+        "trainerItems": "Hyper Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Ribombee",
+            "dexId": 743,
+            "types": [
+              "bug",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Bug Buzz",
+                "type": "bug",
+                "category": "special"
+              },
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Sticky Web",
+                "type": "bug",
+                "category": "status"
+              },
+              {
+                "name": "Charm",
+                "type": "fairy",
+                "category": "status"
+              }
+            ],
+            "ability": "Shield Dust",
+            "item": "Focus Sash",
+            "level": 51,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Manaphy",
+            "dexId": 490,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Surf",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Tail Glow",
+                "type": "bug",
+                "category": "status"
+              }
+            ],
+            "ability": "Soul Heart",
+            "item": "Leftovers",
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Registeel",
+            "dexId": 379,
+            "types": [
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Body Press",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Wave",
+                "type": "electric",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Filter",
+            "item": "Leftovers",
+            "level": 52,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Tapu Bulu",
+            "dexId": 787,
+            "types": [
+              "grass",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Horn Leech",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Close Combat",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Darkest Lariat",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "High Horsepower",
+                "type": "ground",
+                "category": "physical"
+              }
+            ],
+            "ability": "Grassy Surge",
+            "item": "Assault Vest",
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Hoopa Unbound",
+            "dexId": 720,
+            "types": [
+              "psychic",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Hyperspace Fury",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Punch",
+                "type": "fire",
+                "category": "physical"
+              }
+            ],
+            "ability": "Portal Power",
+            "item": "Choice Scarf",
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Gardevoir",
+            "dexId": 282,
+            "types": [
+              "psychic",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Psyshock",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Sneak",
+                "type": "ghost",
+                "category": "physical"
+              }
+            ],
+            "ability": "Trace → Pixilate",
+            "item": "Gardevoirite",
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A22:G41",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Team Light Of Ruin Bosses",
+        "sourceRow": 22,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A22:G41"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A22:G41"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A22:G41"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Team Light Of Ruin Bosses"
+  },
+  {
+    "id": "light-3",
+    "name": "Team Light of Ruin Admin Ivory 3",
+    "kind": "boss",
+    "order": 24,
+    "location": "Crystal Peak after Zekrom/Reshiram fight",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Toxicroak",
+            "dexId": 454,
+            "types": [
+              "poison",
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Poison Jab",
+                "type": "poison",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Anticipation",
+            "item": null,
+            "level": 60,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mismagius",
+            "dexId": 429,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Hex",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Power Gem",
+                "type": "rock",
+                "category": "special"
+              },
+              {
+                "name": "Will-O-Wisp",
+                "type": "fire",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate",
+            "item": null,
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Incineroar",
+            "dexId": 727,
+            "types": [
+              "fire",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Flare Blitz",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Darkest Lariat",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": "Assault Vest",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Alakazam",
+            "dexId": 65,
+            "types": [
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Psychic",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              }
+            ],
+            "ability": "Magic Guard → Trace",
+            "item": "Alakazite",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mandibuzz",
+            "dexId": 630,
+            "types": [
+              "dark",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Foul Play",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Swagger",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              },
+              {
+                "name": "Whirlwind",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Overcoat",
+            "item": null,
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A42:G61",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Team-up with Rival's Pokemon"
+          ]
+        },
+        "sourceSheet": "Team Light Of Ruin Bosses",
+        "sourceRow": 42,
+        "trainerItems": "Max Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Toxicroak",
+            "dexId": 454,
+            "types": [
+              "poison",
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Poison Jab",
+                "type": "poison",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Sucker Punch",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Poison Touch",
+            "item": "Focus Sash",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mismagius",
+            "dexId": 429,
+            "types": [
+              "ghost"
+            ],
+            "moves": [
+              {
+                "name": "Moongeist Beam",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              }
+            ],
+            "ability": "Levitate",
+            "item": null,
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Incineroar",
+            "dexId": 727,
+            "types": [
+              "fire",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Flare Blitz",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Darkest Lariat",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": "Assault Vest",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Alakazam",
+            "dexId": 65,
+            "types": [
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Psyshock",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Nasty Plot",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Magic Guard → Trace",
+            "item": "Alakazite",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mandibuzz",
+            "dexId": 630,
+            "types": [
+              "dark",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Foul Play",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Attract",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Overcoat",
+            "item": "Rocky Helmet",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Eelektross",
+            "dexId": 604,
+            "types": [
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Volt Switch",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Giga Drain",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Acid Spray",
+                "type": "poison",
+                "category": "special"
+              }
+            ],
+            "ability": "Levitate",
+            "item": null,
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A42:G61",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Team-up with Rival's Pokemon"
+          ]
+        },
+        "sourceSheet": "Team Light Of Ruin Bosses",
+        "sourceRow": 42,
+        "trainerItems": "Max Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Incineroar",
+            "dexId": 727,
+            "types": [
+              "fire",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Flare Blitz",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Darkest Lariat",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "U-turn",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": "Assault Vest",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Landorus Therian",
+            "dexId": 645,
+            "types": [
+              "ground",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Grass Knot",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "U-turn",
+                "type": "bug",
+                "category": "physical"
+              }
+            ],
+            "ability": "Intimidate",
+            "item": "Yache Berry",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Pheromosa",
+            "dexId": 795,
+            "types": [
+              "bug",
+              "fighting"
+            ],
+            "moves": [
+              {
+                "name": "Lunge",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Close Combat",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Triple Axel",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Drill Run",
+                "type": "ground",
+                "category": "physical"
+              }
+            ],
+            "ability": "Beast Boost",
+            "item": "Focus Sash",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Alakazam",
+            "dexId": 65,
+            "types": [
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Psychic",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              }
+            ],
+            "ability": "Magic Guard → Trace",
+            "item": "Alakazite",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mandibuzz",
+            "dexId": 630,
+            "types": [
+              "dark",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Foul Play",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Attract",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Overcoat",
+            "item": "Rocky Helmet",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Toxapex",
+            "dexId": 748,
+            "types": [
+              "poison",
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Recover",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Haze",
+                "type": "ice",
+                "category": "status"
+              }
+            ],
+            "ability": "Regenerator",
+            "item": "Black Sludge",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A42:G61",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Team-up with Rival's Pokemon"
+          ]
+        },
+        "sourceSheet": "Team Light Of Ruin Bosses",
+        "sourceRow": 42,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A42:G61"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A42:G61"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A42:G61"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Team Light Of Ruin Bosses"
+  },
+  {
+    "id": "light-4",
+    "name": "Team Light of Ruin Leader Aklove",
+    "kind": "boss",
+    "order": 25,
+    "location": "Crystal Peak, turning off the Ultimate Weapon",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Klefki",
+            "dexId": 707,
+            "types": [
+              "steel",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Foul Play",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Reflect",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Thunder Wave",
+                "type": "electric",
+                "category": "status"
+              }
+            ],
+            "ability": "Prankster",
+            "item": "Light Clay",
+            "level": 60,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Klefki [1st lead]"
+            ]
+          },
+          {
+            "name": "Primarina",
+            "dexId": 730,
+            "types": [
+              "water",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Hydro Pump",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Torrent",
+            "item": null,
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Primarina [2nd lead]"
+            ]
+          },
+          {
+            "name": "Roserade",
+            "dexId": 407,
+            "types": [
+              "grass",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Giga Drain",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Sludge Bomb",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Natural Cure",
+            "item": null,
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Gardevoir",
+            "dexId": 282,
+            "types": [
+              "psychic",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Psychic",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              }
+            ],
+            "ability": "Trace → Pixilate",
+            "item": "Gardevoirite",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Raichu",
+            "dexId": 26,
+            "types": [
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Volt Tackle",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Brick Break",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              }
+            ],
+            "ability": "Lightning Rod",
+            "item": "Air Balloon",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A62:G81",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Rival"
+          ]
+        },
+        "sourceSheet": "Team Light Of Ruin Bosses",
+        "sourceRow": 62,
+        "trainerItems": "Hyper Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Togedemaru",
+            "dexId": 777,
+            "types": [
+              "electric",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Zing Zap",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Nuzzle",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": "Air Balloon",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Togedemaru [1st lead]"
+            ]
+          },
+          {
+            "name": "Mega Gardevoir",
+            "dexId": 282,
+            "types": [
+              "psychic",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Psychic",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              }
+            ],
+            "ability": "Trace → Pixilate",
+            "item": "Gardevoirite",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Mega Gardevoir [2nd lead]"
+            ]
+          },
+          {
+            "name": "Comfey",
+            "dexId": 764,
+            "types": [
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Draining Kiss",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Giga Drain",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Floral Healing",
+                "type": "fairy",
+                "category": "status"
+              },
+              {
+                "name": "Helping Hand",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Triage",
+            "item": "Babiri Berry",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Roserade",
+            "dexId": 407,
+            "types": [
+              "grass",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Leaf Storm",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Sleep Powder",
+                "type": "grass",
+                "category": "status"
+              }
+            ],
+            "ability": "Natural Cure",
+            "item": "Wide Lens",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Dragonite",
+            "dexId": 149,
+            "types": [
+              "dragon",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Dual Wingbeat",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Punch",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Extreme Speed",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Multiscale",
+            "item": null,
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Primarina",
+            "dexId": 730,
+            "types": [
+              "water",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Liquid Voice",
+            "item": null,
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A62:G81",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Rival"
+          ]
+        },
+        "sourceSheet": "Team Light Of Ruin Bosses",
+        "sourceRow": 62,
+        "trainerItems": "Hyper Potion x2",
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Togedemaru",
+            "dexId": 777,
+            "types": [
+              "electric",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Zing Zap",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Nuzzle",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Fake Out",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": "Air Balloon",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Togedemaru [1st lead]"
+            ]
+          },
+          {
+            "name": "Mega Gardevoir",
+            "dexId": 282,
+            "types": [
+              "psychic",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Psychic",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              }
+            ],
+            "ability": "Trace → Pixilate",
+            "item": "Gardevoirite",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Mega Gardevoir [2nd lead]"
+            ]
+          },
+          {
+            "name": "Primal Kyogre",
+            "dexId": 382,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Origin Pulse",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Thunder",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Primordial Sea",
+            "item": "Blue Orb",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Amoonguss",
+            "dexId": 591,
+            "types": [
+              "grass",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Giga Drain",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Clear Smog",
+                "type": "poison",
+                "category": "special"
+              },
+              {
+                "name": "Foul Play",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Spore",
+                "type": "grass",
+                "category": "status"
+              }
+            ],
+            "ability": "Regenerator",
+            "item": "Payapa Berry",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Stakataka",
+            "dexId": 805,
+            "types": [
+              "rock",
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Gyro Ball",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Heat Crash",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Trick Room",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Beast Boost",
+            "item": "Air Balloon",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Stakataka (15 defense IVs, 0 speed IVs)"
+            ]
+          },
+          {
+            "name": "Tapu Fini",
+            "dexId": 788,
+            "types": [
+              "water",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Muddy Water",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Icy Wind",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Nature's Madness",
+                "type": "fairy",
+                "category": "special"
+              }
+            ],
+            "ability": "Misty Surge",
+            "item": "Wiki Berry",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A62:G81",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Rival"
+          ]
+        },
+        "sourceSheet": "Team Light Of Ruin Bosses",
+        "sourceRow": 62,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A62:G81"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A62:G81"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A62:G81"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Team Light Of Ruin Bosses"
+  },
+  {
+    "id": "light-5",
+    "name": "Team Light of Ruin Leader Aklove",
+    "kind": "boss",
+    "order": 26,
+    "location": "Ruins of Void, post-game mission of retrieving kidnapped mother",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Klefki",
+            "dexId": 707,
+            "types": [
+              "steel",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Foul Play",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Wave",
+                "type": "electric",
+                "category": "status"
+              },
+              {
+                "name": "Reflect",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Light Screen",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Prankster",
+            "item": "Light Clay",
+            "level": 70,
+            "levelBasis": "Minimum Level",
+            "notes": [
+              "Klefki [1st lead]"
+            ]
+          },
+          {
+            "name": "Primarina",
+            "dexId": 730,
+            "types": [
+              "water",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              }
+            ],
+            "ability": "Liquid Voice",
+            "item": "Kebia Berry",
+            "level": 74,
+            "levelBasis": "Minimum Level",
+            "notes": [
+              "Primarina [2nd lead]"
+            ]
+          },
+          {
+            "name": "Roserade",
+            "dexId": 407,
+            "types": [
+              "grass",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "Giga Drain",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Technician",
+            "item": "Focus Sash",
+            "level": 72,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Togekiss",
+            "dexId": 468,
+            "types": [
+              "fairy",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Follow Me",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Serene Grace",
+            "item": "Babiri Berry",
+            "level": 71,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Raichu",
+            "dexId": 26,
+            "types": [
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Volt Tackle",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Play Rough",
+                "type": "fairy",
+                "category": "physical"
+              },
+              {
+                "name": "Brick Break",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Surf",
+                "type": "water",
+                "category": "special"
+              }
+            ],
+            "ability": "Lightning Rod",
+            "item": "Air Balloon",
+            "level": 73,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Mega Gardevoir",
+            "dexId": 282,
+            "types": [
+              "psychic",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Psyshock",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Trace → Pixilate",
+            "item": "Gardevoirite",
+            "level": 74,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A82:G101",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Jax"
+          ]
+        },
+        "sourceSheet": "Team Light Of Ruin Bosses",
+        "sourceRow": 82,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Meloetta",
+            "dexId": 648,
+            "types": [
+              "normal",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Expanding Force",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power Fighting",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              }
+            ],
+            "ability": "Competitive",
+            "item": "Adrenaline Orb",
+            "level": 72,
+            "levelBasis": "Minimum Level",
+            "notes": [
+              "Meloetta [1st lead]"
+            ]
+          },
+          {
+            "name": "Tapu Lele",
+            "dexId": 786,
+            "types": [
+              "psychic",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Psychic",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Psychic Terrain",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Psychic Surge",
+            "item": "Red Card",
+            "level": 74,
+            "levelBasis": "Minimum Level",
+            "notes": [
+              "Tapu Lele [2nd lead]"
+            ]
+          },
+          {
+            "name": "Manaphy",
+            "dexId": 490,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Tail Glow",
+                "type": "bug",
+                "category": "status"
+              }
+            ],
+            "ability": "Soul-Heart",
+            "item": "Sitrus Berry",
+            "level": 74,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Tapu Koko",
+            "dexId": 785,
+            "types": [
+              "electric",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Close Combat",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Wild Charge",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Acrobatics",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Grass Knot",
+                "type": "grass",
+                "category": "special"
+              }
+            ],
+            "ability": "Electric Surge",
+            "item": "Electric Seed",
+            "level": 74,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Melmetal",
+            "dexId": 809,
+            "types": [
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Double Iron Bash",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "High Horsepower",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              }
+            ],
+            "ability": "Iron Fist",
+            "item": "Assault Vest",
+            "level": 74,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Mega Diancie",
+            "dexId": 719,
+            "types": [
+              "rock",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Diamond Storm",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Earth Power",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              }
+            ],
+            "ability": "Clear Body → Magic Bounce",
+            "item": "Diancite",
+            "level": 75,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A82:G101",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Jax"
+          ]
+        },
+        "sourceSheet": "Team Light Of Ruin Bosses",
+        "sourceRow": 82,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Meloetta",
+            "dexId": 648,
+            "types": [
+              "normal",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Expanding Force",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Hidden Power Fighting",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              }
+            ],
+            "ability": "Competitive",
+            "item": "Adrenaline Orb",
+            "level": 72,
+            "levelBasis": "Minimum Level",
+            "notes": [
+              "Meloetta [1st lead]"
+            ]
+          },
+          {
+            "name": "Tapu Lele",
+            "dexId": 786,
+            "types": [
+              "psychic",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Stored Power",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Dazzling Gleam",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Psychic Terrain",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Psychic Surge",
+            "item": "Red Card",
+            "level": 74,
+            "levelBasis": "Minimum Level",
+            "notes": [
+              "Tapu Lele [2nd lead]"
+            ]
+          },
+          {
+            "name": "Manaphy",
+            "dexId": 490,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Tail Glow",
+                "type": "bug",
+                "category": "status"
+              }
+            ],
+            "ability": "Soul-Heart",
+            "item": "Sitrus Berry",
+            "level": 74,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Tapu Koko",
+            "dexId": 785,
+            "types": [
+              "electric",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Close Combat",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Wild Charge",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Acrobatics",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Grass Knot",
+                "type": "grass",
+                "category": "special"
+              }
+            ],
+            "ability": "Electric Surge",
+            "item": "Electric Seed",
+            "level": 74,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Melmetal",
+            "dexId": 809,
+            "types": [
+              "steel"
+            ],
+            "moves": [
+              {
+                "name": "Double Iron Bash",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "High Horsepower",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Thunder Punch",
+                "type": "electric",
+                "category": "physical"
+              }
+            ],
+            "ability": "Iron Fist",
+            "item": "Assault Vest",
+            "level": 74,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Mega Diancie",
+            "dexId": 719,
+            "types": [
+              "rock",
+              "fairy"
+            ],
+            "moves": [
+              {
+                "name": "Diamond Storm",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Moonblast",
+                "type": "fairy",
+                "category": "special"
+              },
+              {
+                "name": "Earth Power",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Mystical Fire",
+                "type": "fire",
+                "category": "special"
+              }
+            ],
+            "ability": "Clear Body → Magic Bounce",
+            "item": "Diancite",
+            "level": 75,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A82:G101",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "tag",
+          "notes": [
+            "Tag Battle with Jax"
+          ]
+        },
+        "sourceSheet": "Team Light Of Ruin Bosses",
+        "sourceRow": 82,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A82:G101"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A82:G101"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Team%20Light%20Of%20Ruin%20Bosses!A82:G101"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Team Light Of Ruin Bosses"
+  },
+  {
+    "id": "wild-1",
+    "name": "Shadow Warrior",
+    "kind": "boss",
+    "order": 27,
+    "location": "immediately after Ivory Tag Battle",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Shadow Warrior",
+            "dexId": null,
+            "types": [],
+            "moves": [
+              {
+                "name": "Scratch",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Incinerate",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              }
+            ],
+            "ability": "Tough Claws",
+            "item": null,
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Shadow Warrior",
+            "dexId": null,
+            "types": [],
+            "moves": [
+              {
+                "name": "Scratch",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Incinerate",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              }
+            ],
+            "ability": "Tough Claws",
+            "item": null,
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A1:G18",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 1,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Shadow Warrior",
+            "dexId": null,
+            "types": [],
+            "moves": [
+              {
+                "name": "Scratch",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Incinerate",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              }
+            ],
+            "ability": "Tough Claws",
+            "item": null,
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Shadow Warrior",
+            "dexId": null,
+            "types": [],
+            "moves": [
+              {
+                "name": "Scratch",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Incinerate",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              }
+            ],
+            "ability": "Tough Claws",
+            "item": null,
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A1:G18",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 1,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Shadow Warrior",
+            "dexId": null,
+            "types": [],
+            "moves": [
+              {
+                "name": "Scratch",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Incinerate",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              }
+            ],
+            "ability": "Tough Claws",
+            "item": null,
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Shadow Warrior",
+            "dexId": null,
+            "types": [],
+            "moves": [
+              {
+                "name": "Scratch",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Incinerate",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              }
+            ],
+            "ability": "Tough Claws",
+            "item": null,
+            "level": 37,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A1:G18",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 1,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A1:G18"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A1:G18"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A1:G18"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Boss Wild Battles"
+  },
+  {
+    "id": "wild-2",
+    "name": "Claydol",
+    "kind": "boss",
+    "order": 28,
+    "location": "after climbing up a ladder",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Claydol",
+            "dexId": 344,
+            "types": [
+              "ground",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Stored Power",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Body Press",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Power Split",
+                "type": "psychic",
+                "category": "status"
+              },
+              {
+                "name": "Cosmic Power",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate",
+            "item": "Leftovers",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A20:G37",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 20,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Claydol",
+            "dexId": 344,
+            "types": [
+              "ground",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Stored Power",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Body Press",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              }
+            ],
+            "ability": "Multieye",
+            "item": "Leftovers",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Defense +3, Sp. Def +1"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A20:G37",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 20,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Claydol",
+            "dexId": 344,
+            "types": [
+              "ground",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Stored Power",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Body Press",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Rest",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate",
+            "item": "Leftovers",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Defense +6, Sp. Def +1, Raid Shields"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A20:G37",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 20,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A20:G37"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A20:G37"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A20:G37"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Boss Wild Battles"
+  },
+  {
+    "id": "wild-3",
+    "name": "Raikou",
+    "kind": "boss",
+    "order": 29,
+    "location": "three beasts back to back after Sliding Puzzle",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Raikou",
+            "dexId": 243,
+            "types": [
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Aura Sphere",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Body Slam",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Hidden Power Ice",
+                "type": "ice",
+                "category": "special"
+              }
+            ],
+            "ability": "Pressure / Inner Focus",
+            "item": "Sitrus Berry",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A39:G56",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 39,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Raikou",
+            "dexId": 243,
+            "types": [
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Aura Sphere",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Body Slam",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Hidden Power Ice",
+                "type": "ice",
+                "category": "special"
+              }
+            ],
+            "ability": "Pressure / Inner Focus",
+            "item": "Life Orb",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "+1 Speed"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A39:G56",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 39,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Raikou",
+            "dexId": 243,
+            "types": [
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Aura Sphere",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Body Slam",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Hidden Power Ice",
+                "type": "ice",
+                "category": "special"
+              }
+            ],
+            "ability": "Inner Focus",
+            "item": "Sitrus Berry",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Omniboost +1"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A39:G56",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 39,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A39:G56"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A39:G56"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A39:G56"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Boss Wild Battles"
+  },
+  {
+    "id": "wild-4",
+    "name": "Entei",
+    "kind": "boss",
+    "order": 30,
+    "location": "three beasts back to back after Sliding Puzzle",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Entei",
+            "dexId": 244,
+            "types": [
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Lava Plume",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Hammer Arm",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Ancient Power",
+                "type": "rock",
+                "category": "special"
+              }
+            ],
+            "ability": "Pressure / Inner Focus",
+            "item": "Sitrus Berry",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A58:G75",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 58,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Entei",
+            "dexId": 244,
+            "types": [
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Sacred Fire",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Stone Edge",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Hidden Power Grass",
+                "type": "grass",
+                "category": "special"
+              }
+            ],
+            "ability": "Pressure / Inner Focus",
+            "item": "Sitrus Berry",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "+1 Speed"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A58:G75",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 58,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Entei",
+            "dexId": 244,
+            "types": [
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Sacred Fire",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Stone Edge",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Hidden Power Grass",
+                "type": "grass",
+                "category": "special"
+              }
+            ],
+            "ability": "Pressure",
+            "item": "Sitrus Berry",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Omniboost +1"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A58:G75",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 58,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A58:G75"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A58:G75"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A58:G75"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Boss Wild Battles"
+  },
+  {
+    "id": "wild-5",
+    "name": "Suicune",
+    "kind": "boss",
+    "order": 31,
+    "location": "three beasts back to back after Sliding Puzzle",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Suicune",
+            "dexId": 245,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Body Slam",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Mirror Coat",
+                "type": "psychic",
+                "category": "special"
+              }
+            ],
+            "ability": "Pressure / Inner Focus",
+            "item": "Sitrus Berry",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A77:G94",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 77,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Suicune",
+            "dexId": 245,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Body Slam",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Mirror Coat",
+                "type": "psychic",
+                "category": "special"
+              }
+            ],
+            "ability": "Pressure / Inner Focus",
+            "item": "Sitrus Berry",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "+1 Speed"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A77:G94",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 77,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Suicune",
+            "dexId": 245,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Body Slam",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Mirror Coat",
+                "type": "psychic",
+                "category": "special"
+              }
+            ],
+            "ability": "Pressure",
+            "item": "Sitrus Berry",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Omniboost +1"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A77:G94",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 77,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A77:G94"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A77:G94"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A77:G94"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Boss Wild Battles"
+  },
+  {
+    "id": "wild-6",
+    "name": "Ho-Oh",
+    "kind": "boss",
+    "order": 32,
+    "location": "two birds back to back while meeting Aklove",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Ho-Oh",
+            "dexId": 250,
+            "types": [
+              "fire",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Sacred Fire",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Brave Bird",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Recover",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Pressure",
+            "item": "Sacred Ash",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A96:G113",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 96,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Ho-Oh",
+            "dexId": 250,
+            "types": [
+              "fire",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Sacred Fire",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Brave Bird",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Recover",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Pressure",
+            "item": "Protective Pads",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Attack +1, Defense +2, Raid Shields"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A96:G113",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 96,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Ho-Oh",
+            "dexId": 250,
+            "types": [
+              "fire",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Sacred Fire",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Brave Bird",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Recover",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Pressure",
+            "item": "Protective Pads",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Attack +2, Defense +3, \n4 Raid Shields"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A96:G113",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 96,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A96:G113"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A96:G113"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A96:G113"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Boss Wild Battles"
+  },
+  {
+    "id": "wild-7",
+    "name": "Lugia",
+    "kind": "boss",
+    "order": 33,
+    "location": "two birds back to back while meeting Aklove",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Lugia",
+            "dexId": 249,
+            "types": [
+              "psychic",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Multiscale",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A115:G132",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 115,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Lugia",
+            "dexId": 249,
+            "types": [
+              "psychic",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Multiscale",
+            "item": "Leftovers",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Defense +2, Sp.Atk +1, Raid Shields"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A115:G132",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 115,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Lugia",
+            "dexId": 249,
+            "types": [
+              "psychic",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Toxic",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Multiscale",
+            "item": "Leftovers",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Defense +3, Sp.Atk +2, \n4 Raid Shields"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A115:G132",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 115,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A115:G132"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A115:G132"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A115:G132"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Boss Wild Battles"
+  },
+  {
+    "id": "wild-8",
+    "name": "Primal Groudon",
+    "kind": "boss",
+    "order": 34,
+    "location": "after Vega Tag Battle, party attacks controlled by Marlon",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Primal Groudon",
+            "dexId": 383,
+            "types": [
+              "ground",
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Default moveset",
+                "type": null,
+                "category": null
+              }
+            ],
+            "ability": "Desolate Land",
+            "item": "Red Orb",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A134:G151",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 134,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Primal Groudon",
+            "dexId": 383,
+            "types": [
+              "ground",
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Precipice Blades",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Solar Beam",
+                "type": "grass",
+                "category": "special"
+              }
+            ],
+            "ability": "Desolate Land",
+            "item": "Red Orb",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A134:G151",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 134,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Primal Groudon",
+            "dexId": 383,
+            "types": [
+              "ground",
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Precipice Blades",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Solar Beam",
+                "type": "grass",
+                "category": "special"
+              }
+            ],
+            "ability": "Desolate Land",
+            "item": "Red Orb",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Omniboost +1"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A134:G151",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 134,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A134:G151"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A134:G151"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A134:G151"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Boss Wild Battles"
+  },
+  {
+    "id": "wild-9",
+    "name": "Shadow Warrior",
+    "kind": "boss",
+    "order": 35,
+    "location": "entrance and many fights inside",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Shadow Warrior",
+            "dexId": null,
+            "types": [],
+            "moves": [
+              {
+                "name": "Shadow Bone",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              }
+            ],
+            "ability": "Wonder Guard",
+            "item": null,
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A153:G170",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 153,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Shadow Warrior",
+            "dexId": null,
+            "types": [],
+            "moves": [
+              {
+                "name": "Shadow Bone",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              }
+            ],
+            "ability": "Wonder Guard",
+            "item": null,
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "none?"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A153:G170",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 153,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Shadow Warrior",
+            "dexId": null,
+            "types": [],
+            "moves": [
+              {
+                "name": "Shadow Bone",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              }
+            ],
+            "ability": "Wonder Guard",
+            "item": null,
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Omniboost +1"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A153:G170",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 153,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A153:G170"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A153:G170"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A153:G170"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Boss Wild Battles"
+  },
+  {
+    "id": "wild-10",
+    "name": "Giratina",
+    "kind": "boss",
+    "order": 36,
+    "location": "the end of puzzle",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Giratina",
+            "dexId": 487,
+            "types": [
+              "ghost",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Shadow Claw",
+                "type": "ghost",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Ancient Power",
+                "type": "rock",
+                "category": "special"
+              },
+              {
+                "name": "Slash",
+                "type": "normal",
+                "category": "physical"
+              }
+            ],
+            "ability": "Pressure",
+            "item": null,
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A172:G189",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 172,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Giratina",
+            "dexId": 487,
+            "types": [
+              "ghost",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Aura Sphere",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Pressure",
+            "item": "Leftovers",
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Omniboost +1"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A172:G189",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 172,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Giratina",
+            "dexId": 487,
+            "types": [
+              "ghost",
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Aura Sphere",
+                "type": "fighting",
+                "category": "special"
+              },
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Pressure",
+            "item": "Leftovers",
+            "level": 53,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Omniboost +1"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A172:G189",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 172,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A172:G189"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A172:G189"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A172:G189"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Boss Wild Battles"
+  },
+  {
+    "id": "wild-11",
+    "name": "Zekrom / Reshiram",
+    "kind": "boss",
+    "order": 37,
+    "location": "Crystal Peak",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Zekrom",
+            "dexId": 644,
+            "types": [
+              "dragon",
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Fusion Bolt",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Zen Headbutt",
+                "type": "psychic",
+                "category": "physical"
+              }
+            ],
+            "ability": "Teravolt",
+            "item": null,
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Attack +1"
+            ]
+          },
+          {
+            "name": "Reshiram",
+            "dexId": 643,
+            "types": [
+              "dragon",
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Pulse",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Fusion Flare",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Ancient Power",
+                "type": "rock",
+                "category": "special"
+              },
+              {
+                "name": "Extrasensory",
+                "type": "psychic",
+                "category": "special"
+              }
+            ],
+            "ability": "Turboblaze",
+            "item": null,
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Sp. Atk +1"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A191:G208",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated.",
+            "Partner Pokémon in source columns E:G are excluded from the opposing team."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 191,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Zekrom",
+            "dexId": 644,
+            "types": [
+              "dragon",
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Fusion Bolt",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Zen Headbutt",
+                "type": "psychic",
+                "category": "physical"
+              }
+            ],
+            "ability": "Teravolt",
+            "item": null,
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Sp. Atk +1"
+            ]
+          },
+          {
+            "name": "Reshiram",
+            "dexId": 643,
+            "types": [
+              "dragon",
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Pulse",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Fusion Flare",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Ancient Power",
+                "type": "rock",
+                "category": "special"
+              },
+              {
+                "name": "Extrasensory",
+                "type": "psychic",
+                "category": "special"
+              }
+            ],
+            "ability": "Turboblaze",
+            "item": null,
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Attack +1"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A191:G208",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated.",
+            "Partner Pokémon in source columns E:G are excluded from the opposing team."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 191,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Zekrom",
+            "dexId": 644,
+            "types": [
+              "dragon",
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Fusion Bolt",
+                "type": "electric",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Zen Headbutt",
+                "type": "psychic",
+                "category": "physical"
+              }
+            ],
+            "ability": "Teravolt",
+            "item": "Air Balloon",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Omniboost +1"
+            ]
+          },
+          {
+            "name": "Reshiram",
+            "dexId": 643,
+            "types": [
+              "dragon",
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Pulse",
+                "type": "dragon",
+                "category": "special"
+              },
+              {
+                "name": "Fusion Flare",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Ancient Power",
+                "type": "rock",
+                "category": "special"
+              },
+              {
+                "name": "Extrasensory",
+                "type": "psychic",
+                "category": "special"
+              }
+            ],
+            "ability": "Turboblaze",
+            "item": "Air Balloon",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Omniboost +1"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A191:G208",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated.",
+            "Partner Pokémon in source columns E:G are excluded from the opposing team."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 191,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A191:G208"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A191:G208"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A191:G208"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Boss Wild Battles"
+  },
+  {
+    "id": "wild-12",
+    "name": "Mega Rayquaza / Hoopa Unbound",
+    "kind": "boss",
+    "order": 38,
+    "location": "Crystal Peak",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Mega Rayquaza",
+            "dexId": 384,
+            "types": [
+              "dragon",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Ascent",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Extreme Speed",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Delta Stream",
+            "item": null,
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Mega Rayquaza (respawnable)"
+            ]
+          },
+          {
+            "name": "Hoopa Unbound",
+            "dexId": 720,
+            "types": [
+              "psychic",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Hyperspace Hole",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Hyperspace Fury",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Dual Chop",
+                "type": "dragon",
+                "category": "physical"
+              }
+            ],
+            "ability": "Portal Power",
+            "item": null,
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Defense +1"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A210:G227",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 210,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Mega Rayquaza",
+            "dexId": 384,
+            "types": [
+              "dragon",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Ascent",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Extreme Speed",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Delta Stream",
+            "item": null,
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Mega Rayquaza (respawnable)"
+            ]
+          },
+          {
+            "name": "Hoopa Unbound",
+            "dexId": 720,
+            "types": [
+              "psychic",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Hyperspace Hole",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Hyperspace Fury",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Dual Chop",
+                "type": "dragon",
+                "category": "physical"
+              }
+            ],
+            "ability": "Portal Power",
+            "item": null,
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Omniboost +1"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A210:G227",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 210,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Mega Rayquaza",
+            "dexId": 384,
+            "types": [
+              "dragon",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Ascent",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Extreme Speed",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Pulse",
+                "type": "dragon",
+                "category": "special"
+              }
+            ],
+            "ability": "Delta Stream",
+            "item": null,
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Mega Rayquaza (respawnable)",
+              "Omniboost +1"
+            ]
+          },
+          {
+            "name": "Hoopa Unbound",
+            "dexId": 720,
+            "types": [
+              "psychic",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Hyperspace Hole",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Hyperspace Fury",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Portal Power",
+            "item": null,
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Omniboost +1"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A210:G227",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 210,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Boss%20Wild%20Battles!A210:G227"
+      },
+      {
+        "label": "Expert boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Boss%20Wild%20Battles!A210:G227"
+      },
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A210:G227"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Boss Wild Battles"
+  },
+  {
+    "id": "rival-1-gible",
+    "name": "Rival — Frozen Heights (Gible starter)",
+    "kind": "boss",
+    "order": 39,
+    "location": "Frozen Heights",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Larvitar",
+            "dexId": 246,
+            "types": [
+              "rock",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Leer",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Rock Throw",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Sandstorm",
+                "type": "rock",
+                "category": "status"
+              },
+              {
+                "name": "Bite",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Guts",
+            "item": null,
+            "level": 10,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A2:U20",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 2,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Larvitar",
+            "dexId": 246,
+            "types": [
+              "rock",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Bite",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Scary Face",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Rock Tomb",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Screech",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Guts",
+            "item": null,
+            "level": 17,
+            "levelBasis": "Level at cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A2:U20",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 2,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Larvitar",
+            "dexId": 246,
+            "types": [
+              "rock",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Bite",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Scary Face",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Rock Tomb",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Screech",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Guts",
+            "item": null,
+            "level": 18,
+            "levelBasis": "Level at cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A2:U20",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 2,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A2:U20"
+      },
+      {
+        "label": "Expert rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A2:U20"
+      },
+      {
+        "label": "Insane rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A2:U20"
+      }
+    ],
+    "summary": "Rival roster when your starting Pokémon was Gible.",
+    "gymNumber": null,
+    "chapter": "Rival",
+    "starter": "Gible"
+  },
+  {
+    "id": "rival-1-beldum",
+    "name": "Rival — Frozen Heights (Beldum starter)",
+    "kind": "boss",
+    "order": 40,
+    "location": "Frozen Heights",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Gible",
+            "dexId": 443,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Tackle",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Sand Attack",
+                "type": "ground",
+                "category": "status"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sand Veil",
+            "item": null,
+            "level": 10,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A2:U20",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 2,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Gible",
+            "dexId": 443,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Sand Attack",
+                "type": "ground",
+                "category": "status"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Sandstorm",
+                "type": "rock",
+                "category": "status"
+              },
+              {
+                "name": "Fire Fang",
+                "type": "fire",
+                "category": "physical"
+              }
+            ],
+            "ability": "Rough Skin",
+            "item": null,
+            "level": 17,
+            "levelBasis": "Level at cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A2:U20",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 2,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Gible",
+            "dexId": 443,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Sandstorm",
+                "type": "rock",
+                "category": "status"
+              },
+              {
+                "name": "Fire Fang",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Sand Tomb",
+                "type": "ground",
+                "category": "physical"
+              }
+            ],
+            "ability": "Rough Skin",
+            "item": null,
+            "level": 18,
+            "levelBasis": "Level at cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A2:U20",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 2,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A2:U20"
+      },
+      {
+        "label": "Expert rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A2:U20"
+      },
+      {
+        "label": "Insane rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A2:U20"
+      }
+    ],
+    "summary": "Rival roster when your starting Pokémon was Beldum.",
+    "gymNumber": null,
+    "chapter": "Rival",
+    "starter": "Beldum"
+  },
+  {
+    "id": "rival-1-larvitar",
+    "name": "Rival — Frozen Heights (Larvitar starter)",
+    "kind": "boss",
+    "order": 41,
+    "location": "Frozen Heights",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Beldum",
+            "dexId": 374,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Tackle",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Flash",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Metal Bash",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Metal Bash",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Clear Body",
+            "item": null,
+            "level": 10,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A2:U20",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 2,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Beldum",
+            "dexId": 374,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Tackle",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Flash",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Metal Bash",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Metal Bash",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Clear Body",
+            "item": null,
+            "level": 17,
+            "levelBasis": "Level at cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A2:U20",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 2,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Beldum",
+            "dexId": 374,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Tackle",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Flash",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Metal Bash",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Metal Bash",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Clear Body",
+            "item": null,
+            "level": 18,
+            "levelBasis": "Level at cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A2:U20",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 2,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A2:U20"
+      },
+      {
+        "label": "Expert rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A2:U20"
+      },
+      {
+        "label": "Insane rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A2:U20"
+      }
+    ],
+    "summary": "Rival roster when your starting Pokémon was Larvitar.",
+    "gymNumber": null,
+    "chapter": "Rival",
+    "starter": "Larvitar"
+  },
+  {
+    "id": "rival-2-gible",
+    "name": "Rival — Icicle Cave 2F (Gible starter)",
+    "kind": "boss",
+    "order": 42,
+    "location": "Icicle Cave 2F",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "default moveset",
+                "type": null,
+                "category": null
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 12,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Larvitar",
+            "dexId": 246,
+            "types": [
+              "rock",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Leer",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Rock Throw",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Sandstorm",
+                "type": "rock",
+                "category": "status"
+              },
+              {
+                "name": "Bite",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Guts",
+            "item": null,
+            "level": 13,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A21:U39",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 21,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "default moveset",
+                "type": null,
+                "category": null
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 18,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Larvitar",
+            "dexId": 246,
+            "types": [
+              "rock",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Bite",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Scary Face",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Rock Tomb",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Screech",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Guts",
+            "item": null,
+            "level": 19,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A21:U39",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 21,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "default moveset",
+                "type": null,
+                "category": null
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 18,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Larvitar",
+            "dexId": 246,
+            "types": [
+              "rock",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Bite",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Scary Face",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Rock Tomb",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Screech",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Guts",
+            "item": null,
+            "level": 19,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A21:U39",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 21,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A21:U39"
+      },
+      {
+        "label": "Expert rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A21:U39"
+      },
+      {
+        "label": "Insane rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A21:U39"
+      }
+    ],
+    "summary": "Rival roster when your starting Pokémon was Gible.",
+    "gymNumber": null,
+    "chapter": "Rival",
+    "starter": "Gible"
+  },
+  {
+    "id": "rival-2-beldum",
+    "name": "Rival — Icicle Cave 2F (Beldum starter)",
+    "kind": "boss",
+    "order": 43,
+    "location": "Icicle Cave 2F",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "default moveset",
+                "type": null,
+                "category": null
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 12,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Gible",
+            "dexId": 443,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Tackle",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Sand Attack",
+                "type": "ground",
+                "category": "status"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sand Veil",
+            "item": null,
+            "level": 13,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A21:U39",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 21,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "default moveset",
+                "type": null,
+                "category": null
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 18,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gible",
+            "dexId": 443,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Sand Attack",
+                "type": "ground",
+                "category": "status"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Sandstorm",
+                "type": "rock",
+                "category": "status"
+              },
+              {
+                "name": "Fire Fang",
+                "type": "fire",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sand Veil",
+            "item": null,
+            "level": 19,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A21:U39",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 21,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "default moveset",
+                "type": null,
+                "category": null
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 18,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gible",
+            "dexId": 443,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Sandstorm",
+                "type": "rock",
+                "category": "status"
+              },
+              {
+                "name": "Fire Fang",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Sand Tomb",
+                "type": "ground",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sand Veil",
+            "item": null,
+            "level": 19,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A21:U39",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 21,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A21:U39"
+      },
+      {
+        "label": "Expert rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A21:U39"
+      },
+      {
+        "label": "Insane rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A21:U39"
+      }
+    ],
+    "summary": "Rival roster when your starting Pokémon was Beldum.",
+    "gymNumber": null,
+    "chapter": "Rival",
+    "starter": "Beldum"
+  },
+  {
+    "id": "rival-2-larvitar",
+    "name": "Rival — Icicle Cave 2F (Larvitar starter)",
+    "kind": "boss",
+    "order": 44,
+    "location": "Icicle Cave 2F",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "default moveset",
+                "type": null,
+                "category": null
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 12,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Beldum",
+            "dexId": 374,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Tackle",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Flash",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Metal Bash",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Metal Bash",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Clear Body",
+            "item": null,
+            "level": 13,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A21:U39",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 21,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "default moveset",
+                "type": null,
+                "category": null
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 18,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Beldum",
+            "dexId": 374,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Tackle",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Flash",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Metal Bash",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Metal Bash",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Clear Body",
+            "item": null,
+            "level": 19,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A21:U39",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 21,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "default moveset",
+                "type": null,
+                "category": null
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 18,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Beldum",
+            "dexId": 374,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Tackle",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Flash",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Metal Bash",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Metal Bash",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Clear Body",
+            "item": null,
+            "level": 19,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A21:U39",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 21,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A21:U39"
+      },
+      {
+        "label": "Expert rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A21:U39"
+      },
+      {
+        "label": "Insane rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A21:U39"
+      }
+    ],
+    "summary": "Rival roster when your starting Pokémon was Larvitar.",
+    "gymNumber": null,
+    "chapter": "Rival",
+    "starter": "Larvitar"
+  },
+  {
+    "id": "rival-3-gible",
+    "name": "Rival — Frost Mountain (Gible starter)",
+    "kind": "boss",
+    "order": 45,
+    "location": "Frost Mountain",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Pluck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Fury Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Mud Bomb",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Flail",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Mist",
+                "type": "ice",
+                "category": "status"
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Pupitar",
+            "dexId": 247,
+            "types": [
+              "rock",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Rock Tomb",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Screech",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Guts",
+            "item": null,
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A40:U58",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 40,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Pluck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Fury Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Mud Bomb",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Flail",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Mist",
+                "type": "ice",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Pupitar",
+            "dexId": 247,
+            "types": [
+              "rock",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Rock Tomb",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Screech",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Guts",
+            "item": null,
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A40:U58",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 40,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Brave Bird",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Steel Wing",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Bullet Seed",
+                "type": "grass",
+                "category": "physical"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": "King's Rock",
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Icicle Crash",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Focus Sash",
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Pupitar",
+            "dexId": 247,
+            "types": [
+              "rock",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Stone Edge",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Guts",
+            "item": "Life Orb",
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A40:U58",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 40,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A40:U58"
+      },
+      {
+        "label": "Expert rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A40:U58"
+      },
+      {
+        "label": "Insane rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A40:U58"
+      }
+    ],
+    "summary": "Rival roster when your starting Pokémon was Gible.",
+    "gymNumber": null,
+    "chapter": "Rival",
+    "starter": "Gible"
+  },
+  {
+    "id": "rival-3-beldum",
+    "name": "Rival — Frost Mountain (Beldum starter)",
+    "kind": "boss",
+    "order": 46,
+    "location": "Frost Mountain",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Pluck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Fury Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Mud Bomb",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Flail",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Mist",
+                "type": "ice",
+                "category": "status"
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gabite",
+            "dexId": 444,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Dual Chop",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Fang",
+                "type": "fire",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sand Veil",
+            "item": null,
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A40:U58",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 40,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Pluck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Fury Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Mud Bomb",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Flail",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Mist",
+                "type": "ice",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gabite",
+            "dexId": 444,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Dual Chop",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Metal Claw",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Fang",
+                "type": "fire",
+                "category": "physical"
+              }
+            ],
+            "ability": "Rough Skin",
+            "item": null,
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A40:U58",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 40,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Brave Bird",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Steel Wing",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Bullet Seed",
+                "type": "grass",
+                "category": "physical"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": "King's Rock",
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Icicle Crash",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Focus Sash",
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gabite",
+            "dexId": 444,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Scale Shot",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Blast",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Dragon Rage",
+                "type": "dragon",
+                "category": "special"
+              }
+            ],
+            "ability": "Rough Skin",
+            "item": "Life Orb",
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A40:U58",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 40,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A40:U58"
+      },
+      {
+        "label": "Expert rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A40:U58"
+      },
+      {
+        "label": "Insane rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A40:U58"
+      }
+    ],
+    "summary": "Rival roster when your starting Pokémon was Beldum.",
+    "gymNumber": null,
+    "chapter": "Rival",
+    "starter": "Beldum"
+  },
+  {
+    "id": "rival-3-larvitar",
+    "name": "Rival — Frost Mountain (Larvitar starter)",
+    "kind": "boss",
+    "order": 47,
+    "location": "Frost Mountain",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Pluck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Fury Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Mud Bomb",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Flail",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Mist",
+                "type": "ice",
+                "category": "status"
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Metang",
+            "dexId": 375,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Bullet Punch",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Confusion",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Pursuit",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Magnet Rise",
+                "type": "electric",
+                "category": "status"
+              }
+            ],
+            "ability": "Clear Body",
+            "item": null,
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A40:U58",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 40,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Pluck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Fury Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Mud Bomb",
+                "type": "ground",
+                "category": "special"
+              },
+              {
+                "name": "Flail",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Mist",
+                "type": "ice",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": null,
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Metang",
+            "dexId": 375,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Bullet Punch",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Confusion",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Pursuit",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Magnet Rise",
+                "type": "electric",
+                "category": "status"
+              }
+            ],
+            "ability": "Clear Body",
+            "item": null,
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A40:U58",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 40,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Brave Bird",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Steel Wing",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Bullet Seed",
+                "type": "grass",
+                "category": "physical"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": "King's Rock",
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Swinub",
+            "dexId": 220,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Icicle Crash",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Focus Sash",
+            "level": 32,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Metang",
+            "dexId": 375,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Meteor Mash",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Zen Headbutt",
+                "type": "psychic",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              }
+            ],
+            "ability": "Clear Body",
+            "item": "Life Orb",
+            "level": 33,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A40:U58",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 40,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A40:U58"
+      },
+      {
+        "label": "Expert rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A40:U58"
+      },
+      {
+        "label": "Insane rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A40:U58"
+      }
+    ],
+    "summary": "Rival roster when your starting Pokémon was Larvitar.",
+    "gymNumber": null,
+    "chapter": "Rival",
+    "starter": "Larvitar"
+  },
+  {
+    "id": "rival-4-gible",
+    "name": "Rival — Route 12 (Gible starter)",
+    "kind": "boss",
+    "order": 48,
+    "location": "Route 12",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Drill Peck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Fury Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": null,
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Flail",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Water Pulse",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Aurora Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Quick Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Aqua Ring",
+                "type": "water",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Pupitar",
+            "dexId": 247,
+            "types": [
+              "rock",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Bad Tantrum",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Screech",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Shed Skin",
+            "item": "Tyranitarite",
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Fraxure",
+            "dexId": 611,
+            "types": [
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dual Chop",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Tomb",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Mold Breaker",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A59:U77",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 59,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Focus Sash",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Pluck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Fury Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": null,
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Water Pulse",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Aurora Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Quick Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Aqua Ring",
+                "type": "water",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Sitrus Berry",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Fraxure",
+            "dexId": 611,
+            "types": [
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dual Chop",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Tomb",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Mold Breaker",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Pupitar",
+            "dexId": 247,
+            "types": [
+              "rock",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Stone Edge",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              }
+            ],
+            "ability": "Shed Skin",
+            "item": "Tyranitarite",
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A59:U77",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 59,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Icicle Crash",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Focus Sash",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Brave Bird",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Steel Wing",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Bullet Seed",
+                "type": "grass",
+                "category": "physical"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": "King's Rock",
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Wish",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Haze",
+                "type": "ice",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Leftovers",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Fraxure",
+            "dexId": 611,
+            "types": [
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Outrage",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Mold Breaker",
+            "item": "Safety Goggles",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Pupitar",
+            "dexId": 247,
+            "types": [
+              "rock",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Stone Edge",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Shed Skin",
+            "item": "Life Orb",
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A59:U77",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 59,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A59:U77"
+      },
+      {
+        "label": "Expert rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A59:U77"
+      },
+      {
+        "label": "Insane rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A59:U77"
+      }
+    ],
+    "summary": "Rival roster when your starting Pokémon was Gible.",
+    "gymNumber": null,
+    "chapter": "Rival",
+    "starter": "Gible"
+  },
+  {
+    "id": "rival-4-beldum",
+    "name": "Rival — Route 12 (Beldum starter)",
+    "kind": "boss",
+    "order": 49,
+    "location": "Route 12",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Drill Peck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Fury Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": null,
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Flail",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Water Pulse",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Aurora Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Quick Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Aqua Ring",
+                "type": "water",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gabite",
+            "dexId": 444,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Dual Chop",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Fang",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Hone Claws",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Sand Veil",
+            "item": "Garchompite",
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Aggron",
+            "dexId": 306,
+            "types": [
+              "steel",
+              "rock"
+            ],
+            "moves": [
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Autotomize",
+                "type": "steel",
+                "category": "status"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A59:U77",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 59,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Focus Sash",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Pluck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Fury Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": null,
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Water Pulse",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Aurora Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Quick Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Aqua Ring",
+                "type": "water",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Sitrus Berry",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Aggron",
+            "dexId": 306,
+            "types": [
+              "steel",
+              "rock"
+            ],
+            "moves": [
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Autotomize",
+                "type": "steel",
+                "category": "status"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gabite",
+            "dexId": 444,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Hone Claws",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Rough Skin",
+            "item": "Garchompite",
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A59:U77",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 59,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Icicle Crash",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Focus Sash",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Brave Bird",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Steel Wing",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Bullet Seed",
+                "type": "grass",
+                "category": "physical"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": "King's Rock",
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Wish",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Haze",
+                "type": "ice",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Leftovers",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Aggron",
+            "dexId": 306,
+            "types": [
+              "steel",
+              "rock"
+            ],
+            "moves": [
+              {
+                "name": "Stone Edge",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Body Press",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Metal Burst",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": "Custap Berry",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Gabite",
+            "dexId": 444,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Scale Shot",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Blast",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Dragon Rage",
+                "type": "dragon",
+                "category": "special"
+              }
+            ],
+            "ability": "Rough Skin",
+            "item": "Life Orb",
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A59:U77",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 59,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A59:U77"
+      },
+      {
+        "label": "Expert rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A59:U77"
+      },
+      {
+        "label": "Insane rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A59:U77"
+      }
+    ],
+    "summary": "Rival roster when your starting Pokémon was Beldum.",
+    "gymNumber": null,
+    "chapter": "Rival",
+    "starter": "Beldum"
+  },
+  {
+    "id": "rival-4-larvitar",
+    "name": "Rival — Route 12 (Larvitar starter)",
+    "kind": "boss",
+    "order": 50,
+    "location": "Route 12",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Drill Peck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Fury Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": null,
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Flail",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Water Pulse",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Aurora Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Quick Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Aqua Ring",
+                "type": "water",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Metagross",
+            "dexId": 376,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Bullet Punch",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Psychic",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Brick Break",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Magnet Rise",
+                "type": "electric",
+                "category": "status"
+              }
+            ],
+            "ability": "Clear Body",
+            "item": "Metagrossite",
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Fraxure",
+            "dexId": 611,
+            "types": [
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dual Chop",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Tomb",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Mold Breaker",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A59:U77",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 59,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Focus Sash",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Pluck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Fury Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Roost",
+                "type": "flying",
+                "category": "status"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": null,
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Water Pulse",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Aurora Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Quick Attack",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Aqua Ring",
+                "type": "water",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Sitrus Berry",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Fraxure",
+            "dexId": 611,
+            "types": [
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dual Chop",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Tomb",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Mold Breaker",
+            "item": null,
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Metagross",
+            "dexId": 376,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Psychic",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Hammer Arm",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Magnet Rise",
+                "type": "electric",
+                "category": "status"
+              }
+            ],
+            "ability": "Clear Body",
+            "item": "Metagrossite",
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A59:U77",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 59,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Icicle Crash",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Focus Sash",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Brave Bird",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Steel Wing",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Blast",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Bullet Seed",
+                "type": "grass",
+                "category": "physical"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": "King's Rock",
+            "level": 45,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Wish",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Haze",
+                "type": "ice",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Leftovers",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Fraxure",
+            "dexId": 611,
+            "types": [
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Outrage",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Mold Breaker",
+            "item": "Focus Sash",
+            "level": 46,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Metagross",
+            "dexId": 376,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Meteor Mash",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Zen Headbutt",
+                "type": "psychic",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              }
+            ],
+            "ability": "Clear Body",
+            "item": "Metagrossite",
+            "level": 47,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A59:U77",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 59,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A59:U77"
+      },
+      {
+        "label": "Expert rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A59:U77"
+      },
+      {
+        "label": "Insane rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A59:U77"
+      }
+    ],
+    "summary": "Rival roster when your starting Pokémon was Larvitar.",
+    "gymNumber": null,
+    "chapter": "Rival",
+    "starter": "Larvitar"
+  },
+  {
+    "id": "rival-5-gible",
+    "name": "Rival — Cootes Bog (Gible starter)",
+    "kind": "boss",
+    "order": 51,
+    "location": "Cootes Bog",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Drill Peck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Bullet Seed",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Screech",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": null,
+            "level": 61,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Double Hit",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Amnesia",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 63,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Hydro Pump",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Acid Armor",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Aqua Ring",
+                "type": "water",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Sitrus Berry",
+            "level": 62,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Haxorus",
+            "dexId": 612,
+            "types": [
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Taunt",
+                "type": "dark",
+                "category": "status"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Mold Breaker",
+            "item": null,
+            "level": 63,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Mega Tyranitar",
+            "dexId": 248,
+            "types": [
+              "rock",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Stone Edge",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sand Stream",
+            "item": "Tyranitarite",
+            "level": 65,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A78:U96",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 78,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Focus Sash",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Rotom Fan",
+            "dexId": 479,
+            "types": [
+              "electric",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "DIscharge",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Hex",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Thunder Wave",
+                "type": "electric",
+                "category": "status"
+              }
+            ],
+            "ability": "Motor Drive",
+            "item": "Heavy-Duty Boots",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Hydro Pump",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Acid Armor",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Aqua Ring",
+                "type": "water",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Leftovers",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Haxorus",
+            "dexId": 612,
+            "types": [
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Mold Breaker",
+            "item": "Safety Goggles",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Talonflame",
+            "dexId": 663,
+            "types": [
+              "fire",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Flare Blitz",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Acrobatics",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Steel Wing",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Overheat",
+                "type": "fire",
+                "category": "special"
+              }
+            ],
+            "ability": "Gale Wings",
+            "item": "Flying Gem",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Tyranitar",
+            "dexId": 248,
+            "types": [
+              "rock",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Stone Edge",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Sand Stream",
+            "item": "Tyranitarite",
+            "level": 65,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A78:U96",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 78,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Icicle Crash",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Focus Sash",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Rotom Fan",
+            "dexId": 479,
+            "types": [
+              "electric",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Nasty Plot",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Motor Drive",
+            "item": "Heavy-Duty Boots",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Wish",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Haze",
+                "type": "ice",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Leftovers",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Haxorus",
+            "dexId": 612,
+            "types": [
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Outrage",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Mold Breaker",
+            "item": "Safety Goggles",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Talonflame",
+            "dexId": 663,
+            "types": [
+              "fire",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Flare Blitz",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Brave Bird",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "U-turn",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Overheat",
+                "type": "fire",
+                "category": "special"
+              }
+            ],
+            "ability": "Gale Wings",
+            "item": "Choice Band",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Tyranitar",
+            "dexId": 248,
+            "types": [
+              "rock",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Stone Edge",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Sand Stream",
+            "item": "Tyranitarite",
+            "level": 65,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A78:U96",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 78,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A78:U96"
+      },
+      {
+        "label": "Expert rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A78:U96"
+      },
+      {
+        "label": "Insane rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A78:U96"
+      }
+    ],
+    "summary": "Rival roster when your starting Pokémon was Gible.",
+    "gymNumber": null,
+    "chapter": "Rival",
+    "starter": "Gible"
+  },
+  {
+    "id": "rival-5-beldum",
+    "name": "Rival — Cootes Bog (Beldum starter)",
+    "kind": "boss",
+    "order": 52,
+    "location": "Cootes Bog",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Drill Peck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Bullet Seed",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Screech",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": null,
+            "level": 61,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Double Hit",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Amnesia",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 63,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Hydro Pump",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Acid Armor",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Aqua Ring",
+                "type": "water",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Sitrus Berry",
+            "level": 62,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Aggron",
+            "dexId": 306,
+            "types": [
+              "steel",
+              "rock"
+            ],
+            "moves": [
+              {
+                "name": "Iron Tail",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Metal Burst",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": null,
+            "level": 63,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Mega Garchomp",
+            "dexId": 445,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Rush",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Stomping Tantrum",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Sandstorm",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Sand Veil → Sand Force",
+            "item": "Garchompite",
+            "level": 65,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A78:U96",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 78,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Bulldoze",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Focus Sash",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Rotom Fan",
+            "dexId": 479,
+            "types": [
+              "electric",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "DIscharge",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Hex",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Thunder Wave",
+                "type": "electric",
+                "category": "status"
+              }
+            ],
+            "ability": "Motor Drive",
+            "item": "Heavy-Duty Boots",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Hydro Pump",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Acid Armor",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Aqua Ring",
+                "type": "water",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Leftovers",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Aggron",
+            "dexId": 306,
+            "types": [
+              "steel",
+              "rock"
+            ],
+            "moves": [
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Rock Slide",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Metal Burst",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": "Shuca Berry",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Chandelure",
+            "dexId": 609,
+            "types": [
+              "ghost",
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Minimize",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Shadow Tag",
+            "item": "Bright Powder",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Garchomp",
+            "dexId": 445,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Rush",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Blast",
+                "type": "fire",
+                "category": "special"
+              }
+            ],
+            "ability": "Rough Skin → Sand Force",
+            "item": "Garchompite",
+            "level": 65,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A78:U96",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 78,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Icicle Crash",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Focus Sash",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Rotom Fan",
+            "dexId": 479,
+            "types": [
+              "electric",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Air Slash",
+                "type": "flying",
+                "category": "special"
+              },
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Nasty Plot",
+                "type": "dark",
+                "category": "status"
+              }
+            ],
+            "ability": "Motor Drive",
+            "item": "Heavy-Duty Boots",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Wish",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Haze",
+                "type": "ice",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Leftovers",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Aggron",
+            "dexId": 306,
+            "types": [
+              "steel",
+              "rock"
+            ],
+            "moves": [
+              {
+                "name": "Stone Edge",
+                "type": "rock",
+                "category": "physical"
+              },
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Body Press",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Metal Burst",
+                "type": "steel",
+                "category": "physical"
+              }
+            ],
+            "ability": "Sturdy",
+            "item": "Custap Berry",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Chandelure",
+            "dexId": 609,
+            "types": [
+              "ghost",
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "Flamethrower",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Shadow Ball",
+                "type": "ghost",
+                "category": "special"
+              },
+              {
+                "name": "Energy Ball",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Substitute",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Shadow Tag",
+            "item": "Heavy-Duty Boots",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Garchomp",
+            "dexId": 445,
+            "types": [
+              "dragon",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Scale Shot",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Fire Blast",
+                "type": "fire",
+                "category": "special"
+              },
+              {
+                "name": "Swords Dance",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Rough Skin → Sand Force",
+            "item": "Garchompite",
+            "level": 65,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A78:U96",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 78,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A78:U96"
+      },
+      {
+        "label": "Expert rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A78:U96"
+      },
+      {
+        "label": "Insane rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A78:U96"
+      }
+    ],
+    "summary": "Rival roster when your starting Pokémon was Beldum.",
+    "gymNumber": null,
+    "chapter": "Rival",
+    "starter": "Beldum"
+  },
+  {
+    "id": "rival-5-larvitar",
+    "name": "Rival — Cootes Bog (Larvitar starter)",
+    "kind": "boss",
+    "order": 53,
+    "location": "Cootes Bog",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": {
+        "team": [
+          {
+            "name": "Toucannon",
+            "dexId": 733,
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Drill Peck",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Hyper Voice",
+                "type": "normal",
+                "category": "special"
+              },
+              {
+                "name": "Bullet Seed",
+                "type": "grass",
+                "category": "physical"
+              },
+              {
+                "name": "Screech",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Skill Link",
+            "item": null,
+            "level": 61,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Double Hit",
+                "type": "normal",
+                "category": "physical"
+              },
+              {
+                "name": "Amnesia",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Oblivious",
+            "item": null,
+            "level": 63,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Hydro Pump",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Acid Armor",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Aqua Ring",
+                "type": "water",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Sitrus Berry",
+            "level": 62,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Haxorus",
+            "dexId": 612,
+            "types": [
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Taunt",
+                "type": "dark",
+                "category": "status"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Mold Breaker",
+            "item": null,
+            "level": 63,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          },
+          {
+            "name": "Mega Metagross",
+            "dexId": 376,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Iron Head",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Zen Headbutt",
+                "type": "psychic",
+                "category": "physical"
+              },
+              {
+                "name": "Hammer Arm",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Agility",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Clear Body → Tough Claws",
+            "item": "Metagrossite",
+            "level": 65,
+            "levelBasis": "Minimum Level",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A78:U96",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 78,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Expert": {
+        "team": [
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Ice Fang",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Focus Sash",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Rotom Mow",
+            "dexId": 479,
+            "types": [
+              "electric",
+              "grass"
+            ],
+            "moves": [
+              {
+                "name": "Leaf Storm",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Discharge",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Volt Switch",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Hex",
+                "type": "ghost",
+                "category": "special"
+              }
+            ],
+            "ability": "Levitate",
+            "item": "White Herb",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Hydro Pump",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Ice Beam",
+                "type": "ice",
+                "category": "special"
+              },
+              {
+                "name": "Acid Armor",
+                "type": "poison",
+                "category": "status"
+              },
+              {
+                "name": "Aqua Ring",
+                "type": "water",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Leftovers",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Haxorus",
+            "dexId": 612,
+            "types": [
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Dragon Claw",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Mold Breaker",
+            "item": "Safety Goggles",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Talonflame",
+            "dexId": 663,
+            "types": [
+              "fire",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Flare Blitz",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Acrobatics",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "Steel Wing",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Overheat",
+                "type": "fire",
+                "category": "special"
+              }
+            ],
+            "ability": "Gale Wings",
+            "item": "Flying Gem",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Metagross",
+            "dexId": 376,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Meteor Mash",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Zen Headbutt",
+                "type": "psychic",
+                "category": "physical"
+              },
+              {
+                "name": "Hammer Arm",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Agility",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Clear Body → Tough Claws",
+            "item": "Metagrossite",
+            "level": 65,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A78:U96",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 78,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      },
+      "Insane": {
+        "team": [
+          {
+            "name": "Mamoswine",
+            "dexId": 473,
+            "types": [
+              "ice",
+              "ground"
+            ],
+            "moves": [
+              {
+                "name": "Icicle Crash",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Shard",
+                "type": "ice",
+                "category": "physical"
+              },
+              {
+                "name": "Stealth Rock",
+                "type": "rock",
+                "category": "status"
+              }
+            ],
+            "ability": "Thick Fat",
+            "item": "Focus Sash",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Rotom Mow",
+            "dexId": 479,
+            "types": [
+              "electric",
+              "grass"
+            ],
+            "moves": [
+              {
+                "name": "Leaf Storm",
+                "type": "grass",
+                "category": "special"
+              },
+              {
+                "name": "Thunderbolt",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Volt Switch",
+                "type": "electric",
+                "category": "special"
+              },
+              {
+                "name": "Trick",
+                "type": "psychic",
+                "category": "status"
+              }
+            ],
+            "ability": "Levitate",
+            "item": "Choice Scarf",
+            "level": 61,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Vaporeon",
+            "dexId": 134,
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "Scald",
+                "type": "water",
+                "category": "special"
+              },
+              {
+                "name": "Wish",
+                "type": "normal",
+                "category": "status"
+              },
+              {
+                "name": "Haze",
+                "type": "ice",
+                "category": "status"
+              },
+              {
+                "name": "Protect",
+                "type": "normal",
+                "category": "status"
+              }
+            ],
+            "ability": "Water Absorb",
+            "item": "Leftovers",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Haxorus",
+            "dexId": 612,
+            "types": [
+              "dragon"
+            ],
+            "moves": [
+              {
+                "name": "Outrage",
+                "type": "dragon",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Crunch",
+                "type": "dark",
+                "category": "physical"
+              },
+              {
+                "name": "Dragon Dance",
+                "type": "dragon",
+                "category": "status"
+              }
+            ],
+            "ability": "Mold Breaker",
+            "item": "Safety Goggles",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Talonflame",
+            "dexId": 663,
+            "types": [
+              "fire",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "Flare Blitz",
+                "type": "fire",
+                "category": "physical"
+              },
+              {
+                "name": "Brave Bird",
+                "type": "flying",
+                "category": "physical"
+              },
+              {
+                "name": "U-turn",
+                "type": "bug",
+                "category": "physical"
+              },
+              {
+                "name": "Overheat",
+                "type": "fire",
+                "category": "special"
+              }
+            ],
+            "ability": "Gale Wings",
+            "item": "Choice Band",
+            "level": 63,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          },
+          {
+            "name": "Mega Metagross",
+            "dexId": 376,
+            "types": [
+              "steel",
+              "psychic"
+            ],
+            "moves": [
+              {
+                "name": "Meteor Mash",
+                "type": "steel",
+                "category": "physical"
+              },
+              {
+                "name": "Zen Headbutt",
+                "type": "psychic",
+                "category": "physical"
+              },
+              {
+                "name": "Earthquake",
+                "type": "ground",
+                "category": "physical"
+              },
+              {
+                "name": "Ice Punch",
+                "type": "ice",
+                "category": "physical"
+              }
+            ],
+            "ability": "Clear Body → Tough Claws",
+            "item": "Metagrossite",
+            "level": 65,
+            "levelBasis": "Level at Cap",
+            "notes": []
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A78:U96",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "single",
+          "notes": []
+        },
+        "sourceSheet": "Rival",
+        "sourceRow": 78,
+        "notes": [
+          "Levels are source reference levels and can scale in game."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Difficult rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1_HF-bxEfamTW8S3q7tLjHWWPjo9E1QLS5dtMIhJHoeY/edit#range=Rival!A78:U96"
+      },
+      {
+        "label": "Expert rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1yl1AXKfarFb8_8-iF8We9zmLB135kxJ82yOGQDoMHOs/edit#range=Rival!A78:U96"
+      },
+      {
+        "label": "Insane rival documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Rival!A78:U96"
+      }
+    ],
+    "summary": "Rival roster when your starting Pokémon was Larvitar.",
+    "gymNumber": null,
+    "chapter": "Rival",
+    "starter": "Larvitar"
+  },
+  {
+    "id": "wild-13",
+    "name": "Hoopa Unbound",
+    "kind": "boss",
+    "order": 54,
+    "location": "back to back after Hoopa/Rayquaza fight",
+    "focus": [],
+    "rules": {
+      "inverse": false,
+      "notes": []
+    },
+    "variants": {
+      "Vanilla": null,
+      "Difficult": null,
+      "Expert": null,
+      "Insane": {
+        "team": [
+          {
+            "name": "Hoopa Unbound",
+            "dexId": 720,
+            "types": [
+              "psychic",
+              "dark"
+            ],
+            "moves": [
+              {
+                "name": "Psychic",
+                "type": "psychic",
+                "category": "special"
+              },
+              {
+                "name": "Dark Pulse",
+                "type": "dark",
+                "category": "special"
+              },
+              {
+                "name": "Drain Punch",
+                "type": "fighting",
+                "category": "physical"
+              },
+              {
+                "name": "Throat Chop",
+                "type": "dark",
+                "category": "physical"
+              }
+            ],
+            "ability": "Portal Power",
+            "item": "Leftovers",
+            "level": 62,
+            "levelBasis": "Level at Cap",
+            "notes": [
+              "Dynamaxed, Raid Shields"
+            ]
+          }
+        ],
+        "source": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A229:G246",
+        "version": "2.1.1.1",
+        "confidence": "documented",
+        "rules": {
+          "inverse": false,
+          "format": "scripted",
+          "notes": [
+            "Scripted wild boss encounter; aura and sequence effects are not simulated."
+          ]
+        },
+        "sourceSheet": "Boss Wild Battles",
+        "sourceRow": 229,
+        "trainerItems": null,
+        "notes": [
+          "Levels are source reference levels and can scale in game.",
+          "Workbook is a community WIP, not a runtime-verified battle engine."
+        ]
+      }
+    },
+    "sources": [
+      {
+        "label": "Insane boss documentation — Unbound 2.1.1.1",
+        "url": "https://docs.google.com/spreadsheets/d/1pLTQKQkWTnSkev4_kcjHbY0AkBujbTUDybxXFNZ_aVY/edit#range=Boss%20Wild%20Battles!A229:G246"
+      }
+    ],
+    "summary": "Choose your difficulty to compare documented opponents with your active team and shortlist.",
+    "gymNumber": null,
+    "chapter": "Boss Wild Battles"
+  }
+];

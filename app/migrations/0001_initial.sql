@@ -1,0 +1,11 @@
+CREATE TABLE devices (id TEXT PRIMARY KEY,name TEXT NOT NULL,token_hash TEXT NOT NULL UNIQUE,created_at TEXT NOT NULL,last_seen_at TEXT,revoked_at TEXT);
+CREATE TABLE pairings (code_hash TEXT PRIMARY KEY,expires_at TEXT NOT NULL,created_at TEXT NOT NULL,claimed_at TEXT);
+CREATE TABLE snapshots (id TEXT PRIMARY KEY,device_id TEXT NOT NULL,capture_id TEXT NOT NULL,device_sequence INTEGER NOT NULL,captured_at TEXT NOT NULL,received_at TEXT NOT NULL,hash TEXT NOT NULL,filename TEXT NOT NULL,game_version TEXT NOT NULL,status TEXT NOT NULL DEFAULT 'pending',error TEXT,parsed_json TEXT,summary_json TEXT,attempts INTEGER NOT NULL DEFAULT 0,lease_until TEXT,UNIQUE(device_id,capture_id));
+CREATE INDEX snapshots_status ON snapshots(status,received_at);
+CREATE INDEX snapshots_device_seq ON snapshots(device_id,device_sequence);
+CREATE TABLE plans (id TEXT PRIMARY KEY,data TEXT NOT NULL,updated_at TEXT NOT NULL);
+CREATE TABLE settings (id TEXT PRIMARY KEY,data TEXT NOT NULL);
+CREATE TABLE notes (id TEXT PRIMARY KEY,text TEXT NOT NULL,snapshot_id TEXT,created_at TEXT NOT NULL);
+CREATE TABLE events (id TEXT PRIMARY KEY,snapshot_id TEXT NOT NULL,kind TEXT NOT NULL,text TEXT NOT NULL,created_at TEXT NOT NULL);
+CREATE INDEX events_snapshot ON events(snapshot_id);
+CREATE TABLE request_limits (key TEXT PRIMARY KEY,count INTEGER NOT NULL,expires_at INTEGER NOT NULL);
