@@ -1,20 +1,113 @@
 {
- "$schema":"node_modules/wrangler/config-schema.json",
- "name":"borrius-companion-local","main":"src/index.js","compatibility_date":"2026-09-04","compatibility_flags":["nodejs_compat"],
- "assets":{"directory":"./public","binding":"ASSETS","run_worker_first":true,"not_found_handling":"single-page-application"},
- "observability":{"enabled":true},
- "vars":{"DEPLOYMENT_MODE":"local","DASHBOARD_HOSTNAME":"127.0.0.1","UPLOAD_HOSTNAME":"127.0.0.1","UPLOAD_ORIGIN":"http://127.0.0.1:8787"},
- "d1_databases":[{"binding":"DB","database_name":"borrius-companion","database_id":"44abcd6f-dbc9-4571-a233-3a4e56141ab6","migrations_dir":"migrations"}],
- "r2_buckets":[{"binding":"SAVES","bucket_name":"borrius-saves"}],
- "queues":{"producers":[{"binding":"INGEST","queue":"borrius-ingest"}],"consumers":[{"queue":"borrius-ingest","max_batch_size":1,"max_retries":5}]},
- "triggers":{"crons":["*/10 * * * *"]},
- "env":{"production":{
-  "name":"borrius-companion","account_id":"06fdb0f07b51b7afdcb8a7d15c82c418","workers_dev":false,"preview_urls":false,
-  "vars":{"DEPLOYMENT_MODE":"production","DASHBOARD_HOSTNAME":"borrius.ronsanzone.dev","UPLOAD_HOSTNAME":"borrius-sync.ronsanzone.dev","UPLOAD_ORIGIN":"https://borrius-sync.ronsanzone.dev","ACCESS_TEAM_DOMAIN":"https://ronsanzone.cloudflareaccess.com","ACCESS_AUD":"f75d395d641cdd357df523a289bdbaaff3758ef52d737868c558ab0b1c0f3a6a","ACCESS_ALLOWED_EMAIL":"ron.sanzone1@gmail.com"},
-  "routes":[{"pattern":"borrius.ronsanzone.dev","custom_domain":true},{"pattern":"borrius-sync.ronsanzone.dev","custom_domain":true}],
-  "d1_databases":[{"binding":"DB","database_name":"borrius-companion","database_id":"44abcd6f-dbc9-4571-a233-3a4e56141ab6","migrations_dir":"migrations"}],
-  "r2_buckets":[{"binding":"SAVES","bucket_name":"borrius-saves"}],
-  "queues":{"producers":[{"binding":"INGEST","queue":"borrius-ingest"}],"consumers":[{"queue":"borrius-ingest","max_batch_size":1,"max_retries":5}]},
-  "triggers":{"crons":["*/10 * * * *"]}
- }}
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "borrius-companion-local",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-04",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "single-page-application",
+  },
+  "observability": {
+    "enabled": true,
+  },
+  "vars": {
+    "DEPLOYMENT_MODE": "local",
+    "DASHBOARD_HOSTNAME": "127.0.0.1",
+    "UPLOAD_HOSTNAME": "127.0.0.1",
+    "UPLOAD_ORIGIN": "http://127.0.0.1:8787",
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "borrius-companion",
+      "database_id": "44abcd6f-dbc9-4571-a233-3a4e56141ab6",
+      "migrations_dir": "migrations",
+    },
+  ],
+  "r2_buckets": [
+    {
+      "binding": "SAVES",
+      "bucket_name": "borrius-saves",
+    },
+  ],
+  "queues": {
+    "producers": [
+      {
+        "binding": "INGEST",
+        "queue": "borrius-ingest",
+      },
+    ],
+    "consumers": [
+      {
+        "queue": "borrius-ingest",
+        "max_batch_size": 1,
+        "max_retries": 5,
+      },
+    ],
+  },
+  "triggers": {
+    "crons": ["*/10 * * * *"],
+  },
+  "env": {
+    "production": {
+      "name": "borrius-companion",
+      "account_id": "06fdb0f07b51b7afdcb8a7d15c82c418",
+      "workers_dev": false,
+      "preview_urls": false,
+      "vars": {
+        "DEPLOYMENT_MODE": "production",
+        "DASHBOARD_HOSTNAME": "borrius.ronsanzone.dev",
+        "UPLOAD_HOSTNAME": "borrius-sync.ronsanzone.dev",
+        "UPLOAD_ORIGIN": "https://borrius-sync.ronsanzone.dev",
+        "ACCESS_TEAM_DOMAIN": "https://ronsanzone.cloudflareaccess.com",
+        "ACCESS_AUD": "f75d395d641cdd357df523a289bdbaaff3758ef52d737868c558ab0b1c0f3a6a",
+        "ACCESS_ALLOWED_EMAIL": "ron.sanzone1@gmail.com",
+      },
+      "routes": [
+        {
+          "pattern": "borrius.ronsanzone.dev",
+          "custom_domain": true,
+        },
+        {
+          "pattern": "borrius-sync.ronsanzone.dev",
+          "custom_domain": true,
+        },
+      ],
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "borrius-companion",
+          "database_id": "44abcd6f-dbc9-4571-a233-3a4e56141ab6",
+          "migrations_dir": "migrations",
+        },
+      ],
+      "r2_buckets": [
+        {
+          "binding": "SAVES",
+          "bucket_name": "borrius-saves",
+        },
+      ],
+      "queues": {
+        "producers": [
+          {
+            "binding": "INGEST",
+            "queue": "borrius-ingest",
+          },
+        ],
+        "consumers": [
+          {
+            "queue": "borrius-ingest",
+            "max_batch_size": 1,
+            "max_retries": 5,
+          },
+        ],
+      },
+      "triggers": {
+        "crons": ["*/10 * * * *"],
+      },
+    },
+  },
 }

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.wrangler/
+worker-configuration.d.ts
+tools/oxlint/anti-slop/
+src/vendor/
+public/data/
+public/sprites/
+package-lock.json
+test-results/
+playwright-report/

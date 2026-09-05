@@ -1,3 +1,196 @@
-.fight-intro h1{font-size:36px}.fight-controls{display:flex;align-items:end;gap:15px;flex-wrap:wrap}.fight-controls label{min-width:140px}.fight-choice{flex:1}.fight-controls button{white-space:nowrap}.fight-name-choice{margin:15px 0;font-size:11px}.fight-reveal{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 8px}.fight-small{font-size:11px;line-height:1.7}.fight-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:28px 0 12px}.fight-heading h2{margin:7px 0}.fight-heading label{min-width:215px}.fight-confidence small{display:block}.fight-type-picks{display:flex;flex-wrap:wrap;gap:12px}.fight-type-picks>div{padding:12px;background:#eef0df;border-radius:9px}.fight-type-picks small{display:block;margin-top:8px;font-size:10px}.fight-hint-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.fight-hint-list article{background:#f3f4e8;border-radius:10px;padding:12px}.fight-hint-list article>div{display:flex;align-items:center;gap:6px}.fight-hint-list article>div small{margin-left:auto;font-size:10px}.fight-hint-list img{width:45px;height:45px}.fight-hint-list p{font-size:12px}.fight-candidates,.fight-foes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.fight-candidates article,.fight-foes article{padding:16px;border:1px solid #d8ddc8;border-radius:10px;background:#faf9ef;min-width:0}.fight-candidates p,.fight-foes p,.fight-foes li{font-size:12px;line-height:1.6}.fight-candidates small{font-size:10px}.fight-candidates .row{margin-top:12px}.fight-mon-title{display:flex;align-items:center;gap:8px}.fight-mon-title h3{font-size:17px}.fight-mon-title img{width:54px;height:54px}.fight-grid th,.fight-grid td{white-space:normal;min-width:125px;font-size:11px}.fight-grid thead th{text-align:center;background:#f0f3e5}.fight-grid thead strong{display:block;margin:3px}.fight-grid tbody th{position:sticky;left:0;background:#fffdf5}.fight-grid td{line-height:1.7}.fight-grid .type{font-size:8px}.fight-sources a{overflow-wrap:anywhere}.fight-foes ul{padding-left:18px}
-@media(max-width:900px){.fight-hint-list,.fight-candidates,.fight-foes{grid-template-columns:repeat(2,minmax(0,1fr));}.fight-heading{align-items:start;flex-direction:column;}}
-@media(max-width:540px){.fight-intro h1{font-size:29px}.fight-controls{gap:10px}.fight-controls label{width:100%;min-width:0}.fight-controls button{width:100%}.fight-reveal button{font-size:10px;padding:9px}.fight-hint-list,.fight-candidates,.fight-foes{grid-template-columns:1fr}.fight-heading label{width:100%}}
+.fight-intro h1 {
+  font-size: 36px;
+}
+.fight-controls {
+  display: flex;
+  align-items: end;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.fight-controls label {
+  min-width: 140px;
+}
+.fight-choice {
+  flex: 1;
+}
+.fight-controls button {
+  white-space: nowrap;
+}
+.fight-name-choice {
+  margin: 15px 0;
+  font-size: 11px;
+}
+.fight-reveal {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 18px 0 8px;
+}
+.fight-small {
+  font-size: 11px;
+  line-height: 1.7;
+}
+.fight-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 28px 0 12px;
+}
+.fight-heading h2 {
+  margin: 7px 0;
+}
+.fight-heading label {
+  min-width: 215px;
+}
+.fight-confidence small {
+  display: block;
+}
+.fight-type-picks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.fight-type-picks > div {
+  padding: 12px;
+  background: #eef0df;
+  border-radius: 9px;
+}
+.fight-type-picks small {
+  display: block;
+  margin-top: 8px;
+  font-size: 10px;
+}
+.fight-hint-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.fight-hint-list article {
+  background: #f3f4e8;
+  border-radius: 10px;
+  padding: 12px;
+}
+.fight-hint-list article > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.fight-hint-list article > div small {
+  margin-left: auto;
+  font-size: 10px;
+}
+.fight-hint-list img {
+  width: 45px;
+  height: 45px;
+}
+.fight-hint-list p {
+  font-size: 12px;
+}
+.fight-candidates,
+.fight-foes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.fight-candidates article,
+.fight-foes article {
+  padding: 16px;
+  border: 1px solid #d8ddc8;
+  border-radius: 10px;
+  background: #faf9ef;
+  min-width: 0;
+}
+.fight-candidates p,
+.fight-foes p,
+.fight-foes li {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.fight-candidates small {
+  font-size: 10px;
+}
+.fight-candidates .row {
+  margin-top: 12px;
+}
+.fight-mon-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.fight-mon-title h3 {
+  font-size: 17px;
+}
+.fight-mon-title img {
+  width: 54px;
+  height: 54px;
+}
+.fight-grid th,
+.fight-grid td {
+  white-space: normal;
+  min-width: 125px;
+  font-size: 11px;
+}
+.fight-grid thead th {
+  text-align: center;
+  background: #f0f3e5;
+}
+.fight-grid thead strong {
+  display: block;
+  margin: 3px;
+}
+.fight-grid tbody th {
+  position: sticky;
+  left: 0;
+  background: #fffdf5;
+}
+.fight-grid td {
+  line-height: 1.7;
+}
+.fight-grid .type {
+  font-size: 8px;
+}
+.fight-sources a {
+  overflow-wrap: anywhere;
+}
+.fight-foes ul {
+  padding-left: 18px;
+}
+@media (max-width: 900px) {
+  .fight-hint-list,
+  .fight-candidates,
+  .fight-foes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .fight-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 540px) {
+  .fight-intro h1 {
+    font-size: 29px;
+  }
+  .fight-controls {
+    gap: 10px;
+  }
+  .fight-controls label {
+    width: 100%;
+    min-width: 0;
+  }
+  .fight-controls button {
+    width: 100%;
+  }
+  .fight-reveal button {
+    font-size: 10px;
+    padding: 9px;
+  }
+  .fight-hint-list,
+  .fight-candidates,
+  .fight-foes {
+    grid-template-columns: 1fr;
+  }
+  .fight-heading label {
+    width: 100%;
+  }
+}

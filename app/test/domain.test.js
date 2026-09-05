@@ -1,10 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {
-  hasOrdinaryTypeDamage,
-  multiplier,
-  opportunities,
-} from "../public/domain.mjs";
+import { hasOrdinaryTypeDamage, multiplier, opportunities } from "../src/shared/domain.ts";
 
 test("special damage moves are never ranked as ordinary super-effective coverage", () => {
   const special = [
@@ -99,9 +95,6 @@ test("Acrobatics empty-item reminder preserves an intentional build", () => {
     level: 37,
     moves: [{ name: "Acrobatics", pp: 12, maxPp: 15 }],
   };
-  assert.match(
-    opportunities([mon], null)[0].text,
-    /Acrobatics benefits from an empty item slot/,
-  );
+  assert.match(opportunities([mon], null)[0].text, /Acrobatics benefits from an empty item slot/);
   assert.equal(opportunities([{ ...mon, item: "Berry" }], null).length, 0);
 });

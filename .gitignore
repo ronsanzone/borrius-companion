@@ -28,3 +28,7 @@ app/worker-configuration.d.ts
 *.state*
 .DS_Store
 __pycache__/
+
+# Browser test outputs
+app/test-results/
+app/playwright-report/

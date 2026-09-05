@@ -20,14 +20,16 @@ The signed release is installed with a verified read-only folder grant. Producti
 ## Develop
 
 ```sh
-cd app
-npm ci
-npx wrangler d1 migrations apply borrius-companion --local
-npm test
+npm run setup
+npm run check
+npm run build
+npm run test:e2e
 npm run dev
 ```
 
-Local development is bound to `127.0.0.1:8787` and bypasses owner login; do not expose that mode publicly. Run `npm run build` for a production dry run. Android instructions are in [android/README.md](android/README.md).
+The app uses strict TypeScript, Effect schemas and typed failure handling, Vite, and type-aware Oxlint with Dillon Mulroy's vendored anti-slop rules. See [source structure and verification](docs/build/maintainability.md) for module ownership and development commands.
+
+Local development binds to `127.0.0.1:8787` and bypasses owner login; keep it local. The end-to-end suite runs its own isolated Worker/D1/R2/Queue with synthetic saves and browser checks. Android instructions are in [android/README.md](android/README.md).
 
 ## Scope and limits
 

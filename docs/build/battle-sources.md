@@ -1,6 +1,6 @@
 # Battle reference provenance
 
-`app/public/data/battles.mjs` contains 54 encounter choices and 160 difficulty-specific rosters for Pokémon Unbound 2.1.1.1. These are documented community reference sets, not a runtime extraction from this user's game. The original workbooks are explicitly marked WIP. Every variant links its worksheet and row range; the application must select the exact difficulty or report that the roster is unavailable.
+`app/public/data/battles.json` contains 54 encounter choices and 160 difficulty-specific rosters for Pokémon Unbound 2.1.1.1. These are documented community reference sets, not a runtime extraction from this user's game. The original workbooks are explicitly marked WIP. Every variant links its worksheet and row range; the application must select the exact difficulty or report that the roster is unavailable.
 
 ## Sources inspected and downloaded
 

@@ -1,0 +1,286 @@
+import { Schema } from "effect";
+import { esc, element, control, errorMessage } from "../dom";
+import { DexSchema, moveSections } from "./dex-data";
+import type { Dex, DexSpecies, Evolution, DexFilters } from "./dex-data";
+import type { Pokemon } from "../../shared/types";
+const title = (v: string) =>
+  v
+    .toLowerCase()
+    .replaceAll("_", " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+export function filterDex(
+  species: readonly DexSpecies[],
+  moves: Dex["moves"],
+  { query = "", type = "", ownedOnly = false, ownedIds = [] }: DexFilters = {},
+) {
+  const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean),
+    ids = new Set(ownedIds);
+  return species.filter(
+    (s) =>
+      (!type || s.types.includes(type)) &&
+      (!ownedOnly || ids.has(s.speciesId)) &&
+      terms.every((term) =>
+        [
+          s.name,
+          s.dexId,
+          ...s.types,
+          ...s.abilities,
+          s.hiddenAbility,
+          ...[
+            ...s.learnset.map((m) => m.moveId),
+            ...s.eggMoves,
+            ...(s.machineMoves || []),
+            ...(s.tutorMoves || []),
+          ].map((id) => moves[id]?.name),
+        ]
+          .join(" ")
+          .toLowerCase()
+          .includes(term),
+      ),
+  );
+}
+export function evolutionLabel(e: Evolution) {
+  const item = title(e.parameter.replace(/^ITEM_/, ""));
+  if (e.method === "EVO_LEVEL") return `Level ${e.parameter}`;
+  if (e.method === "EVO_ITEM") return `Use ${item}`;
+  if (e.method === "EVO_FRIENDSHIP") return "High friendship";
+  if (e.method === "EVO_FRIENDSHIP_DAY") return "High friendship · daytime";
+  if (e.method === "EVO_FRIENDSHIP_NIGHT") return "High friendship · nighttime";
+  return `${title(e.method.replace(/^EVO_/, ""))} · ${item}${e.extra !== "0" ? " · " + title(e.extra) : ""}`;
+}
+export function mountDex(
+  container: HTMLElement,
+  { owned = [], query = "" }: { owned?: readonly Pokemon[]; query?: string } = {},
+) {
+  let data: Dex = { species: [], moves: {}, source: { notice: "", url: "" } },
+    selected: number | null = null,
+    page = 0,
+    search = query,
+    type = "",
+    ownedOnly = false,
+    disposed = false;
+  const abort = new AbortController();
+  const counts = new Map<number, number>();
+  for (const p of owned) counts.set(p.speciesId, (counts.get(p.speciesId) || 0) + 1);
+  container.classList.add("dex-root");
+  container.innerHTML = '<div class="dex-loading" role="status">Opening your Pokédex…</div>';
+  const badges = (types: readonly string[]) =>
+    types
+      .map((t) => `<span class="dex-type" data-type="${esc(t.toLowerCase())}">${esc(t)}</span>`)
+      .join("");
+  const sprite = (s: DexSpecies) =>
+    `<img class="dex-sprite" src="/sprites/${s.dexId}.png" alt="" loading="lazy">`;
+  function moveTable(rows: readonly { moveId: number; label: string }[]) {
+    return `<div class="dex-move-scroll">
+      <table>
+      <thead>
+      <tr>
+      <th>Learn</th>
+      <th>Move</th>
+      <th>Type</th>
+      <th>Category</th>
+      <th>Power</th>
+      <th>Accuracy</th>
+      </tr>
+      </thead>
+      <tbody>${rows
+        .map(({ moveId, label }) => {
+          const m = data.moves[moveId];
+          return m
+            ? `<tr>
+      <td>${esc(label)}</td>
+      <th scope="row">${esc(m.name)}</th>
+      <td>${badges([m.type || "Unknown"])}</td>
+      <td>${esc(m.category || "Unknown")}</td>
+      <td>${m.power ?? "—"}</td>
+      <td>${m.accuracy == null ? "—" : m.accuracy + "%"}</td>
+      </tr>`
+            : "";
+        })
+        .join("")}</tbody>
+      </table>
+      </div>`;
+  }
+  function detail() {
+    const s = data.species.find((p) => p.speciesId === selected);
+    if (!s) return "<p>Select a Pokémon to open its page.</p>";
+    const back = data.species.filter((p) => p.evolutions.some((e) => e.target === s.speciesId));
+    return `<div class="dex-species-head">${sprite(s)}<div>
+      <small>No. ${s.dexId} · ${counts.get(s.speciesId) || 0} owned</small>
+      <h2>${esc(s.name)}</h2>${badges(s.types)}</div>
+      </div>
+      <h3>Base stats</h3>
+      <div class="dex-stats">${["HP", "Attack", "Defense", "Sp. Atk", "Sp. Def", "Speed"]
+        .map(
+          (label, i) => `<div>
+      <span>${label}</span>
+      <meter min="0" max="255" value="${s.baseStats[i]}">${s.baseStats[i]}</meter>
+      <b>${s.baseStats[i]}</b>
+      </div>`,
+        )
+        .join("")}</div>
+      <small>Total ${s.baseStats.reduce((a, b) => a + b, 0)} · species base stats, not your individual Pokémon’s stats</small>
+      <h3>Abilities</h3>
+      <p>${s.abilities.map(esc).join(" · ")}${
+        s.hiddenAbility
+          ? `<br>
+      <small>Hidden: ${esc(s.hiddenAbility)}</small>`
+          : ""
+      }</p>
+      <h3>Evolution reference</h3>${back
+        .map(
+          (p) =>
+            `<p>From <button class="dex-inline" data-species="${p.speciesId}">${esc(p.name)}</button> · ${p.evolutions
+              .filter((e) => e.target === s.speciesId)
+              .map((e) => esc(evolutionLabel(e)))
+              .join(" / ")}</p>`,
+        )
+        .join("")}${s.evolutions
+        .map((e) => {
+          const target = data.species.find((p) => p.speciesId === e.target);
+          return target
+            ? `<p>
+      <button class="dex-inline" data-species="${target.speciesId}">${esc(target.name)}</button> · ${esc(evolutionLabel(e))}</p>`
+            : "";
+        })
+        .join(
+          "",
+        )}${!s.evolutions.length && !back.length ? "<p>No regular evolution recorded in this reference.</p>" : ""}<h3>Learnset reference</h3>
+      <p class="dex-note">These are potential moves, not moves your Pokémon currently knows. TM/HM and tutor compatibility does not mean you own the item or have reached its location.</p>
+      <details open>
+      <summary>Level-up (${s.learnset.length})</summary>${moveTable(s.learnset.map((m) => ({ ...m, label: m.level === 0 ? "Evolution" : `Lv. ${m.level}` })))}</details>${moveSections
+        .map(
+          ([key, label]) =>
+            `<details>
+      <summary>${label} (${s[key]?.length || 0})</summary>${s[key]?.length ? moveTable(s[key].map((moveId) => ({ moveId, label }))) : "<p>No moves recorded.</p>"}</details>`,
+        )
+        .join(
+          "",
+        )}<p class="dex-note">Move power and accuracy use the verified 2.1.1.1 move table; variable values show —. Type, ability and learnset interactions are not damage simulations.</p>
+      <a href="https://ydarissep.github.io/Unbound-Pokedex/?species=${encodeURIComponent(s.symbol || "SPECIES_" + s.name.toUpperCase())}" target="_blank" rel="noopener noreferrer">Open ${esc(s.name)} in Yda Dex ↗</a>`;
+  }
+  function results() {
+    const list = filterDex(data.species, data.moves, {
+      query: search,
+      type,
+      ownedOnly,
+      ownedIds: [...counts.keys()],
+    });
+    page = Math.min(page, Math.max(0, Math.ceil(list.length / 36) - 1));
+    element(".dex-count", container).textContent = `${list.length} species & forms`;
+    element(".dex-results", container).innerHTML =
+      list
+        .slice(page * 36, page * 36 + 36)
+        .map(
+          (s) =>
+            `<button class="dex-entry ${s.speciesId === selected ? "dex-selected" : ""}" data-species="${s.speciesId}" aria-pressed="${s.speciesId === selected}">${sprite(s)}<span>
+      <small>#${s.dexId}${counts.has(s.speciesId) ? " · Owned " + counts.get(s.speciesId) : ""}</small>
+      <strong>${esc(s.name)}</strong>${badges(s.types)}</span>
+      </button>`,
+        )
+        .join("") || "<p>No matching Pokémon. Try fewer filters.</p>";
+    element(".dex-pager", container).innerHTML =
+      `<button data-page="-1" ${!page ? "disabled" : ""}>Previous</button>
+      <span>${page + 1} / ${Math.max(1, Math.ceil(list.length / 36))}</span>
+      <button data-page="1" ${(page + 1) * 36 >= list.length ? "disabled" : ""}>Next</button>`;
+  }
+  function render() {
+    container.innerHTML = `<header class="dex-heading">
+      <div class="eyebrow">POKÉDEX</div>
+      <h1>Know your Pokémon</h1>
+      <p>Explore species, find a useful move, or follow an evolution. Your collection is marked as you browse.</p>
+      </header>
+      <div class="dex-filters">
+      <label>Search species, ability or learnable move<input data-dex-search type="search" placeholder="Joltik, Levitate, Thunderbolt…" value="${esc(search)}">
+      </label>
+      <label>Type<select data-dex-type>
+      <option value="">All types</option>${[...new Set(data.species.flatMap((s) => s.types))]
+        .sort()
+        .map((t) => `<option>${esc(t)}</option>`)
+        .join("")}</select>
+      </label>
+      <label class="dex-check">
+      <input data-dex-owned type="checkbox">Owned only</label>
+      </div>
+      <div class="dex-layout">
+      <section class="dex-browser" aria-label="Species results">
+      <p class="dex-count" aria-live="polite">
+      </p>
+      <div class="dex-results">
+      </div>
+      <div class="dex-pager">
+      </div>
+      </section>
+      <section class="dex-detail" aria-label="Species detail">${detail()}</section>
+      </div>
+      <details class="dex-source">
+      <summary>Reference source & coverage</summary>
+      <p>${esc(data.source.notice)}</p>
+      <p>National Dex 1–809 and catalogued forms. Forms use their species’ standard sprite. No encounter-location claims or randomized-mode predictions.</p>
+      <a href="${esc(data.source.url)}" target="_blank" rel="noopener noreferrer">Pinned Unbound expansion reference ↗</a>
+      </details>`;
+    results();
+  }
+  const onInput = (e: Event) => {
+    const target = control(e.target);
+    if (!target) return;
+    if (target.matches("[data-dex-search]")) {
+      search = target.value;
+      page = 0;
+      results();
+    }
+  };
+  const onChange = (e: Event) => {
+    const target = control(e.target);
+    if (!target) return;
+    if (target.matches("[data-dex-type]")) type = target.value;
+    else if (target.matches("[data-dex-owned]"))
+      ownedOnly = target instanceof HTMLInputElement && target.checked;
+    else return;
+    page = 0;
+    results();
+  };
+  const onClick = (e: MouseEvent) => {
+    const button = e.target instanceof Element ? e.target.closest("button") : null;
+    if (!button) return;
+    if (button.dataset.species) {
+      selected = Number(button.dataset.species);
+      element(".dex-detail", container).innerHTML = detail();
+      results();
+      if (globalThis.matchMedia?.("(max-width: 760px)").matches)
+        element(".dex-detail", container).scrollIntoView({ behavior: "smooth", block: "start" });
+    } else if (button.dataset.page) {
+      page += Number(button.dataset.page);
+      results();
+      element(".dex-results", container).scrollTop = 0;
+    }
+  };
+  container.addEventListener("input", onInput);
+  container.addEventListener("change", onChange);
+  container.addEventListener("click", onClick);
+  fetch("/data/dex.json", { signal: abort.signal })
+    .then((r) => {
+      if (!r.ok) throw Error("Pokédex reference could not be loaded.");
+      return r.json();
+    })
+    .then(Schema.decodeUnknownPromise(DexSchema))
+    .then((d) => {
+      if (disposed) return;
+      data = d;
+      selected =
+        (filterDex(d.species, d.moves, { query })[0]?.speciesId || d.species[0]?.speciesId) ?? null;
+      render();
+    })
+    .catch((e) => {
+      if (!disposed)
+        container.innerHTML = `<p role="alert">${esc(errorMessage(e))} Reload this page to try again.</p>`;
+    });
+  return () => {
+    disposed = true;
+    abort.abort();
+    container.removeEventListener("input", onInput);
+    container.removeEventListener("change", onChange);
+    container.removeEventListener("click", onClick);
+    container.classList.remove("dex-root");
+  };
+}

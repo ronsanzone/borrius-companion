@@ -17,8 +17,8 @@ Move {id:number,name:string,type:string|null,power:number|null,accuracy:number|n
 Progress {badges:number|null,isChampion:boolean|null,money:number|null,heartScales:number|null,ownedTms:string[],provenance:'experimental',difficulty:null,levelCap:null}; unsupported unknown, never invented caps.
 SnapshotSummary {id,capturedAt,receivedAt,status,partyNames:string[],boxCount:number,error?:string}
 Device {id,name,createdAt,lastSeenAt,revokedAt}; Plan {id,name,memberIds,inverse,weaknessLimit,hardLimit,updatedAt}; Context as above; Event {id,snapshotId,kind,text,createdAt}; Note {id,text,snapshotId,createdAt}.
-Parser module app/src/parser.js exports parseSave(Uint8Array,{gameVersion='2.1.1.1'}={}) returning {party,boxes,progress,warnings,parserVersion,gameVersion}, getCatalog() -> {species:[{speciesId,dexId,name,types,baseStats}]}.
-Root handles backend, migrations, package.json/wrangler and integration. UI agent owns app/public only. Parser agent owns app/src/parser.js, app/src/vendor, app/test/parser* only. Android agent owns android/ only.
+Parser module app/src/parser/index.ts exports parseSave(Uint8Array,{gameVersion='2.1.1.1'}={}) returning {party,boxes,progress,warnings,parserVersion,gameVersion}, getCatalog() -> {species:[{speciesId,dexId,name,types,baseStats}]}.
+The Cloudflare service lives in app/src/server, client features in app/src/client, and shared game contracts in app/src/shared. The read-only parser lives in app/src/parser; upstream/generated data is isolated in app/src/vendor with explicit TypeScript declarations. Android source remains in android/.
 
 ## Planning board update
 

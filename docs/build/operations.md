@@ -52,7 +52,7 @@ npx wrangler d1 migrations apply borrius-companion --local
 npm run dev
 ```
 
-The default local mode binds `127.0.0.1:8787` and intentionally does not require Access. Keep it local. In a second terminal, run `node test/integration.mjs` from `app/` against that server to exercise the local pipeline. It requires the ignored private fixture at `imports/retroid/unbound-2026-09-05-initial.srm` and creates local test data.
+The default local mode binds `127.0.0.1:8787` and intentionally does not require Access. Keep it local. In a second terminal, run `npm run test:integration` from `app/` against that server to exercise the local pipeline. It uses a synthetic six-member party and four boxed Pokémon and creates local test data. Set `BORRIUS_TEST_SAVE` to an ignored local save path for an additional private-fixture check. `npm run test:e2e` starts an isolated local Worker and runs the pipeline plus browser interactions.
 
 Android uses JDK 17, SDK/build tools 35 and Gradle 8.13. From `android/`:
 

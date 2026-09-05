@@ -1,0 +1,11 @@
+{
+  "name": "borrius-monorepo",
+  "private": true,
+  "scripts": {
+    "setup": "npm --prefix app ci",
+    "dev": "npm --prefix app run dev",
+    "check": "npm --prefix app run check",
+    "test:e2e": "npm --prefix app run test:e2e",
+    "build": "npm --prefix app run build"
+  }
+}

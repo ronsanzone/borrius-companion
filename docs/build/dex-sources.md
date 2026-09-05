@@ -21,4 +21,4 @@ Clone `https://github.com/Skeli789/Dynamic-Pokemon-Expansion.git` into ignored `
 
 ## Integration
 
-`mountDex(container, { owned: ownedPokemonArray, query: optionalInitialSearch })` in `app/public/dex.mjs` returns cleanup. Call cleanup when leaving/replacing the tab. Include `dex.css`. The mount owns scoped listeners and an AbortController; all search, selection, and pagination happen without global application rerendering.
+`mountDex(container, { owned: ownedPokemonArray, query: optionalInitialSearch })` in `app/src/client/features/dex.ts` returns cleanup. Call cleanup when leaving/replacing the tab. Include `dex.css`. The mount owns scoped listeners and an AbortController; all search, selection, and pagination happen without global application rerendering.
