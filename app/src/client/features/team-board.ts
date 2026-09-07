@@ -8,6 +8,13 @@ import type { PlannerDraft } from "../contracts";
 import type { Pokemon, TeamMember } from "../../shared/types";
 import type { Dex } from "./dex-data";
 
+export interface TypeBoardState {
+  type: string;
+  metric: "weak" | "resist" | "immune";
+  target: number | null;
+  benchOpen: boolean;
+}
+
 export function boardCandidates(draft: PlannerDraft): readonly TeamMember[] {
   const active = ownedIds(draft.members);
   return [
@@ -35,6 +42,7 @@ export function teamBoard(
   owned: readonly Pokemon[],
   dex: Dex,
   pending: boolean,
+  mobile?: TypeBoardState,
 ): string {
   const candidates = boardCandidates(draft);
   const columns = [...draft.members, ...candidates].map((m) => memberView(m, owned, dex));
@@ -53,6 +61,47 @@ export function teamBoard(
       unknown: active.filter((v) => v === null).length,
     };
   });
+  if (mobile) {
+    const selected = rows.find((r) => r.type === mobile.type) ?? rows[0];
+    const targetName = mobile.target === null ? undefined : columns[mobile.target]?.name;
+    const memberRow = (i: number, active: boolean) => {
+      const member = columns[i];
+      if (!member) return "";
+      const value = selected?.values[i];
+      const status =
+        value === null || value === undefined
+          ? "unknown"
+          : value === 0
+            ? "immune"
+            : value > 1
+              ? "weak"
+              : value < 1
+                ? "resist"
+                : "neutral";
+      const index = active ? i : i - activeCount;
+      return `<article class="mobile-type-member"><div class="mobile-type-member-head"><button class="quiet" data-strategy="${active ? "board-inspect" : "inspect-candidate"}" data-id="${index}">${esc(member.name)}</button><span class="mobile-type-value ${status}">${value === null || value === undefined ? "?" : `${value}×`} ${status}</span></div><small>${member.individual ? "Owned" : member.missing ? "Missing owned individual" : "Uncaught reference build"}${active ? "" : " · Bench, not counted"}</small><div class="mobile-member-actions">${
+        active
+          ? `<button class="quiet" data-strategy="${pending ? "board-replace" : "board-target"}" data-id="${index}" aria-pressed="${mobile.target === index}">${pending ? "Replace" : "Try swap"}</button><button class="quiet" data-strategy="board-bench" data-id="${index}">Bench</button>`
+          : `<button class="quiet" data-strategy="board-activate" data-id="${index}">${targetName ? `Replace ${esc(targetName)}` : activeCount === 6 ? "Swap in" : "Activate"}</button><button class="quiet" data-strategy="board-unlist" data-id="${index}">Unlist</button>`
+      }</div></article>`;
+    };
+    return `<div class="section-head"><h3>Build & compare by type</h3><span>${activeCount}/6 active · ${candidates.length} bench</span></div><p>${draft.inverse ? "Inverse" : "Standard"} chart · active team only. Tap a type to inspect each Pokémon.</p>
+    <div class="mobile-type-metrics" role="group" aria-label="Type count metric">${(["weak", "resist", "immune"] as const).map((metric) => `<button class="quiet" data-strategy="board-metric" data-id="${metric}" aria-pressed="${mobile.metric === metric}">${metric === "weak" ? "Weak" : metric === "resist" ? "Resist" : "Immune"}</button>`).join("")}</div>
+    <div class="mobile-type-tiles" role="group" aria-label="Incoming types">${rows.map((r) => `<button class="quiet" data-strategy="board-type" data-id="${r.type}" aria-pressed="${r.type === selected?.type}" aria-label="${r.type}: ${r[mobile.metric]} ${mobile.metric}, ${r.unknown} unknown">${badges([r.type])}<b>${r[mobile.metric]}</b></button>`).join("")}</div>
+    <p class="dex-note">${selected?.unknown ? `${selected.unknown} active member(s) have unknown typing and are not counted. ` : ""}Resist excludes immunity. Encounter field rules are evaluated separately.</p>
+    <section class="mobile-type-detail" aria-label="Selected type breakdown"><h4>${badges([selected?.type ?? "normal"])} · your team</h4>${
+      activeCount
+        ? columns
+            .slice(0, activeCount)
+            .map((_, i) => memberRow(i, true))
+            .join("")
+        : "<p>No active members. Add an owned candidate or an uncaught build to start a team.</p>"
+    }</section>
+    ${pending ? '<p class="banner">Choose Replace on an active member above, or cancel.</p><button class="quiet" data-strategy="cancel">Cancel swap</button>' : ""}
+    <section data-mobile-bench><button class="quiet mobile-bench-toggle" data-strategy="board-bench-toggle" aria-expanded="${mobile.benchOpen}">${mobile.benchOpen ? "Hide" : "Show"} bench · ${candidates.length} candidates</button>
+    ${mobile.benchOpen ? `<h4>${targetName ? `Choose a replacement for ${esc(targetName)}` : "Bench candidates"}</h4>${targetName ? '<button class="quiet" data-strategy="board-target-cancel">Cancel selection</button>' : ""}${candidates.map((_, i) => memberRow(i + activeCount, false)).join("") || "<p>Your bench is empty. Add an owned Pokémon or an uncaught reference build.</p>"}` : ""}
+    <div class="strategy-controls"><button class="quiet" data-strategy="find-owned">Add owned candidates</button><button class="quiet" data-strategy="find-build">Find uncaught Pokémon</button></div></section>`;
+  }
   return `<div class="section-head"><h3>Build & compare by type</h3><span>${activeCount}/6 active · ${candidates.length} bench</span></div><p>Compare owned Pokémon and uncaught builds together. Only active columns count toward totals. ${draft.inverse ? "Inverse" : "Standard"} chart; encounter-specific field rules stay in Encounter matchups.</p>
   <div class="strategy-controls"><button class="quiet" data-strategy="find-owned">Add owned candidates</button><button class="quiet" data-strategy="find-build">Find uncaught Pokémon</button></div>
   ${pending ? '<p class="banner">Choose Replace in an active column to finish your swap, or cancel.</p><button class="quiet" data-strategy="cancel">Cancel swap</button>' : ""}

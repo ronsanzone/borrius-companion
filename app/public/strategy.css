@@ -439,3 +439,80 @@
 .team-board th {
   white-space: normal;
 }
+.mobile-type-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0;
+}
+.mobile-type-metrics button {
+  flex: 1 1 5rem;
+  padding: 9px 6px;
+}
+.mobile-type-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 6rem), 1fr));
+  gap: 6px;
+}
+.strategy-layout .mobile-type-tiles button {
+  display: flex;
+  justify-content: space-between;
+  gap: 3px;
+  padding: 8px 5px;
+  min-width: 0;
+}
+.strategy-layout .mobile-type-tiles .type {
+  margin: 0;
+  font-size: 0.7rem;
+  padding: 3px 5px;
+}
+.mobile-type-tiles button[aria-pressed="true"],
+.mobile-type-metrics button[aria-pressed="true"] {
+  border-color: #b73538;
+  box-shadow: inset 0 0 0 1px #b73538;
+  background: #f1e4d5;
+}
+.mobile-type-detail {
+  margin: 16px 0;
+}
+.mobile-type-member {
+  padding: 12px 0;
+  border-bottom: 1px solid #d9cebd;
+}
+.mobile-type-member-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.mobile-type-member-head button {
+  max-width: 100%;
+}
+.mobile-type-value {
+  white-space: nowrap;
+  font-weight: 700;
+}
+.mobile-type-value.weak {
+  color: #8c4030;
+}
+.mobile-type-value.resist {
+  color: #286044;
+}
+.mobile-type-value.immune {
+  color: #335e88;
+}
+.mobile-member-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+.mobile-type-member small {
+  display: block;
+  margin: 6px 0;
+}
+.mobile-bench-toggle {
+  width: 100%;
+  margin: 12px 0;
+}

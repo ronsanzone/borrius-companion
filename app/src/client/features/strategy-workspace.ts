@@ -1,3 +1,4 @@
+import type { TypeBoardState } from "./team-board";
 import { boardCandidates, changeActiveTeam, teamBoard } from "./team-board";
 import type { PairSelection } from "./matchup-grid";
 import { types as badges } from "../components";
@@ -32,6 +33,7 @@ interface Props {
 type Selection =
   { side: "dex"; speciesId: number } | { side: "player" | "enemy" | "candidate"; index: number };
 export interface StrategySession {
+  typeBoard: TypeBoardState;
   selection: Selection | null;
   eventId: string;
   stage: number;
@@ -44,6 +46,7 @@ export interface StrategySession {
 export function strategySession(context: TrainerContext): StrategySession {
   const current = encounterForRoster(context.nextBattleId);
   return {
+    typeBoard: { type: "fire", metric: "weak", target: null, benchOpen: false },
     selection: null,
     eventId: current?.id ?? "",
     stage: Math.max(0, current?.stages.indexOf(context.nextBattleId ?? "") ?? 0),
@@ -78,9 +81,13 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
     cleanupDex: (() => void) | null = null;
   let pairSelection: PairSelection | null = null;
   const abort = new AbortController();
+  const typeBoard = props.session.typeBoard;
   const viewport = globalThis.matchMedia("(max-width: 760px)");
   const moveInspector = () => {
-    if (root.querySelector(".strategy-inspector")) renderInspector();
+    if (root.querySelector(".strategy-inspector")) {
+      renderInspector();
+      renderTypeBoard();
+    }
   };
   viewport.addEventListener("change", moveInspector);
   const event = () => encounters.find((e) => e.id === eventId);
@@ -96,6 +103,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
   function update(next: PlannerDraft) {
     if (disposed) return;
     pairSelection = null;
+    if (draft.members !== next.members) typeBoard.target = null;
     draft = next;
     props.onDraft(next);
   }
@@ -106,6 +114,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
   }
   function add(member: TeamMember) {
     if (draft.members.length === 6) {
+      typeBoard.target = null;
       pending = member;
       message = "Choose a slot to replace, or cancel.";
       return;
@@ -216,7 +225,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
         .join("") || "<p>Your draft is empty. Add a Dex build or an owned Pokémon below.</p>"
     }</div>${pending ? '<button class="quiet" data-strategy="cancel">Cancel replacement</button>' : ""}
     <form id="strategy-save"><label>Team name<input name="name" required maxlength="80" value="${esc(draft.name)}" placeholder="Name your team"></label><button ${busy ? "disabled" : ""}>${draft.activePlan ? "Update team" : "Save team"}</button>${draft.activePlan ? '<button type="button" class="quiet" data-strategy="copy">Save as new</button><button type="button" class="danger" data-strategy="delete">Delete saved team</button>' : ""}</form>
-    <div class="strategy-controls"><label>Free planning chart<select data-strategy-change="inverse">${options(["Standard", "Inverse"], draft.inverse ? "Inverse" : "Standard")}</select></label><label>Weakness threshold<select data-strategy-change="limit">${options(["0", "1", "2", "3", "4", "5", "6"], String(draft.limit))}</select></label><label class="check"><input type="checkbox" data-strategy-change="hard" ${draft.hard ? "checked" : ""}>Only show bench additions below threshold</label></div><section data-type-board>${teamBoard(draft, props.owned, dex, pending !== null)}</section>`;
+    <div class="strategy-controls"><label>Free planning chart<select data-strategy-change="inverse">${options(["Standard", "Inverse"], draft.inverse ? "Inverse" : "Standard")}</select></label><label>Weakness threshold<select data-strategy-change="limit">${options(["0", "1", "2", "3", "4", "5", "6"], String(draft.limit))}</select></label><label class="check"><input type="checkbox" data-strategy-change="hard" ${draft.hard ? "checked" : ""}>Only show bench additions below threshold</label></div><section data-type-board>${teamBoard(draft, props.owned, dex, pending !== null, viewport.matches ? typeBoard : undefined)}</section>`;
     const board = root.querySelector(".team-board-scroll");
     if (board) board.scrollLeft = boardScroll;
     element("[data-enemy]", root).innerHTML =
@@ -281,6 +290,18 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
           )
             input.disabled = true;
         });
+  }
+  function renderTypeBoard() {
+    const scroll = root.querySelector(".team-board-scroll")?.scrollLeft ?? 0;
+    element("[data-type-board]", root).innerHTML = teamBoard(
+      draft,
+      props.owned,
+      dex,
+      pending !== null,
+      viewport.matches ? typeBoard : undefined,
+    );
+    const board = root.querySelector(".team-board-scroll");
+    if (board) board.scrollLeft = scroll;
   }
   function renderAnalysis() {
     element("[data-analysis]", root).innerHTML = strategyAnalysis(
@@ -368,6 +389,32 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
     const a = button.dataset.strategy,
       id = button.dataset.id ?? "";
     try {
+      if (
+        a === "board-type" ||
+        a === "board-metric" ||
+        a === "board-target" ||
+        a === "board-bench-toggle" ||
+        a === "board-target-cancel"
+      ) {
+        if (a === "board-type") typeBoard.type = id;
+        if (a === "board-metric" && (id === "weak" || id === "resist" || id === "immune"))
+          typeBoard.metric = id;
+        if (a === "board-target") {
+          typeBoard.target = Number(id);
+          typeBoard.benchOpen = true;
+        }
+        if (a === "board-bench-toggle") typeBoard.benchOpen = !typeBoard.benchOpen;
+        if (a === "board-target-cancel") typeBoard.target = null;
+        renderTypeBoard();
+        const nextControl =
+          root.querySelector<HTMLElement>(
+            `[data-strategy="${a}"]${button.dataset.id === undefined ? "" : `[data-id="${id}"]`}`,
+          ) ?? root.querySelector<HTMLElement>('[data-strategy="board-bench-toggle"]');
+        nextControl?.focus({ preventScroll: true });
+        if (a === "board-target")
+          root.querySelector("[data-mobile-bench]")?.scrollIntoView({ block: "start" });
+        return;
+      }
       if (a === "find-owned") {
         const collection = root.querySelector<HTMLDetailsElement>("[data-collection-panel]");
         if (collection) collection.open = true;
@@ -386,7 +433,11 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
       if (a === "board-bench") setMembers(draft.members.filter((_, i) => i !== Number(id)));
       if (a === "board-activate") {
         const candidate = boardCandidates(draft)[Number(id)];
-        if (candidate) add(candidate);
+        if (candidate) {
+          if (viewport.matches && typeBoard.target !== null) {
+            setMembers(editTeam(draft.members, candidate, typeBoard.target));
+          } else add(candidate);
+        }
       }
       if (a === "board-unlist") {
         const candidate = boardCandidates(draft)[Number(id)];
@@ -459,6 +510,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
         selection = { side: "player", index: Number(id) };
       }
       if (a === "cancel") {
+        typeBoard.target = null;
         pending = null;
         message = "Replacement cancelled.";
       }
@@ -633,15 +685,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
             benchBuilds: (draft.benchBuilds ?? []).map((m) => (m === member ? proposal : m)),
           },
     );
-    const boardScroll = root.querySelector(".team-board-scroll")?.scrollLeft ?? 0;
-    element("[data-type-board]", root).innerHTML = teamBoard(
-      draft,
-      props.owned,
-      dex,
-      pending !== null,
-    );
-    const board = root.querySelector(".team-board-scroll");
-    if (board) board.scrollLeft = boardScroll;
+    renderTypeBoard();
     renderAnalysis();
   }
   async function submit(e: SubmitEvent) {

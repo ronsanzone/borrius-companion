@@ -306,7 +306,7 @@ test("encounter grid supports keyboard pairing, mobile scroll and spoiler resets
 test("type board explores owned and uncaught teams with persistent bench proposals", async ({
   page,
 }) => {
-  await page.setViewportSize({ width: 390, height: 900 });
+  await page.setViewportSize({ width: 1200, height: 900 });
   await page.goto("/#dex");
   await page.locator('[data-strategy="new"]').click();
   await page.locator("[data-dex-search]").fill("Joltik");
@@ -368,8 +368,76 @@ test("type board explores owned and uncaught teams with persistent bench proposa
     el.scrollLeft = 0;
   });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
-  await page.locator("[data-type-board]").screenshot({ path: "test-results/team-board-390.png" });
+  await page
+    .locator("[data-type-board]")
+    .screenshot({ path: "test-results/team-board-desktop.png" });
   await page.locator('[data-strategy-change="plan"]').selectOption({ label: "Bench exploration" });
   await expect(page.locator('[data-strategy="inspect-player"]')).toHaveCount(0);
   await expect(buildColumn).toContainText("Bench");
+});
+
+test("mobile type overview selects metrics and swaps an uncaught candidate", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 900 });
+  await page.goto("/#dex");
+  await page.locator('[data-strategy="party"]').click();
+  await expect(page.locator(".team-board")).toHaveCount(0);
+  await expect(page.locator('[data-strategy="board-type"]')).toHaveCount(18);
+  await page.locator('[data-strategy-change="inverse"]').selectOption("Standard");
+  await page.locator('[data-strategy="board-type"][data-id="fire"]').click();
+  await expect(page.locator(".mobile-type-detail h4")).toContainText("fire");
+  await expect(page.locator(".mobile-type-detail .mobile-type-member")).toHaveCount(6);
+  const fire = page.locator('[data-strategy="board-type"][data-id="fire"]');
+  await expect(fire).toHaveAttribute("aria-label", /fire: 1 weak/);
+  await page.locator('[data-strategy="board-metric"][data-id="resist"]').click();
+  await expect(fire).toHaveAttribute("aria-label", /fire: 3 resist/);
+  await page.locator('[data-strategy="board-type"][data-id="ground"]').focus();
+  await page.keyboard.press("Enter");
+  await expect(page.locator('[data-strategy="board-type"][data-id="ground"]')).toBeFocused();
+  await page.locator('[data-strategy="board-target"]').first().click();
+  await expect(page.locator("[data-mobile-bench]")).toContainText(
+    "Choose a replacement for Bulbasaur",
+  );
+  await page.locator('[data-strategy="board-target-cancel"]').click();
+  await expect(page.locator('[data-strategy="board-bench-toggle"]')).toBeFocused();
+  await page.locator('[data-strategy="board-target"]').first().click();
+  await page.locator('[data-strategy="find-build"]').click();
+  await page.locator("[data-dex-search]").fill("Joltik");
+  await page.locator(".dex-results [data-species]").first().click();
+  await page.locator('[data-strategy="add-build"]').click();
+  await page.locator('[data-strategy="cancel"]').first().click();
+  await expect(page.locator("[data-mobile-bench]")).not.toContainText("Choose a replacement for");
+  await page.locator('[data-strategy="board-target"]').first().click();
+  await page.locator('[data-strategy="compare-build"]').click();
+  await page
+    .locator("[data-mobile-bench] .mobile-type-member")
+    .filter({ hasText: "Joltik" })
+    .getByRole("button", { name: "Replace Bulbasaur", exact: true })
+    .click();
+  await expect(page.locator(".mobile-type-detail .mobile-type-member").first()).toContainText(
+    "Joltik",
+  );
+  await page.locator('[data-strategy="board-metric"][data-id="immune"]').click();
+  await page.locator('nav a[href="#types"]').click();
+  await page.locator('nav a[href="#dex"]').click();
+  await expect(page.locator('[data-strategy="board-metric"][data-id="immune"]')).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+  await expect(page.locator('[data-strategy="board-type"][data-id="ground"]')).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+  await page.locator('[data-strategy="board-bench-toggle"]').click();
+  await expect(page.locator('[data-strategy="board-bench-toggle"]')).toBeFocused();
+  await page
+    .locator("[data-type-board]")
+    .screenshot({ path: "test-results/mobile-type-overview-390.png" });
+  await page.addStyleTag({ content: "html{font-size:200%}" });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.setViewportSize({ width: 1200, height: 900 });
+  await expect(page.locator(".team-board")).toHaveCount(1);
+  await expect(page.locator(".mobile-type-tiles")).toHaveCount(0);
+  await page.setViewportSize({ width: 320, height: 900 });
+  await expect(page.locator('[data-strategy="board-type"]')).toHaveCount(18);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
