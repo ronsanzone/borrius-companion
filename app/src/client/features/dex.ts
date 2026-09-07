@@ -1,3 +1,4 @@
+import { types as badges } from "../components";
 import { esc, element, control } from "../dom";
 import type { Dex, DexSpecies, Evolution, DexFilters } from "./dex-data";
 import type { Pokemon } from "../../shared/types";
@@ -76,10 +77,7 @@ export function mountDex(
   for (const p of owned) counts.set(p.speciesId, (counts.get(p.speciesId) || 0) + 1);
   container.classList.add("dex-root");
   container.innerHTML = '<div class="dex-loading" role="status">Opening your Pokédex…</div>';
-  const badges = (types: readonly string[]) =>
-    types
-      .map((t) => `<span class="dex-type" data-type="${esc(t.toLowerCase())}">${esc(t)}</span>`)
-      .join("");
+
   const sprite = (s: DexSpecies) =>
     `<img class="dex-sprite" src="/sprites/${s.dexId}.png" alt="" loading="lazy">`;
   function results() {

@@ -1,13 +1,10 @@
+import { types as badges } from "../components";
 import { esc } from "../dom";
 import { evolutionLabel } from "./dex";
 import { moveSections } from "./dex-data";
 import type { Dex, DexSpecies } from "./dex-data";
 import type { Pokemon } from "../../shared/types";
 export function speciesDetail(data: Dex, s: DexSpecies, owned: readonly Pokemon[]): string {
-  const badges = (types: readonly string[]) =>
-    types
-      .map((t) => `<span class="dex-type" data-type="${esc(t.toLowerCase())}">${esc(t)}</span>`)
-      .join("");
   const sprite = (s: DexSpecies) =>
     `<img class="dex-sprite" src="/sprites/${s.dexId}.png" alt="" loading="lazy">`;
   function moveTable(rows: readonly { moveId: number; label: string }[]) {

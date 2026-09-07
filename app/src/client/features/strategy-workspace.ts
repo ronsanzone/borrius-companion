@@ -1,3 +1,4 @@
+import { types as badges } from "../components";
 import { Schema } from "effect";
 import { esc, control, errorMessage, element } from "../dom";
 import { mountDex, type DexBrowserState } from "./dex";
@@ -231,8 +232,8 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
           : `<p>Version ${esc(v.version ?? "not established")} · ${esc(difficulty)} · ${esc(v.confidence ?? "community reference")}</p><div class="team-strip">${foes()
               .map((f, i) =>
                 visible
-                  ? `<button class="team-member" data-strategy="inspect-enemy" data-id="${i}">${f.dexId ? `<img src="/sprites/${f.dexId}.png" width="64" height="64" alt="">` : ""}<strong>${esc(f.name)}</strong><small>${f.types.map(esc).join(" / ") || "Typing unknown"}</small></button>`
-                  : `<div class="type-hint">${f.types.map(esc).join(" / ") || "Typing unknown"}</div>`,
+                  ? `<button class="team-member" data-strategy="inspect-enemy" data-id="${i}">${f.dexId ? `<img src="/sprites/${f.dexId}.png" width="64" height="64" alt="">` : ""}<strong>${esc(f.name)}</strong><small>${badges(f.types) || "Typing unknown"}</small></button>`
+                  : `<div class="type-hint">${badges(f.types) || "Typing unknown"}</div>`,
               )
               .join("")}</div>`
     }

@@ -212,12 +212,30 @@
   line-height: 1.05;
   letter-spacing: -0.04em;
 }
-.strategy-inspector .dex-type {
-  border-radius: 6px;
-  padding: 4px 7px;
-  background: #e8dfce;
-  margin-right: 5px;
+/* Reuse the Type Desk palette without splitting a type label across lines. */
+.strategy-layout .type {
   display: inline-block;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  margin: 2px 3px 2px 0;
+}
+.strategy-defense-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+}
+.strategy-type-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.strategy-type-list .type {
+  margin: 0;
 }
 .strategy-inspector .dex-species-head {
   flex-wrap: wrap;

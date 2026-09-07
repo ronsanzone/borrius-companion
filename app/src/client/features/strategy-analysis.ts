@@ -1,3 +1,4 @@
+import { types as badges } from "../components";
 import { esc } from "../dom";
 import { TYPES } from "../../shared/domain";
 import {
@@ -20,7 +21,7 @@ export function strategyAnalysis(
     type,
     count: team.filter((m) => (battleMultiplier(type, m.combatant, rules) ?? 0) > 1).length,
   })).filter((x) => x.count > 0);
-  return `<h2>Team strategy</h2><p>Shared weaknesses · ${rules.inverse ? "Inverse" : "Standard"}${rules.notes?.length ? " with supported field rules" : ""}</p><p>${weaknesses.map((x) => `<span class="pill ${x.count >= limit ? "weak" : ""}">${esc(x.type)} ${x.count}/${team.length}${x.count >= limit ? " ⚑" : ""}</span>`).join(" ") || "No shared weaknesses established."}</p>${unknown ? `<p>${unknown} member(s) have unknown battle typing and are excluded from weakness counts.</p>` : ""}
+  return `<h2>Team strategy</h2><p>Shared weaknesses · ${rules.inverse ? "Inverse" : "Standard"}${rules.notes?.length ? " with supported field rules" : ""}</p><p>${weaknesses.map((x) => `<span class="pill ${x.count >= limit ? "weak" : ""}">${badges([x.type])} ${x.count}/${team.length}${x.count >= limit ? " ⚑" : ""}</span>`).join(" ") || "No shared weaknesses established."}</p>${unknown ? `<p>${unknown} member(s) have unknown battle typing and are excluded from weakness counts.</p>` : ""}
   ${
     foes.length && reveal !== "types"
       ? foes
@@ -57,7 +58,7 @@ export function strategyAnalysis(
                 !battleTypes(m.combatant, rules).length
                   ? "unknown typing"
                   : incomingExposure(m.combatant, foes, rules)
-                      .map((x) => `${esc(x.type)} ${x.multiplier}×`)
+                      .map((x) => `${badges([x.type])} ${x.multiplier}×`)
                       .join(", ") ||
                     "No super-effective ordinary move type found in this source set; missing moves are unknown."
               }</p>`,

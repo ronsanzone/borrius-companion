@@ -1,3 +1,4 @@
+import { types as badges } from "../components";
 import { esc } from "../dom";
 import { TYPES } from "../../shared/domain";
 import { battleMultiplier } from "../../shared/fight-analysis";
@@ -19,17 +20,17 @@ export function defense(mon: Combatant, rules: BattleRules = {}): string {
   ]
     .map(
       ([value, label]) =>
-        `<p><b>${label} ${value}×:</b> ${
+        `<p class="strategy-defense-row"><b>${label} ${value}×:</b> <span class="strategy-type-list">${
           chart
             .filter((x) => x.value === value)
-            .map((x) => esc(x.type))
-            .join(", ") || "None"
-        }</p>`,
+            .map((x) => badges([x.type]))
+            .join(" ") || "None"
+        }</span></p>`,
     )
     .join("")}`;
 }
 function movesTable(moves: readonly Move[], label: string): string {
-  return `<h3>${label}</h3><ul>${moves.map((m) => `<li>${esc(m.name ?? "Unknown")} · ${esc(m.type ?? "unknown type")} · ${esc(m.category ?? "unknown category")}</li>`).join("") || "<li>No moves recorded; coverage is unknown.</li>"}</ul>`;
+  return `<h3>${label}</h3><ul>${moves.map((m) => `<li>${esc(m.name ?? "Unknown")} · ${m.type ? badges([m.type]) : "unknown type"} · ${esc(m.category ?? "unknown category")}</li>`).join("") || "<li>No moves recorded; coverage is unknown.</li>"}</ul>`;
 }
 export function inspector(
   data: Dex,
