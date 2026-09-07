@@ -1,3 +1,4 @@
+import type { PairSelection } from "./matchup-grid";
 import { types as badges } from "../components";
 import { Schema } from "effect";
 import { esc, control, errorMessage, element } from "../dom";
@@ -73,6 +74,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
     busy = false,
     disposed = false,
     cleanupDex: (() => void) | null = null;
+  let pairSelection: PairSelection | null = null;
   const abort = new AbortController();
   const viewport = globalThis.matchMedia("(max-width: 760px)");
   const moveInspector = () => {
@@ -91,6 +93,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
   const views = () => draft.members.map((m) => memberView(m, props.owned, dex));
   function update(next: PlannerDraft) {
     if (disposed) return;
+    pairSelection = null;
     draft = next;
     props.onDraft(next);
   }
@@ -281,6 +284,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
       rules(),
       reveal,
       draft.limit,
+      pairSelection,
     );
     const suggestions = benchOptions(
       views().map((v) => v.combatant),
@@ -359,6 +363,24 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
     const a = button.dataset.strategy,
       id = button.dataset.id ?? "";
     try {
+      if (a === "pair" && reveal !== "types") {
+        pairSelection = {
+          player: Number(button.dataset.player),
+          enemy: Number(button.dataset.enemy),
+        };
+        const scroll = root.querySelector(".matchup-scroll")?.scrollLeft ?? 0;
+        renderAnalysis();
+        const grid = root.querySelector(".matchup-scroll");
+        if (grid) grid.scrollLeft = scroll;
+        root
+          .querySelector<HTMLElement>(
+            `[data-strategy="pair"][data-player="${pairSelection.player}"][data-enemy="${pairSelection.enemy}"]`,
+          )
+          ?.focus({ preventScroll: true });
+        if (viewport.matches && e.detail > 0)
+          root.querySelector("[data-pair-detail]")?.scrollIntoView({ block: "nearest" });
+        return;
+      }
       if (a === "inspect-player" || a === "inspect-enemy") {
         selection = { side: a === "inspect-player" ? "player" : "enemy", index: Number(id) };
         form = 0;
@@ -437,6 +459,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
         message = "Saved team deleted; your working draft remains.";
       }
       if (a === "reveal" && (id === "types" || id === "team" || id === "full")) {
+        pairSelection = null;
         reveal = id;
         if (selection?.side === "enemy") selection = null;
       }
@@ -482,6 +505,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
     if (key === "starter") starter = input.value;
     if (key === "stage") stage = Number(input.value);
     if (["event", "difficulty", "starter", "stage"].includes(key)) {
+      pairSelection = null;
       if (selection?.side === "enemy") selection = null;
       form = 0;
     }
@@ -603,7 +627,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
       if (disposed) return;
       dex = d;
       battles = b;
-      root.innerHTML = `<header class="dex-heading"><div class="eyebrow">POKÉDEX · STRATEGY WORKSPACE</div><h1>Find your six.</h1><p>Your collection, hypothetical builds and sourced opponents in one place.</p></header><div data-message role="status" aria-live="polite"></div><div class="strategy-layout"><div class="strategy-main"><section class="panel strategy-search" data-dex></section><section class="panel" data-player></section><div data-player-detail></div><section class="panel" data-enemy></section><div data-enemy-detail></div><section class="panel" data-analysis></section><details class="panel"><summary>Your collection & shortlist</summary><label>Find an owned Pokémon<input type="search" data-collection-search></label><label>Collection filter<select data-collection-scope>${options(["all", "party", "box", "favorites", "shortlist"], "all")}</select></label><div data-missing-shortlist></div><div data-collection-results></div></details></div><div data-desktop-detail><section class="panel strategy-inspector" tabindex="-1" aria-label="Pokémon inspector"></section></div></div>`;
+      root.innerHTML = `<header class="dex-heading"><div class="eyebrow">POKÉDEX · STRATEGY WORKSPACE</div><h1>Find your six.</h1><p>Your collection, hypothetical builds and sourced opponents in one place.</p></header><div data-message role="status" aria-live="polite"></div><div class="strategy-layout"><div class="strategy-main"><section class="panel strategy-search" data-dex></section><section class="panel" data-player></section><div data-player-detail></div><section class="panel" data-enemy></section><section class="panel" data-analysis></section><div data-enemy-detail></div><details class="panel"><summary>Your collection & shortlist</summary><label>Find an owned Pokémon<input type="search" data-collection-search></label><label>Collection filter<select data-collection-scope>${options(["all", "party", "box", "favorites", "shortlist"], "all")}</select></label><div data-missing-shortlist></div><div data-collection-results></div></details></div><div data-desktop-detail><section class="panel strategy-inspector" tabindex="-1" aria-label="Pokémon inspector"></section></div></div>`;
       cleanupDex = mountDex(element("[data-dex]", root), {
         owned: props.owned,
         data: dex,

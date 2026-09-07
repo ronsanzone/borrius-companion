@@ -268,3 +268,37 @@ test("a save completing after navigation cannot restore an older draft", async (
   await expect(page.getByRole("textbox", { name: "Team name" })).toHaveValue("Newer working draft");
   await expect(page.locator('[data-strategy="inspect-player"]')).toHaveCount(0);
 });
+
+test("encounter grid supports keyboard pairing, mobile scroll and spoiler resets", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 360, height: 900 });
+  await page.goto("/#dex");
+  await page.locator('[data-strategy="party"]').click();
+  await page.locator('[data-strategy-change="event"]').selectOption("gym-alice");
+  await page.locator('[data-strategy-change="difficulty"]').selectOption("Difficult");
+  await page.locator('[data-strategy="reveal"][data-id="full"]').click();
+  const cell = page.locator('[data-strategy="pair"]').first();
+  await cell.focus();
+  await page.keyboard.press("Enter");
+  await expect(page.locator("[data-pair-detail]")).toContainText("Known attacks from save");
+  await expect(page.locator("[data-pair-detail]")).toContainText("Documented return attacks");
+  await expect(cell).toBeFocused();
+  await page.locator(".matchup-scroll").evaluate((el) => {
+    el.scrollLeft = el.scrollWidth;
+  });
+  await page.locator('[data-strategy="pair"]').last().click();
+  expect(await page.locator(".matchup-scroll").evaluate((el) => el.scrollLeft)).toBeGreaterThan(0);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.locator('[data-strategy="reveal"][data-id="team"]').click();
+  await expect(page.locator(".matchup-risk")).toHaveCount(0);
+  await expect(page.locator("[data-pair-detail]")).not.toContainText("Documented return attacks");
+  await cell.click();
+  await expect(page.locator("[data-pair-detail]")).toContainText("Reveal full details");
+  await page.locator("[data-analysis]").screenshot({ path: "test-results/matchup-grid-360.png" });
+  await page.locator('[data-strategy-change="difficulty"]').selectOption("Expert");
+  await expect(page.locator("[data-pair-detail]")).toContainText("Select a pairing");
+  await page.locator('[data-strategy="reveal"][data-id="types"]').click();
+  await expect(page.locator(".matchup-grid")).toHaveCount(0);
+  await expect(page.locator("[data-analysis]")).not.toContainText("Crobat");
+});

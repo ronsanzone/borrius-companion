@@ -260,3 +260,88 @@
 .strategy-search .dex-heading h2 {
   font-size: 1.2rem;
 }
+.matchup-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+.matchup-counts p {
+  flex: 1;
+  min-width: 130px;
+}
+.matchup-counts strong {
+  display: block;
+  font-size: 1.7rem;
+}
+.matchup-warning {
+  border-left: 4px solid #947521;
+  padding-left: 12px;
+}
+.matchup-scroll {
+  overflow-x: auto;
+  isolation: isolate;
+  margin: 14px 0;
+}
+.matchup-grid {
+  border-collapse: separate;
+  border-spacing: 4px;
+  width: 100%;
+}
+.matchup-grid th {
+  min-width: 112px;
+  max-width: 160px;
+  text-align: center;
+  padding: 8px;
+}
+.matchup-grid th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: #fffdf4;
+  min-width: 100px;
+  max-width: 130px;
+  text-align: left;
+  border-right: 2px solid #d9cebd;
+}
+.matchup-grid th small,
+.matchup-types {
+  display: block;
+}
+.matchup-grid th small {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.strategy-layout .matchup-cell {
+  width: 100%;
+  min-width: 70px;
+  white-space: nowrap;
+  color: #294944;
+  box-shadow: none;
+  padding: 12px 8px;
+  border: 2px solid transparent;
+}
+.strategy-layout .matchup-cell.effective {
+  background: #dfeadd;
+}
+.strategy-layout .matchup-cell.resisted {
+  background: #eee0d7;
+}
+.strategy-layout .matchup-cell.neutral {
+  background: #f0ebdf;
+}
+.strategy-layout .matchup-cell.unknown {
+  background: #e7e7e2;
+}
+.strategy-layout .matchup-cell[aria-pressed="true"] {
+  border-color: #b73538;
+}
+.matchup-risk {
+  color: #77500d;
+}
+.matchup-detail {
+  background: #f4eedf;
+  border-top: 3px solid #b73538;
+  border-radius: 8px;
+  margin: 16px 0;
+  padding: 14px;
+}
