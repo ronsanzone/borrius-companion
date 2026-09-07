@@ -7,7 +7,7 @@ JSON errors: {error:string}. Dates ISO UTC.
 POST /api/pairings (browser) -> {code,expiresAt,uploadUrl}; POST /api/device/pair {code,name} -> {deviceId,token,uploadUrl}; code one-use 10min, token revocable upload-only.
 POST /api/device/upload raw application/octet-stream, Authorization Bearer token, X-Capture-Id UUID, X-Captured-At ISO, X-Device-Sequence integer, X-Save-Name UTF8 URI-encoded filename, X-Game-Version '2.1.1.1'. -> {id,status:'pending'|'ready'|'failed',duplicate:boolean}; GET /api/device/receipts/:id -> {id,status,error?} only own.
 Browser GET /api/state -> {snapshot:Snapshot|null, snapshots:SnapshotSummary[],devices:Device[],plans:Plan[],context:Context,events:Event[],notes:Note[]}
-GET /api/snapshots/:id -> Snapshot; POST /api/import (browser raw bytes same capture headers optional) -> receipt. POST /api/plans {id?,name,memberIds:string[],inverse:boolean,weaknessLimit:number,hardLimit:boolean} -> Plan; DELETE /api/plans/:id.
+GET /api/snapshots/:id -> Snapshot; POST /api/import (browser raw bytes same capture headers optional) -> receipt. POST /api/plans {id?,name,members:TeamMember[],shortlistIds:string[],inverse:boolean,weaknessLimit:number,hardLimit:boolean} -> Plan; DELETE /api/plans/:id.
 PUT /api/context {difficulty:'unknown'|'Vanilla'|'Difficult'|'Expert'|'Insane',levelCap:number|null,checkpoint:string,spoilerMode:'hints'|'full',favorites:string[]} -> Context.
 POST /api/notes {text,snapshotId?} -> Note; POST /api/devices/:id/revoke -> {ok:true}.
 GET /api/catalog -> {species:CatalogSpecies[]} may be public only on authenticated dashboard. Parser agent exports catalog as getCatalog().
@@ -16,13 +16,13 @@ Pokemon {id:string,identityConfidence:'candidate'|'ambiguous',speciesId:number,d
 Move {id:number,name:string,type:string|null,power:number|null,accuracy:number|null,category:'physical'|'special'|'status'|'unknown',pp:number,maxPp:number}
 Progress {badges:number|null,isChampion:boolean|null,money:number|null,heartScales:number|null,ownedTms:string[],provenance:'experimental',difficulty:null,levelCap:null}; unsupported unknown, never invented caps.
 SnapshotSummary {id,capturedAt,receivedAt,status,partyNames:string[],boxCount:number,error?:string}
-Device {id,name,createdAt,lastSeenAt,revokedAt}; Plan {id,name,memberIds,inverse,weaknessLimit,hardLimit,updatedAt}; Context as above; Event {id,snapshotId,kind,text,createdAt}; Note {id,text,snapshotId,createdAt}.
+Device {id,name,createdAt,lastSeenAt,revokedAt}; Plan {id,name,members,shortlistIds,inverse,weaknessLimit,hardLimit,updatedAt}; Context as above; Event {id,snapshotId,kind,text,createdAt}; Note {id,text,snapshotId,createdAt}.
 Parser module app/src/parser/index.ts exports parseSave(Uint8Array,{gameVersion='2.1.1.1'}={}) returning {party,boxes,progress,warnings,parserVersion,gameVersion}, getCatalog() -> {species:[{speciesId,dexId,name,types,baseStats}]}.
 The Cloudflare service lives in app/src/server, client features in app/src/client, and shared game contracts in app/src/shared. The read-only parser lives in app/src/parser; upstream/generated data is isolated in app/src/vendor with explicit TypeScript declarations. Android source remains in android/.
 
 ## Planning board update
 
-Plans optionally accept `shortlistIds`: up to 24 unique Pokémon IDs, containing every `memberIds` entry. The active `memberIds` list still allows at most six. Existing plans without a shortlist load their active members as the shortlist. Both are stored in the existing plan JSON; no database migration is required.
+Plans require `members` (up to six) and `shortlistIds` (up to 24 unique owned identities, including every active owned member). A member is `{kind:"owned",pokemonId}` or `{kind:"build",speciesId,moveIds:(number|null)[],ability,item,notes}`. Up to four proposed move slots retain order and explicit unknown positions. Owned IDs and proposed nonempty moves must be distinct. Context writes include explicit `nextBattleId` and `fightReveal`; settings updates intentionally set both spoiler preferences. SQL migration `0003_strategy_teams.sql` converts pre-feature plan/context JSON before new decoding; see [strategy workspace](strategy-workspace.md) for migration and recovery. No runtime legacy plan/context reader remains.
 
 The UI threshold is explicitly inclusive: “3+ weak” highlights a row at count >= 3. Counts use only active members; benched columns remain visible in gray. Full-team swaps replace one selected ID in a single transition. Draft active selections/shortlist are retained locally; Save/Update plan persists them to the owner account. Focus mode fits ten candidates and eighteen type rows at 1280×720. Smaller screens scroll the grid horizontally while type/count columns remain pinned.
 

@@ -14,7 +14,7 @@ export function renderCamp(model: ViewModel): string {
       <div class="eyebrow">THE BORRIUS ADVENTURE</div>
       <h1>A good day for<br>another adventure.</h1>
       <p>${state.context.checkpoint ? `Up next: ${esc(state.context.checkpoint)}` : "Six companions. A whole region to explore.<br>Pick up your journey right where you left it."}</p>
-      <a class="button" href="#prepare">Let’s get ready <span aria-hidden="true">→</span>
+      <a class="button" href="#dex">Let’s get ready <span aria-hidden="true">→</span>
       </a>
       </div>
       <div class="route-scene" aria-hidden="true">
@@ -52,7 +52,7 @@ export function renderCamp(model: ViewModel): string {
       <h2>Your battle plan is ready to revisit.</h2>
       <p>${esc(state.context.difficulty)} · ${state.context.fightReveal === "full" ? "Full scouting" : state.context.fightReveal === "team" ? "Team preview" : "Typing hints"} · Selected by you</p>
       </div>
-      <a class="button" href="#prepare">Open matchup →</a>
+      <a class="button" href="#dex">Open matchup →</a>
       </section>`
         : "") +
       `${Date.now() - Date.parse(s.capturedAt) > 3600000 ? '<div class="banner">Your last save is over an hour old. Save in-game and sync your Retroid to catch up.</div>' : ""}<div class="section-head">
@@ -60,7 +60,7 @@ export function renderCamp(model: ViewModel): string {
       <div class="eyebrow">READY WHEN YOU ARE</div>
       <h2>Your traveling companions</h2>
       </div>
-      <a class="text-link" href="#lab">Visit your Pokémon →</a>
+      <a class="text-link" href="#dex">Visit your Pokémon →</a>
       </div>
       <div class="grid roster party-roster">${s.party.map((p) => card(p, model, false)).join("")}</div>
       <section class="trainer-record">

@@ -6,7 +6,6 @@ import {
   battleMultiplier,
   incomingExposure,
 } from "../src/shared/fight-analysis.ts";
-import { fightLabel } from "../src/client/features/battle-prep.ts";
 const mon = (id, type, move, pp = 10) => ({
   id,
   name: id,
@@ -52,11 +51,6 @@ test("source field restrictions alter recommendations without pretending full si
 test("unknown typing remains unknown, never a neutral or coverage claim", () => {
   assert.equal(battleMultiplier("fire", { types: [] }), null);
   assert.equal(analyzeFight([], [], [{ name: "unknown", types: [] }]).uncovered.length, 0);
-});
-test("hints hide encounter identities and locations", () => {
-  const b = { name: "Secret boss", location: "Secret area", kind: "boss", order: 12 };
-  assert.equal(fightLabel(b, "types"), "Boss entry 12");
-  assert.equal(fightLabel(b, "full"), "Secret boss · Secret area");
 });
 test("Camomons defensive matchups use first two move types, including status moves", () => {
   const defender = {

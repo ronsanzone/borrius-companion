@@ -13,6 +13,8 @@ export const DEFAULT_CONTEXT = {
   checkpoint: "",
   spoilerMode: "hints",
   favorites: [],
+  nextBattleId: null,
+  fightReveal: "types",
 };
 const decodePlan = Schema.decodeUnknownSync(Schema.parseJson(PlanSchema));
 const decodeContext = Schema.decodeUnknownSync(Schema.parseJson(TrainerContextSchema));

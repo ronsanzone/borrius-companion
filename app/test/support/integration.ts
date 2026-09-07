@@ -129,7 +129,7 @@ export async function exerciseSavePipeline(bytes: Uint8Array, origin = "http://1
     post(
       JSON.stringify({
         name: "Integration team",
-        memberIds,
+        members: memberIds.map((pokemonId) => ({ kind: "owned", pokemonId })),
         shortlistIds,
         inverse: false,
         weaknessLimit: 3,
@@ -173,9 +173,8 @@ export async function exerciseSavePipeline(bytes: Uint8Array, origin = "http://1
   });
   const { nextBattleId: _nextBattleId, fightReveal: _fightReveal, ...legacy } = savedContext;
   assert.equal(
-    (await read("/api/context", ContextSchema, { ...post(JSON.stringify(legacy)), method: "PUT" }))
-      .nextBattleId,
-    "gym-mel",
+    (await send("/api/context", { ...post(JSON.stringify(legacy)), method: "PUT" })).status,
+    400,
   );
   assert.equal(
     (

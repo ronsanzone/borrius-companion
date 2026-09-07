@@ -1,7 +1,7 @@
 import { TrainerContextSchema as ContextSchema, PlanSchema } from "../shared/types";
 export { TrainerContextSchema as ContextSchema, PlanSchema } from "../shared/types";
 import { Schema } from "effect";
-import { SnapshotSchema, SnapshotSummarySchema } from "../shared/types";
+import { SnapshotSchema, SnapshotSummarySchema, TeamMemberSchema } from "../shared/types";
 export const NoteSchema = Schema.Struct({
   id: Schema.String,
   text: Schema.String,
@@ -37,7 +37,9 @@ export const ReceiptSchema = Schema.Struct({
 export const OkSchema = Schema.Struct({ ok: Schema.Boolean });
 export const PlannerDraftSchema = Schema.Struct({
   shortlist: Schema.Array(Schema.String),
-  selected: Schema.Array(Schema.String),
+  version: Schema.Literal(2),
+  members: Schema.Array(TeamMemberSchema).pipe(Schema.maxItems(6)),
+  hard: Schema.Boolean,
   inverse: Schema.Boolean,
   limit: Schema.Number,
   name: Schema.String,
@@ -55,6 +57,8 @@ export const emptyState: AppState = {
     checkpoint: "",
     spoilerMode: "hints",
     favorites: [],
+    nextBattleId: null,
+    fightReveal: "types",
   },
   events: [],
   notes: [],

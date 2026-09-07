@@ -48,8 +48,14 @@ await test("HTTP Effect boundary exposes expected messages and hides internal fa
   assert.equal(success.headers.get("x-frame-options"), "DENY");
 });
 
-await test("context schema supports omitted legacy fight fields while rejecting invalid spoilers", () => {
-  const context = { difficulty: "Difficult", spoilerMode: "hints", levelCap: null };
+await test("context schema requires explicit fight fields and rejects invalid spoilers", () => {
+  const context = {
+    difficulty: "Difficult",
+    spoilerMode: "hints",
+    levelCap: null,
+    nextBattleId: null,
+    fightReveal: "types",
+  };
   assert.equal(Schema.decodeUnknownEither(ContextRequest)(context)._tag, "Right");
   assert.equal(
     Schema.decodeUnknownEither(ContextRequest)({ ...context, fightReveal: "surprise" })._tag,

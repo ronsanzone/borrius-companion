@@ -12,11 +12,12 @@ await test("parsed synthetic full roster satisfies the shared persisted/client s
   assert.equal(parsed.boxes[0].pokemon.length, 4);
 });
 
-await test("older plan and context payloads need no migration for optional planning fields", () => {
+await test("final plan and context payloads decode without legacy readers", () => {
   const plan = {
     id: "existing-plan",
     name: "Team",
-    memberIds: [],
+    members: [],
+    shortlistIds: [],
     inverse: false,
     weaknessLimit: 3,
     hardLimit: false,
@@ -28,6 +29,8 @@ await test("older plan and context payloads need no migration for optional plann
     checkpoint: "Fallshore",
     spoilerMode: "hints",
     favorites: [],
+    nextBattleId: null,
+    fightReveal: "types",
   };
   assert.deepEqual(Schema.decodeUnknownSync(PlanSchema)(plan), plan);
   assert.deepEqual(Schema.decodeUnknownSync(TrainerContextSchema)(context), context);

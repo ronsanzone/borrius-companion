@@ -91,14 +91,31 @@ export const TrainerContextSchema = Schema.Struct({
   checkpoint: Schema.String,
   spoilerMode: Schema.String,
   favorites: Schema.Array(Schema.String),
-  nextBattleId: Schema.optional(Schema.NullOr(Schema.String)),
-  fightReveal: Schema.optional(Schema.Literal("types", "team", "full")),
+  nextBattleId: Schema.NullOr(Schema.String),
+  fightReveal: Schema.Literal("types", "team", "full"),
 });
+export const TeamMemberSchema = Schema.Union(
+  Schema.Struct({
+    kind: Schema.Literal("owned"),
+    pokemonId: Schema.String.pipe(Schema.minLength(1), Schema.maxLength(100)),
+  }),
+  Schema.Struct({
+    kind: Schema.Literal("build"),
+    speciesId: Schema.Int.pipe(Schema.positive()),
+    moveIds: Schema.Array(Schema.NullOr(Schema.Int.pipe(Schema.positive()))).pipe(
+      Schema.maxItems(4),
+    ),
+    ability: Schema.String.pipe(Schema.maxLength(100)),
+    item: Schema.String.pipe(Schema.maxLength(100)),
+    notes: Schema.String.pipe(Schema.maxLength(1000)),
+  }),
+);
+export type TeamMember = typeof TeamMemberSchema.Type;
 export const PlanSchema = Schema.Struct({
   id: Schema.String,
   name: Schema.String,
-  memberIds: Schema.Array(Schema.String),
-  shortlistIds: Schema.optional(Schema.Array(Schema.String)),
+  members: Schema.Array(TeamMemberSchema).pipe(Schema.maxItems(6)),
+  shortlistIds: Schema.Array(Schema.String),
   inverse: Schema.Boolean,
   weaknessLimit: Schema.Number,
   hardLimit: Schema.Boolean,

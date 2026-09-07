@@ -1,7 +1,5 @@
-import { Schema } from "effect";
 import { HttpError, json, now, readJson } from "./http.js";
-import { first, JsonDataRow } from "./storage.js";
-import { cleanText, ContextRequest, PlanRequest, PreviousFightContext } from "./schemas.js";
+import { cleanText, ContextRequest, PlanRequest } from "./schemas.js";
 
 export async function saveContext(request: Request, env: Env): Promise<Response> {
   const body = await readJson(
@@ -9,18 +7,8 @@ export async function saveContext(request: Request, env: Env): Promise<Response>
     ContextRequest,
     "Choose valid difficulty, level cap and spoiler settings",
   );
-  const oldSetting = await first(
-    env.DB.prepare("SELECT data FROM settings WHERE id='context'"),
-    JsonDataRow,
-  );
-  const oldContext = oldSetting
-    ? Schema.decodeUnknownSync(Schema.parseJson(PreviousFightContext))(oldSetting.data)
-    : {};
   const context = {
     ...body,
-    nextBattleId:
-      body.nextBattleId === undefined ? (oldContext.nextBattleId ?? null) : body.nextBattleId,
-    fightReveal: body.fightReveal ?? oldContext.fightReveal ?? "types",
     checkpoint: cleanText(body.checkpoint, 300),
   };
   await env.DB.prepare(
@@ -37,8 +25,18 @@ export async function savePlan(request: Request, env: Env): Promise<Response> {
     PlanRequest,
     "Choose a name, valid weakness limit, and up to six distinct Pokémon",
   );
-  const ids = body.memberIds;
-  const shortlistIds = body.shortlistIds ?? ids;
+  for (const member of body.members) {
+    if (member.kind === "build") {
+      const ids = member.moveIds.filter((id) => id !== null);
+      if (new Set(ids).size !== ids.length)
+        throw new HttpError({
+          status: 400,
+          message: "Proposed moves must be distinct; unknown slots may be left blank.",
+        });
+    }
+  }
+  const ids = body.members.flatMap((member) => (member.kind === "owned" ? [member.pokemonId] : []));
+  const shortlistIds = body.shortlistIds;
   if (
     new Set(ids).size !== ids.length ||
     new Set(shortlistIds).size !== shortlistIds.length ||

@@ -91,3 +91,8 @@ If a receipt stays pending, check Queue delivery and Worker logs; reconciliation
 Final production release: `89c12401-22ed-4d43-91dc-87395f26d951`, parser `unbound-readonly-3`. The original production snapshot was reprocessed successfully from its unchanged private R2 copy to correct accented names; no extra snapshot or game-file write was created. Anonymous dashboard, API and assets redirect to Access; upload-host dashboard routes return 404 and unauthenticated device receipts return 401. Final browser inspection reported no JavaScript errors.
 
 Battle/reference release aaf47067-5d59-492f-b34e-142f9ba13542 deployed September5,2026. Production verified #prepare (54 sourced entries), #dex (1121 reference species/forms), #types. 37 unit tests and integration exercise passed, including next-fight context persistence/backward-compatible context updates. Browser QA covered exact difficulty selection, inverse fight, spoiler suppression/reveal, full reference sets, save/reload, Joltik search/details, all171 type combinations, mobile nooverflow, no JavaScript errors. Sources remain community documentation; Vanilla boss rosters unavailable. Ability/item/damage/turnorder simulation remains out of scope.
+
+
+## Strategy workspace migration
+
+Before deploying the strategy feature, follow the backup/write-pause/migrate/verify procedure in [strategy-workspace.md](strategy-workspace.md). Migration 0003 changes stored JSON contracts; roll back data and app together if recovery is necessary. Local Playwright startup seeds only disposable legacy rows and reapplies the actual migration twice to verify idempotence. Production writes/deployment require separate authorization.

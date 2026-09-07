@@ -16,9 +16,11 @@ export function battleTypes(defender: Combatant, rules: Rules = {}): string[] {
   if (notes.join(" ").toLowerCase().includes("camomons")) {
     const first = (defender.moves ?? []).slice(0, 2);
     if (first.length < 2 || first.some((move) => !move.type)) return [];
-    return [...new Set(first.map((move) => normalizedType(move.type)))];
+    const types = [...new Set(first.map((move) => normalizedType(move.type)))];
+    return types.every((type) => TYPES.some((valid) => valid === type)) ? types : [];
   }
-  return defender.types.map(normalizedType);
+  const types = [...new Set(defender.types.map(normalizedType))];
+  return types.every((type) => TYPES.some((valid) => valid === type)) ? types : [];
 }
 export function battleMultiplier(
   type: string,
@@ -30,6 +32,7 @@ export function battleMultiplier(
   if (types.length === 0) return null;
   const notes = (settings.notes ?? []).join(" ").toLowerCase();
   const attack = normalizedType(type);
+  if (!TYPES.some((valid) => valid === attack)) return null;
   if (attack === "fairy" && notes.includes("fairy-type moves ban")) return 0;
   if (attack === "fire" && notes.includes("heavy rain")) return 0;
   if (

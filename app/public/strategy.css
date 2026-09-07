@@ -1,0 +1,244 @@
+.strategy-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(300px, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.strategy-main,
+[data-desktop-detail],
+[data-player-detail],
+[data-enemy-detail] {
+  min-width: 0;
+}
+.strategy-main > .panel {
+  margin-bottom: 20px;
+}
+.strategy-inspector {
+  position: sticky;
+  top: 12px;
+  max-height: calc(100vh - 24px);
+  overflow: auto;
+  scroll-margin-top: 12px;
+  overflow-wrap: anywhere;
+}
+.strategy-inspector:focus {
+  outline: 3px solid #b73538;
+  outline-offset: 3px;
+}
+.strategy-controls,
+.fight-reveal,
+#strategy-save {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: end;
+  margin: 14px 0;
+}
+.strategy-controls label,
+#strategy-save label {
+  flex: 1;
+  min-width: 140px;
+}
+.strategy-layout input,
+.strategy-layout select,
+.strategy-layout textarea {
+  max-width: 100%;
+  width: 100%;
+  min-width: 0;
+}
+.strategy-layout button {
+  min-height: 44px;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.strategy-layout .panel {
+  background: #fffdf4;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.team-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+  gap: 8px;
+  margin: 14px 0;
+}
+.team-strip article {
+  min-width: 0;
+  border: 1px solid #d9cebd;
+  border-radius: 12px;
+  padding: 6px;
+  text-align: center;
+  background: #f4eedf;
+}
+.team-strip article > button:not(.team-member) {
+  width: 100%;
+  margin-top: 8px;
+}
+.team-strip [data-strategy="remove"],
+.team-strip [data-strategy="replace"] {
+  white-space: nowrap;
+}
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px;
+  color: #302b28;
+  background: #f4eedf;
+  border: 1px solid #d9cebd;
+  border-radius: 12px;
+  min-width: 0;
+}
+.team-member small,
+[data-collection-results] small {
+  display: block;
+  font-size: 0.8rem;
+}
+.team-member img {
+  image-rendering: pixelated;
+  max-width: 100%;
+}
+.team-member:hover,
+.fight-reveal [aria-pressed="true"] {
+  background: #b73538;
+  color: #fffdf4;
+}
+.scouting,
+.coverage-card {
+  background: #f4eedf;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 14px 0;
+}
+.type-hint {
+  padding: 14px;
+  background: #f4eedf;
+  border-radius: 12px;
+}
+[data-collection-results] {
+  max-height: 420px;
+  overflow: auto;
+}
+[data-collection-results] article {
+  padding: 12px;
+  border-bottom: 1px solid #d9cebd;
+}
+[data-message] {
+  position: sticky;
+  top: 0;
+  background: #fffdf4;
+  color: #83252a;
+  z-index: 2;
+}
+.strategy-main .dex-layout {
+  display: block;
+}
+.strategy-main .dex-results {
+  max-height: 430px;
+  overflow: auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.strategy-main .dex-heading h2 {
+  margin-top: 0;
+}
+#build-form {
+  padding: 12px;
+  background: #f4eedf;
+  border-radius: 12px;
+}
+#build-form label {
+  display: block;
+  margin: 10px 0;
+}
+.strategy-inspector .dex-move-scroll {
+  overflow: auto;
+}
+.strategy-inspector .dex-stats {
+  min-width: 0;
+}
+.strategy-inspector .dex-stats > div {
+  grid-template-columns: 80px minmax(0, 1fr) 35px;
+}
+@media (max-width: 1100px) {
+  .strategy-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  .strategy-layout {
+    display: block;
+  }
+  .strategy-inspector {
+    position: static;
+    max-height: none;
+    margin-bottom: 20px;
+  }
+  .strategy-main .dex-results {
+    max-height: 320px;
+  }
+  .strategy-main .dex-filters {
+    display: block;
+  }
+  .strategy-layout .section-head {
+    flex-wrap: wrap;
+  }
+  .strategy-layout .panel {
+    padding: 14px;
+  }
+  .team-member {
+    font-size: 0.85rem;
+  }
+  .strategy-inspector h2 {
+    font-size: 1.5rem;
+  }
+  [data-desktop-detail]:empty {
+    display: none;
+  }
+}
+#content .dex-heading {
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0 0 20px;
+  background: transparent;
+}
+#content .dex-heading h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+.strategy-inspector .dex-type {
+  border-radius: 6px;
+  padding: 4px 7px;
+  background: #e8dfce;
+  margin-right: 5px;
+  display: inline-block;
+}
+.strategy-inspector .dex-species-head {
+  flex-wrap: wrap;
+}
+.strategy-search .dex-results {
+  max-height: 260px;
+}
+.strategy-search .dex-browser {
+  position: static;
+  padding: 8px;
+  border: 0;
+}
+.strategy-search .dex-filters {
+  margin: 8px 0;
+}
+.strategy-search .dex-source {
+  margin-top: 8px;
+}
+.strategy-search .dex-heading .eyebrow {
+  display: none;
+}
+.strategy-search .dex-heading h2 {
+  font-size: 1.2rem;
+}

@@ -2,9 +2,12 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readPlannerDraft, writePlannerDraft } from "../src/client/planner-storage.js";
 
-const draft = {
+import type { PlannerDraft } from "../src/client/contracts";
+const draft: PlannerDraft = {
+  version: 2,
+  hard: false,
   shortlist: ["a", "b"],
-  selected: ["a"],
+  members: [{ kind: "owned", pokemonId: "a" }],
   inverse: false,
   limit: 3,
   name: "My plan",
@@ -38,4 +41,23 @@ await test("invalid drafts and unavailable browser storage leave the app usable"
   };
   assert.equal(readPlannerDraft(unavailable), null);
   assert.equal(writePlannerDraft(draft, unavailable), false);
+});
+
+await test("readable legacy draft remains available when migration cannot write storage", () => {
+  const old = JSON.stringify({
+    shortlist: ["missing"],
+    selected: ["missing"],
+    inverse: true,
+    limit: 2,
+    name: "Keep me",
+    activePlan: null,
+  });
+  const restored = readPlannerDraft({
+    getItem: (key) => (key === "borrius-planner" ? old : null),
+    setItem: () => {
+      throw Error("Quota exceeded");
+    },
+  });
+  assert.equal(restored?.name, "Keep me");
+  assert.deepEqual(restored?.members, [{ kind: "owned", pokemonId: "missing" }]);
 });

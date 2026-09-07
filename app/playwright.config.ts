@@ -14,7 +14,7 @@ export default defineConfig({
   },
   webServer: {
     command:
-      "npm run build:client && wrangler d1 migrations apply borrius-companion --local --persist-to .wrangler/e2e && wrangler dev --ip 127.0.0.1 --port 8787 --persist-to .wrangler/e2e",
+      "npm run build:client && wrangler d1 migrations apply borrius-companion --local --persist-to .wrangler/e2e && wrangler d1 execute borrius-companion --local --persist-to .wrangler/e2e --file test/fixtures/legacy-plans.sql && wrangler d1 execute borrius-companion --local --persist-to .wrangler/e2e --file migrations/0003_strategy_teams.sql && wrangler d1 execute borrius-companion --local --persist-to .wrangler/e2e --file migrations/0003_strategy_teams.sql && wrangler dev --ip 127.0.0.1 --port 8787 --persist-to .wrangler/e2e",
     url: "http://127.0.0.1:8787",
     reuseExistingServer: false,
     timeout: 120_000,
