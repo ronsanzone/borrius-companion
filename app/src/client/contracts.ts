@@ -1,3 +1,4 @@
+import { BenchBuildsField } from "../shared/types";
 import { TrainerContextSchema as ContextSchema, PlanSchema } from "../shared/types";
 export { TrainerContextSchema as ContextSchema, PlanSchema } from "../shared/types";
 import { Schema } from "effect";
@@ -36,6 +37,7 @@ export const ReceiptSchema = Schema.Struct({
 });
 export const OkSchema = Schema.Struct({ ok: Schema.Boolean });
 export const PlannerDraftSchema = Schema.Struct({
+  benchBuilds: BenchBuildsField,
   shortlist: Schema.Array(Schema.String),
   version: Schema.Literal(2),
   members: Schema.Array(TeamMemberSchema).pipe(Schema.maxItems(6)),

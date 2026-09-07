@@ -94,24 +94,27 @@ export const TrainerContextSchema = Schema.Struct({
   nextBattleId: Schema.NullOr(Schema.String),
   fightReveal: Schema.Literal("types", "team", "full"),
 });
+export const BuildMemberSchema = Schema.Struct({
+  kind: Schema.Literal("build"),
+  speciesId: Schema.Int.pipe(Schema.positive()),
+  moveIds: Schema.Array(Schema.NullOr(Schema.Int.pipe(Schema.positive()))).pipe(Schema.maxItems(4)),
+  ability: Schema.String.pipe(Schema.maxLength(100)),
+  item: Schema.String.pipe(Schema.maxLength(100)),
+  notes: Schema.String.pipe(Schema.maxLength(1000)),
+});
+export const BenchBuildsField = Schema.optional(
+  Schema.Array(BuildMemberSchema).pipe(Schema.maxItems(24)),
+);
 export const TeamMemberSchema = Schema.Union(
   Schema.Struct({
     kind: Schema.Literal("owned"),
     pokemonId: Schema.String.pipe(Schema.minLength(1), Schema.maxLength(100)),
   }),
-  Schema.Struct({
-    kind: Schema.Literal("build"),
-    speciesId: Schema.Int.pipe(Schema.positive()),
-    moveIds: Schema.Array(Schema.NullOr(Schema.Int.pipe(Schema.positive()))).pipe(
-      Schema.maxItems(4),
-    ),
-    ability: Schema.String.pipe(Schema.maxLength(100)),
-    item: Schema.String.pipe(Schema.maxLength(100)),
-    notes: Schema.String.pipe(Schema.maxLength(1000)),
-  }),
+  BuildMemberSchema,
 );
 export type TeamMember = typeof TeamMemberSchema.Type;
 export const PlanSchema = Schema.Struct({
+  benchBuilds: BenchBuildsField,
   id: Schema.String,
   name: Schema.String,
   members: Schema.Array(TeamMemberSchema).pipe(Schema.maxItems(6)),

@@ -345,3 +345,97 @@
   margin: 16px 0;
   padding: 14px;
 }
+.team-board-scroll {
+  overflow-x: auto;
+  isolation: isolate;
+  margin: 14px 0;
+}
+.team-board {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 3px;
+}
+.team-board caption {
+  text-align: left;
+  padding: 8px 0;
+}
+.team-board th {
+  min-width: 144px;
+  max-width: 170px;
+  text-align: center;
+  vertical-align: top;
+  padding: 6px;
+}
+.team-board th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 94px;
+  background: #fffdf4;
+  text-align: left;
+  border-right: 2px solid #d9cebd;
+}
+.team-board small {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.team-board td {
+  text-align: center;
+  padding: 9px 6px;
+  white-space: nowrap;
+}
+.team-board th button {
+  width: 100%;
+  margin: 4px 0;
+  white-space: nowrap;
+}
+.team-board .board-inspect {
+  display: flex;
+  flex-direction: column;
+  white-space: normal;
+}
+.board-inspect img {
+  image-rendering: pixelated;
+}
+.board-active {
+  border-top: 2px solid #397761;
+}
+.board-bench {
+  border-top: 2px dashed #a4947a;
+}
+.board-weak,
+.board-alert {
+  background: #f0d9ce;
+  color: #773728;
+}
+.board-resist {
+  background: #dfeadd;
+  color: #294944;
+}
+.board-immune {
+  background: #d8e5ed;
+  color: #254b66;
+}
+.board-neutral {
+  background: #f4eedf;
+}
+.board-unknown {
+  background: #e7e7e2;
+}
+.team-board td.board-bench {
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 5px,
+    #fffdf433 5px,
+    #fffdf433 10px
+  );
+}
+.team-board th:nth-child(2) {
+  min-width: 112px;
+  width: 112px;
+}
+.team-board th {
+  white-space: normal;
+}

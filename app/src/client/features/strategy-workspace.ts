@@ -1,3 +1,4 @@
+import { boardCandidates, changeActiveTeam, teamBoard } from "./team-board";
 import type { PairSelection } from "./matchup-grid";
 import { types as badges } from "../components";
 import { Schema } from "effect";
@@ -28,7 +29,8 @@ interface Props {
   onDelete: (id: string) => Promise<void>;
   onContext: (context: TrainerContext) => Promise<void>;
 }
-type Selection = { side: "dex"; speciesId: number } | { side: "player" | "enemy"; index: number };
+type Selection =
+  { side: "dex"; speciesId: number } | { side: "player" | "enemy" | "candidate"; index: number };
 export interface StrategySession {
   selection: Selection | null;
   eventId: string;
@@ -98,10 +100,8 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
     props.onDraft(next);
   }
   function setMembers(members: readonly TeamMember[]) {
-    const shortlist = [...new Set([...draft.shortlist, ...ownedIds(members)])];
-    if (shortlist.length > 24)
-      throw Error("The shortlist is full. Remove a candidate before adding a new individual.");
-    update({ ...draft, members, shortlist });
+    update(changeActiveTeam(draft, members));
+    pending = null;
     selection = null;
   }
   function add(member: TeamMember) {
@@ -119,10 +119,12 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
     if (selection.side === "dex") {
       const speciesId = selection.speciesId;
       const species = dex.species.find((s) => s.speciesId === speciesId);
-      return `${species ? `<button data-strategy="add-build" data-id="${species.speciesId}">+ Add hypothetical build</button>` : ""}${inspector(dex, species, props.owned, {}, undefined, undefined, true)}`;
+      return `${species ? `<button data-strategy="add-build" data-id="${species.speciesId}">+ Add hypothetical build</button><button class="quiet" data-strategy="compare-build" data-id="${species.speciesId}">Compare on bench</button>` : ""}${inspector(dex, species, props.owned, {}, undefined, undefined, true)}`;
     }
-    if (selection.side === "player") {
-      const member = draft.members[selection.index],
+    if (selection.side === "player" || selection.side === "candidate") {
+      const member = (selection.side === "player" ? draft.members : boardCandidates(draft))[
+          selection.index
+        ],
         view = member && memberView(member, props.owned, dex);
       if (!member || !view) return "<p>Choose a current team slot.</p>";
       if (view.missing)
@@ -194,6 +196,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
   }
   function render() {
     if (disposed) return;
+    const boardScroll = root.querySelector(".team-board-scroll")?.scrollLeft ?? 0;
     const focused = control(document.activeElement);
     const focusKey = focused?.dataset.strategyChange;
     const current = event(),
@@ -213,7 +216,9 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
         .join("") || "<p>Your draft is empty. Add a Dex build or an owned Pokémon below.</p>"
     }</div>${pending ? '<button class="quiet" data-strategy="cancel">Cancel replacement</button>' : ""}
     <form id="strategy-save"><label>Team name<input name="name" required maxlength="80" value="${esc(draft.name)}" placeholder="Name your team"></label><button ${busy ? "disabled" : ""}>${draft.activePlan ? "Update team" : "Save team"}</button>${draft.activePlan ? '<button type="button" class="quiet" data-strategy="copy">Save as new</button><button type="button" class="danger" data-strategy="delete">Delete saved team</button>' : ""}</form>
-    <div class="strategy-controls"><label>Free planning chart<select data-strategy-change="inverse">${options(["Standard", "Inverse"], draft.inverse ? "Inverse" : "Standard")}</select></label><label>Weakness threshold<select data-strategy-change="limit">${options(["0", "1", "2", "3", "4", "5", "6"], String(draft.limit))}</select></label><label class="check"><input type="checkbox" data-strategy-change="hard" ${draft.hard ? "checked" : ""}>Only show bench additions below threshold</label></div>`;
+    <div class="strategy-controls"><label>Free planning chart<select data-strategy-change="inverse">${options(["Standard", "Inverse"], draft.inverse ? "Inverse" : "Standard")}</select></label><label>Weakness threshold<select data-strategy-change="limit">${options(["0", "1", "2", "3", "4", "5", "6"], String(draft.limit))}</select></label><label class="check"><input type="checkbox" data-strategy-change="hard" ${draft.hard ? "checked" : ""}>Only show bench additions below threshold</label></div><section data-type-board>${teamBoard(draft, props.owned, dex, pending !== null)}</section>`;
+    const board = root.querySelector(".team-board-scroll");
+    if (board) board.scrollLeft = boardScroll;
     element("[data-enemy]", root).innerHTML =
       `<h2>Opposing encounter</h2><div class="strategy-controls"><label>Story encounter<select data-strategy-change="event"><option value="">Choose an encounter…</option>${encounters
         .map((e, i) => {
@@ -363,6 +368,51 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
     const a = button.dataset.strategy,
       id = button.dataset.id ?? "";
     try {
+      if (a === "find-owned") {
+        const collection = root.querySelector<HTMLDetailsElement>("[data-collection-panel]");
+        if (collection) collection.open = true;
+        root.querySelector<HTMLElement>("[data-collection-search]")?.focus();
+        return;
+      }
+      if (a === "find-build") {
+        root.querySelector<HTMLElement>("[data-dex-search]")?.focus();
+        return;
+      }
+      if (a === "inspect-candidate") {
+        selection = { side: "candidate", index: Number(id) };
+        renderInspector(true);
+        return;
+      }
+      if (a === "board-bench") setMembers(draft.members.filter((_, i) => i !== Number(id)));
+      if (a === "board-activate") {
+        const candidate = boardCandidates(draft)[Number(id)];
+        if (candidate) add(candidate);
+      }
+      if (a === "board-unlist") {
+        const candidate = boardCandidates(draft)[Number(id)];
+        if (candidate?.kind === "owned")
+          update({ ...draft, shortlist: draft.shortlist.filter((x) => x !== candidate.pokemonId) });
+        if (candidate?.kind === "build")
+          update({
+            ...draft,
+            benchBuilds: (draft.benchBuilds ?? []).filter((x) => x !== candidate),
+          });
+        selection = null;
+        pending = null;
+      }
+      if (a === "compare-build") {
+        const builds = draft.benchBuilds ?? [];
+        if (builds.length >= 24)
+          throw Error("The reference bench holds 24 builds. Unlist one first.");
+        update({
+          ...draft,
+          benchBuilds: [
+            ...builds,
+            { kind: "build", speciesId: Number(id), moveIds: [], ability: "", item: "", notes: "" },
+          ],
+        });
+        selection = { side: "candidate", index: boardCandidates(draft).length - 1 };
+      }
       if (a === "pair" && reveal !== "types") {
         pairSelection = {
           player: Number(button.dataset.player),
@@ -381,8 +431,8 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
           root.querySelector("[data-pair-detail]")?.scrollIntoView({ block: "nearest" });
         return;
       }
-      if (a === "inspect-player" || a === "inspect-enemy") {
-        selection = { side: a === "inspect-player" ? "player" : "enemy", index: Number(id) };
+      if (a === "inspect-player" || a === "board-inspect" || a === "inspect-enemy") {
+        selection = { side: a === "inspect-enemy" ? "enemy" : "player", index: Number(id) };
         form = 0;
         renderInspector(true);
         return;
@@ -402,7 +452,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
           notes: "",
         });
       if (a === "add-owned") add({ kind: "owned", pokemonId: id });
-      if (a === "replace" && pending) {
+      if ((a === "replace" || a === "board-replace") && pending) {
         setMembers(editTeam(draft.members, pending, Number(id)));
         pending = null;
         message = "Slot replaced.";
@@ -482,7 +532,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
       busy = false;
     }
     render();
-    if (a === "add-build" && !pending) renderInspector(true);
+    if ((a === "add-build" || a === "compare-build") && !pending) renderInspector(true);
   }
   function change(e: Event) {
     const input = control(e.target);
@@ -519,6 +569,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
         update({
           version: 2,
           members: p.members,
+          benchBuilds: p.benchBuilds,
           shortlist: p.shortlistIds,
           inverse: p.inverse,
           limit: p.weaknessLimit,
@@ -545,29 +596,52 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
   }
   function captureProposal() {
     const formElement = root.querySelector("#build-form");
-    if (!(formElement instanceof HTMLFormElement) || selection?.side !== "player") return;
+    if (
+      !(formElement instanceof HTMLFormElement) ||
+      (selection?.side !== "player" && selection?.side !== "candidate")
+    )
+      return;
     const index = selection.index,
-      member = draft.members[index];
+      member = (selection.side === "player" ? draft.members : boardCandidates(draft))[index];
     if (member?.kind !== "build") return;
     const formData = new FormData(formElement);
     const moveIds = [0, 1, 2, 3].map((i) => {
       const value = Number(formData.get(`move${i}`));
       return value > 0 ? value : null;
     });
-    update({
-      ...draft,
-      members: draft.members.map((m, i) =>
-        i === index
-          ? {
-              ...member,
-              moveIds,
-              ability: Schema.decodeUnknownSync(Schema.String)(formData.get("ability")),
-              item: Schema.decodeUnknownSync(Schema.String)(formData.get("item")),
-              notes: Schema.decodeUnknownSync(Schema.String)(formData.get("notes")),
-            }
-          : m,
-      ),
-    });
+    const proposal = {
+      ...member,
+      moveIds,
+      ability: Schema.decodeUnknownSync(Schema.String)(formData.get("ability")),
+      item: Schema.decodeUnknownSync(Schema.String)(formData.get("item")),
+      notes: Schema.decodeUnknownSync(Schema.String)(formData.get("notes")),
+    };
+    if (
+      member.moveIds.length === proposal.moveIds.length &&
+      member.moveIds.every((id, i) => id === proposal.moveIds[i]) &&
+      member.ability === proposal.ability &&
+      member.item === proposal.item &&
+      member.notes === proposal.notes
+    )
+      return;
+    if (pending === member) pending = proposal;
+    update(
+      selection.side === "player"
+        ? { ...draft, members: draft.members.map((m, i) => (i === index ? proposal : m)) }
+        : {
+            ...draft,
+            benchBuilds: (draft.benchBuilds ?? []).map((m) => (m === member ? proposal : m)),
+          },
+    );
+    const boardScroll = root.querySelector(".team-board-scroll")?.scrollLeft ?? 0;
+    element("[data-type-board]", root).innerHTML = teamBoard(
+      draft,
+      props.owned,
+      dex,
+      pending !== null,
+    );
+    const board = root.querySelector(".team-board-scroll");
+    if (board) board.scrollLeft = boardScroll;
     renderAnalysis();
   }
   async function submit(e: SubmitEvent) {
@@ -587,9 +661,9 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
         plans = [p, ...plans.filter((x) => x.id !== p.id)];
         update({ ...draft, activePlan: p.id });
         message = "Team saved to your owner account.";
-      } else if (selection?.side === "player") {
+      } else if (selection?.side === "player" || selection?.side === "candidate") {
         const index = selection.index,
-          m = draft.members[index];
+          m = (selection.side === "player" ? draft.members : boardCandidates(draft))[index];
         if (m?.kind === "build") {
           captureProposal();
           message = "Proposal applied. Save the team to keep it across devices.";
@@ -627,7 +701,7 @@ export function mountStrategy(root: HTMLElement, props: Props): () => void {
       if (disposed) return;
       dex = d;
       battles = b;
-      root.innerHTML = `<header class="dex-heading"><div class="eyebrow">POKÉDEX · STRATEGY WORKSPACE</div><h1>Find your six.</h1><p>Your collection, hypothetical builds and sourced opponents in one place.</p></header><div data-message role="status" aria-live="polite"></div><div class="strategy-layout"><div class="strategy-main"><section class="panel strategy-search" data-dex></section><section class="panel" data-player></section><div data-player-detail></div><section class="panel" data-enemy></section><section class="panel" data-analysis></section><div data-enemy-detail></div><details class="panel"><summary>Your collection & shortlist</summary><label>Find an owned Pokémon<input type="search" data-collection-search></label><label>Collection filter<select data-collection-scope>${options(["all", "party", "box", "favorites", "shortlist"], "all")}</select></label><div data-missing-shortlist></div><div data-collection-results></div></details></div><div data-desktop-detail><section class="panel strategy-inspector" tabindex="-1" aria-label="Pokémon inspector"></section></div></div>`;
+      root.innerHTML = `<header class="dex-heading"><div class="eyebrow">POKÉDEX · STRATEGY WORKSPACE</div><h1>Find your six.</h1><p>Your collection, hypothetical builds and sourced opponents in one place.</p></header><div data-message role="status" aria-live="polite"></div><div class="strategy-layout"><div class="strategy-main"><section class="panel strategy-search" data-dex></section><section class="panel" data-player></section><div data-player-detail></div><section class="panel" data-enemy></section><section class="panel" data-analysis></section><div data-enemy-detail></div><details class="panel" data-collection-panel><summary>Your collection & shortlist</summary><label>Find an owned Pokémon<input type="search" data-collection-search></label><label>Collection filter<select data-collection-scope>${options(["all", "party", "box", "favorites", "shortlist"], "all")}</select></label><div data-missing-shortlist></div><div data-collection-results></div></details></div><div data-desktop-detail><section class="panel strategy-inspector" tabindex="-1" aria-label="Pokémon inspector"></section></div></div>`;
       cleanupDex = mountDex(element("[data-dex]", root), {
         owned: props.owned,
         data: dex,

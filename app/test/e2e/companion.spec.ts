@@ -302,3 +302,74 @@ test("encounter grid supports keyboard pairing, mobile scroll and spoiler resets
   await expect(page.locator(".matchup-grid")).toHaveCount(0);
   await expect(page.locator("[data-analysis]")).not.toContainText("Crobat");
 });
+
+test("type board explores owned and uncaught teams with persistent bench proposals", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 900 });
+  await page.goto("/#dex");
+  await page.locator('[data-strategy="new"]').click();
+  await page.locator("[data-dex-search]").fill("Joltik");
+  await page.locator(".dex-results [data-species]").first().click();
+  await page.locator('[data-strategy="compare-build"]').click();
+  await page.locator('select[name="move0"]').selectOption({ label: "Thunderbolt" });
+  await page.locator('input[name="item"]').fill("Life Orb");
+  await page.locator('textarea[name="notes"]').fill("Bench proposal survives swaps");
+  await page.getByRole("button", { name: "Apply proposal", exact: true }).click();
+  const buildColumn = page.locator(".team-board thead th").filter({ hasText: "Joltik" });
+  await expect(buildColumn).toContainText("Uncaught build");
+  await buildColumn.getByRole("button", { name: "Activate", exact: true }).click();
+  await expect(page.locator(".team-board tbody tr")).toHaveCount(18);
+  await expect(
+    page.locator(".team-board tbody tr").filter({ hasText: "Fire" }).locator(".board-totals"),
+  ).toHaveAttribute("aria-label", /1 weak/);
+  await page.locator('[data-strategy-change="inverse"]').selectOption("Inverse");
+  await expect(
+    page.locator(".team-board tbody tr").filter({ hasText: "Fire" }).locator(".board-totals"),
+  ).toHaveAttribute("aria-label", /0 weak, 1 resistant/);
+  await buildColumn.getByRole("button", { name: "Bench", exact: true }).click();
+  await expect(
+    page.locator(".team-board tbody tr").filter({ hasText: "Fire" }).locator(".board-totals"),
+  ).toHaveAttribute("aria-label", /0 weak, 0 resistant/);
+  await page.getByRole("textbox", { name: "Team name" }).fill("Bench exploration");
+  await page.getByRole("button", { name: "Save team", exact: true }).click();
+  await expect(page.getByText("Team saved to your owner account.")).toBeVisible();
+  await page.reload();
+  await buildColumn.getByRole("button", { name: "Joltik", exact: true }).click();
+  await expect(page.locator('input[name="item"]')).toHaveValue("Life Orb");
+  await expect(page.locator('textarea[name="notes"]')).toHaveValue("Bench proposal survives swaps");
+  await page.locator('[data-strategy="party"]').click();
+  await buildColumn.getByRole("button", { name: "Swap in", exact: true }).click();
+  await buildColumn.getByRole("button", { name: "Joltik", exact: true }).click();
+  await page.locator('textarea[name="notes"]').fill("Edited during pending swap");
+  await page.locator('.team-board [data-strategy="board-replace"]').first().click();
+  await page.locator('.team-board [data-strategy="board-inspect"]').first().click();
+  await expect(page.locator('textarea[name="notes"]')).toHaveValue("Edited during pending swap");
+  await expect(page.locator(".team-board thead th").filter({ hasText: "Joltik" })).toHaveCount(1);
+  await buildColumn.getByRole("button", { name: "Bench", exact: true }).click();
+  await page
+    .locator(".team-board thead th")
+    .filter({ hasText: "Bulbasaur" })
+    .getByRole("button", { name: "Activate", exact: true })
+    .click();
+  await buildColumn.getByRole("button", { name: "Swap in", exact: true }).click();
+  await page.locator('[data-strategy="remove"]').first().click();
+  await buildColumn.getByRole("button", { name: "Activate", exact: true }).click();
+  await expect(page.locator('[data-strategy="board-replace"]')).toHaveCount(0);
+  await page.locator('[data-strategy="party"]').click();
+  await buildColumn.getByRole("button", { name: "Swap in", exact: true }).click();
+  await page.locator('.team-board [data-strategy="board-replace"]').first().click();
+  await expect(page.locator(".team-board .board-active").first()).toContainText("Joltik");
+  await page.locator('[data-strategy-change="event"]').selectOption("gym-alice");
+  await page.locator('[data-strategy-change="difficulty"]').selectOption("Difficult");
+  await page.locator('[data-strategy="reveal"][data-id="team"]').click();
+  await expect(page.locator(".matchup-grid tbody tr").first()).toContainText("Joltik");
+  await page.locator(".team-board-scroll").evaluate((el) => {
+    el.scrollLeft = 0;
+  });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.locator("[data-type-board]").screenshot({ path: "test-results/team-board-390.png" });
+  await page.locator('[data-strategy-change="plan"]').selectOption({ label: "Bench exploration" });
+  await expect(page.locator('[data-strategy="inspect-player"]')).toHaveCount(0);
+  await expect(buildColumn).toContainText("Bench");
+});

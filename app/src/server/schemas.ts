@@ -1,5 +1,5 @@
 import { Schema } from "effect";
-import { TeamMemberSchema } from "../shared/types";
+import { TeamMemberSchema, BenchBuildsField } from "../shared/types";
 
 export const idPattern = /^[a-zA-Z0-9_-]{8,80}$/;
 export const cleanText = (value: string, max = 120): string => value.trim().slice(0, max);
@@ -11,6 +11,7 @@ export const NoteRequest = Schema.Struct({
   snapshotId: Schema.optional(Schema.NullOr(Schema.String)),
 });
 export const PlanRequest = Schema.Struct({
+  benchBuilds: BenchBuildsField,
   id: Schema.optional(Schema.String.pipe(Schema.pattern(idPattern))),
   name: Schema.String.pipe(Schema.filter((value) => value.trim().length > 0)),
   members: Schema.Array(TeamMemberSchema).pipe(Schema.maxItems(6)),

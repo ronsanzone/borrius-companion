@@ -25,7 +25,7 @@ export async function savePlan(request: Request, env: Env): Promise<Response> {
     PlanRequest,
     "Choose a name, valid weakness limit, and up to six distinct Pokémon",
   );
-  for (const member of body.members) {
+  for (const member of [...body.members, ...(body.benchBuilds ?? [])]) {
     if (member.kind === "build") {
       const ids = member.moveIds.filter((id) => id !== null);
       if (new Set(ids).size !== ids.length)

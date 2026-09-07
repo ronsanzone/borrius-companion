@@ -132,6 +132,7 @@ function render() {
           id: next.activePlan ?? undefined,
           name: next.name,
           members: next.members,
+          benchBuilds: next.benchBuilds,
           shortlistIds: next.shortlist,
           inverse: next.inverse,
           weaknessLimit: next.limit,
